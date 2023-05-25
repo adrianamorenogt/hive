@@ -1,0 +1,107 @@
+* {
+  box-sizing: border-box;
+
+}
+
+body {
+  padding: 1rem;
+  margin: 1rem;
+  margin-left: 1rem;
+  font-family: Arial, sans-serif;
+  background-image: url("https://cdn.forbes.com.mx/2022/06/jared-brashier-duNHkmSkW6M-unsplash-scaled-e1655154058728.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  /* background-position: center; */
+}
+
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+  width: 21.875rem;
+  gap: 2rem;
+  font-family: sans-serif;
+  margin: 0.5rem;
+  /* equivalente a 400px si usamos 16px como tamaño de fuente */
+  max-width: 95%;
+  /* máximo ancho del contenedor */
+  margin: 0 auto;
+  /* centrado horizontal */
+  border-radius: 5px;
+}
+
+.register-form {
+  flex: 1;
+  min-height: 20rem;
+  padding: 2rem 3rem;
+  background-color: #f2f2f2da;
+  border-radius: 1rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+  gap: 1rem;
+  transition: transform 0.3s ease-in-out;
+  padding: 1.25rem;
+  background-color: #ffffff8b;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.register-form:hover {
+  transform: scale(1.05);
+}
+
+.register-form h2 {
+  margin-top: 0;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.login-form P {
+  margin-top: 0;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.register-form input {
+  display: block;
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  border-radius: 0.5rem;
+  border: none;
+  font-size: 1.2rem;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.66);
+}
+
+.register-form button {
+  display: block;
+  width: 100%;
+  padding: 0.5rem;
+  background-color: #021326;
+  color: #fff;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.register-form button:hover {
+  background: #011e28;
+  background-image: linear-gradient(0deg, #074d66 0%, #015371 0%, #021326 100%);
+}
+
+@media (max-width: 768px) {
+  .form-container {
+    flex-direction: column;
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+
+  .register-form {
+    width: 100%;
+    margin-bottom: 2rem;
+    padding: 2rem 1rem;
+  }
+}

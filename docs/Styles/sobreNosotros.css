@@ -1,0 +1,191 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 1rem;
+  margin: 1rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
+  font-family: Arial, sans-serif;
+  background-image: url("https://img.freepik.com/vector-gratis/diseno-fondo-abstracto-blanco_23-2148825582.jpg?w=1380&t=st=1683774935~exp=1683775535~hmac=53574d9c1e3c4d5ca52b28d009a10f7152dd215fb2027660cea2874f46dfc49b");
+  background-color: rgba(255, 255, 255, 0.705);
+  opacity: 1;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* Estilos para pantallas grandes */
+.about-us-section {
+  margin-top: 1rem;
+  text-align: center;
+
+}
+
+.about-us-section h2 {
+  text-align: center;
+  font-size: 3rem;
+  margin-bottom: 2rem;
+  font-family: fantasy;
+}
+
+.about-us-section p {
+  text-align: center;
+  font-size: 1rem;
+  margin-bottom: 2rem;
+  font-family: sans-serif;
+}
+
+p {
+  text-align: center;
+  font-size: 1rem;
+  margin: 0;
+  font-family: sans-serif;
+}
+
+.developers-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+  width: 38rem;
+  gap: 1rem;
+  font-family: sans-serif;
+  margin: 0.5rem;
+  max-width: 95%;
+  /* máximo ancho del contenedor */
+  margin: 0 auto;
+  /* centrado horizontal */
+  border-radius: 5px;
+}
+
+.developer-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 20rem;
+  gap: 1rem;
+  transition: transform 0.3s ease-in-out;
+  padding: 1.25rem;
+  background-color: #ffffff8f;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.603);
+  transition: transform 0.3s ease-in-out;
+}
+
+.developer-card img {
+  width: 10rem;
+  height: 10rem;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+  align-self: center;
+}
+
+.developer-card:hover {
+  transform: scale(1.05);
+}
+
+.developer-card img:hover {
+  transform: scale(1.2);
+}
+
+.developer-card h3 {
+  font-size: 1.8rem;
+  text-align: center;
+  margin-bottom: 1rem;
+  font-family: sans-serif;
+}
+
+.social-links {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  margin-top: auto;
+}
+
+.social-links a {
+  display: block;
+  width: 100%;
+  padding: 0.5rem;
+  background-color: #000000a8;
+  color: #fff;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+  text-decoration: none;
+  margin-right: 0.5rem;
+  font-family: sans-serif;
+  /* Agregar espacio de 1 rem debajo de cada link/botón */
+}
+
+
+.social-links a:hover {
+  color: aliceblue;
+  background: #011e28;
+  font-family: sans-serif;
+  background-image: linear-gradient(0deg, #074d66 0%, #015371 0%, #021326 100%);
+}
+
+@media (min-width: 992px) {
+  .developers-container {
+    gap: 4rem;
+  }
+
+  .developer-card {
+    width: calc((100% - 4rem) / 2);
+  }
+}
+
+/* Estilos para pantallas medianas */
+
+@media (max-width: 768px) {
+  .developers-container {
+    flex-direction: column;
+  }
+
+  .developer-card {
+    width: 100%;
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+
+  .social-links {
+    margin-top: 1rem;
+  }
+}
+
+/* Estilos para pantallas pequeñas */
+
+@media (max-width: 576px) {
+  .developers-container {
+    flex-direction: column;
+  }
+
+  .developer-card {
+    width: 100%;
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+
+  .developer-card img {
+    width: 8rem;
+    height: 8rem;
+  }
+
+  .developer-card h3 {
+    font-size: 1.2rem;
+  }
+
+  .social-links {
+    margin-top: 1rem;
+  }
+
+  .social-links a {
+    font-size: 1rem;
+    padding: 0.3rem;
+  }
+}
