@@ -19,21 +19,24 @@ body{
 /*ESTILOS HEADER*/
 header {
     position: fixed;
-    display: inline-block;
+    display: flex;
     width: 100%; 
+    
     z-index: 3; 
+
 }
 .navbar{
+  display: flex;
+  padding: .5rem;
+  width: 100%;
+  justify-content: space-between;
+}
+.nav-bar-web{
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding-top: 5px;
-    padding-left: 5%;
-    padding-right: 5%;
+    justify-content:end;
     font-weight: bold;
-    font-size: 1rem;
-    
-    
+    font-size: 1rem;  
+    padding-top: 1rem;
     
 }
 i{
@@ -49,7 +52,7 @@ a{
     text-decoration: none;
 }
 
-.navbar ul li a:hover {
+.nav-bar-web ul li a:hover {
     color: gold;
     transition: color 0.3s ease;
 }
@@ -57,13 +60,12 @@ a{
 .logo {
     width: 3rem;
     height: auto;  
+    
 }
 .navbar-scroll{
   background-color: #000;
   transition: all 1300ms;
 }
-
-
 
 /*ESTILOS SLIDER*/
 /* Google Fonts - Poppins */
@@ -216,49 +218,6 @@ a.button:hover {
   
 }
 
-@media screen and (max-width: 768px) {
-  .nav-btn {
-    visibility: hidden;
-  }
-
-  .swiper-pagination-bullet {
-    visibility: visible;
-  }
-  
-}
-
-@media(min-width:850px) {
-  .nuestros-productos .container {
-      display: flex;
-      justify-content: space-around;
-   }
-   .nuestros-productos {
-      width: 100%;
-      max-width: 100%;
-      text-align: initial;
-      padding-left: 20px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      line-height: 0.3;
-   }
-   .nuestros-productos p{
-       font-size: 30px;
-       color: rgb(125, 122, 118);
-       font-family: 'Teko';
-       font-weight: 500;
-       margin-top: 5%;
-   }
-   .nuestros-productos h3{
-      margin-top: 5%;
-      font-size: 45px;
-      font-family: 'Teko';
-   }
-   .card button {
-    margin-top: 10%;
-   }
-   
-}
 
 /* ESTILOS SOBRE NOSOTROS TIENDA */
 #sobre_nosotros_tienda{
@@ -351,8 +310,116 @@ a.button:hover {
   opacity: 1;
 }
 
+/*MEDIA RESPONSIVE SECCION*/
+@media screen and (max-width: 768px) {
+  .nav-btn {
+    visibility: hidden;
+  }
 
+  .swiper-pagination-bullet {
+    visibility: visible;
+  }
+  
+}
 
+@media(min-width:850px) {
+  .nuestros-productos .container {
+      display: flex;
+      justify-content: space-around;
+   }
+   .nuestros-productos {
+      width: 100%;
+      max-width: 100%;
+      text-align: initial;
+      padding-left: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      line-height: 0.3;
+   }
+   .nuestros-productos p{
+       font-size: 30px;
+       color: rgb(125, 122, 118);
+       font-family: 'Teko';
+       font-weight: 500;
+       margin-top: 5%;
+   }
+   .nuestros-productos h3{
+      margin-top: 5%;
+      font-size: 45px;
+      font-family: 'Teko';
+   }
+   .card button {
+    margin-top: 10%;
+   }
+   
+}
+
+@media(max-width:850px){
+/*ESTILOS MENU HAMBURGUESA*/
+.burger_menu{
+  width: 40px;
+  height: 30px;
+  position: fixed;
+  top: 2%;
+  right: 3%; 
+    
+}
+.burger_menu span{
+  display: block;
+  width: 80%;
+  height: 3px;
+  background-color: #ffffff;
+  margin-top: 6px;
+  cursor: pointer;
+  transform-origin: 0px 100%;
+  transition: all 600ms;
+  
+}
+
+.activeline1_menu{
+  transform: rotate(45deg) translate(-2px, -1px);
+}
+.activeline2_menu{
+  opacity: 0;
+  margin-left: -30px;
+}
+.activeline3_menu{
+  transform: rotate(-45deg) translate(-1.2px, 2px);
+}
+.navbar{
+  display: flex;
+  padding: .2;
+ 
+}
+  
+  .nav-bar-web{
+    background-color: #000000c7;
+    /*background: linear-gradient(90deg, rgba(2, 0, 36, 0.651) 0%, rgba(9, 9, 121, 0.548) 35%, rgba(0, 213, 255, 0.466) 190%);*/
+    display: none;
+    margin: -1rem;
+    position: fixed;
+    width: 70vw;
+    height: 100vh;
+    padding: 0;
+    line-height: 6rem;
+    padding-top: 0;
+    font-weight: bold;
+    font-size: 1.2rem;
+    z-index: 3;
+  }
+  .nav-list{
+    display: block;
+  }
+  ul li{
+    display: block;
+    text-align: center;
+    margin: -1rem;
+    
+   
+}
+
+}
 
 
 
