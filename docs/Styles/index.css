@@ -261,22 +261,27 @@ a.button:hover {
 }
 
 /* ESTILOS SOBRE NOSOTROS TIENDA */
+#sobre_nosotros_tienda{
 
+  justify-content:end;
+}
 .title{
   text-align: center;
-  margin-top: 60px;
+  margin-top: 5%;
   letter-spacing: 2px;
 }
 
 .container-box{
   width: 100%;
+  
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  
 }
 
 .box{
-  width: 250px;
+  width: 380px;
   height: 500px;
   margin: 10px; 
   padding: 0px;
@@ -291,8 +296,8 @@ a.button:hover {
 }
 
 .box img{
-  height: 70%;
-  width: 100%;
+ width: 100%;
+ height: 70%;
   transition: all 400ms;
   border-radius: 13px;
   border-bottom: 3px solid #4d4b4b;
@@ -313,7 +318,7 @@ a.button:hover {
   left: 0;
   bottom: 0;
   overflow: hidden;
-  padding: 0px 10px;
+  padding: 20px 10px;
   border-radius: 0px 0px 14px 14px;
   text-align: justify;
 }
