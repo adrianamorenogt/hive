@@ -5,36 +5,31 @@
 body {
   padding: 1rem;
   margin: 1rem;
-  margin-left: 2rem;
-  margin-right: 2rem;
   font-family: Arial, sans-serif;
   background-image: url("https://img.freepik.com/vector-gratis/diseno-fondo-abstracto-blanco_23-2148825582.jpg?w=1380&t=st=1683774935~exp=1683775535~hmac=53574d9c1e3c4d5ca52b28d009a10f7152dd215fb2027660cea2874f46dfc49b");
   background-color: rgba(255, 255, 255, 0.705);
-  opacity: 1;
   background-size: cover;
   background-repeat: no-repeat;
 }
+
 .logo {
   width: 3rem;
-  height: auto;  
+  height: auto;
 }
 
 /* Estilos para pantallas grandes */
 .about-us-section {
   margin-top: 1rem;
   text-align: center;
-
 }
 
 .about-us-section h2 {
-  text-align: center;
   font-size: 3rem;
   margin-bottom: 2rem;
   font-family: fantasy;
 }
 
 .about-us-section p {
-  text-align: center;
   font-size: 1rem;
   margin-bottom: 2rem;
   font-family: sans-serif;
@@ -49,18 +44,15 @@ p {
 
 .developers-container {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  height: 80vh;
-  width: 38rem;
   gap: 1rem;
-  font-family: sans-serif;
-  margin: 0.5rem;
-  padding: 0 .8rem;
   max-width: 95%;
-  /* máximo ancho del contenedor */
   margin: 0 auto;
-  /* centrado horizontal */
+  padding: 0 0.8rem;
+  height: auto;
+  /* máximo ancho del contenedor */
   border-radius: 5px;
 }
 
@@ -76,7 +68,6 @@ p {
   background-color: #ffffff8f;
   border-radius: 5px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.603);
-  transition: transform 0.3s ease-in-out;
 }
 
 .developer-card img {
@@ -112,7 +103,6 @@ p {
 
 .social-links a {
   display: block;
-  width: 100%;
   padding: 0.5rem;
   background-color: #000000a8;
   color: #fff;
@@ -125,72 +115,60 @@ p {
   margin-right: 0.5rem;
   font-family: sans-serif;
   /* Agregar espacio de 1 rem debajo de cada link/botón */
+  margin-bottom: 1rem;
 }
-
 
 .social-links a:hover {
   color: aliceblue;
   background: #011e28;
-  font-family: sans-serif;
   background-image: linear-gradient(0deg, #074d66 0%, #015371 0%, #021326 100%);
 }
 
-@media (min-width: 992px) {
-  .developers-container {
-    gap: 4rem;
+/* Estilos para dispositivos medianos */
+@media (max-width: 992px) {
+  .developer-card {
+    flex: 0 0 calc(50% - 2rem);
+    max-width: calc(50% - 2rem);
   }
 
-  .developer-card {
-    width: calc((100% - 4rem) / 2);
+  .developer-card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .developer-card p {
+    font-size: 1rem;
   }
 }
 
-/* Estilos para pantallas medianas */
-
+/* Estilos para tablets y celulares */
 @media (max-width: 768px) {
-  .developers-container {
-    flex-direction: column;
-  }
-
   .developer-card {
-    width: 100%;
-    margin-bottom: 2rem;
-    text-align: center;
-  }
-
-  .social-links {
-    margin-top: 1rem;
-  }
-}
-
-/* Estilos para pantallas pequeñas */
-
-@media (max-width: 576px) {
-  .developers-container {
-    flex-direction: column;
-  }
-
-  .developer-card {
-    width: 100%;
-    margin-bottom: 2rem;
-    text-align: center;
-  }
-
-  .developer-card img {
-    width: 8rem;
-    height: 8rem;
+    flex: 0 0 calc(100% - 2rem);
+    max-width: calc(100% - 2rem);
   }
 
   .developer-card h3 {
     font-size: 1.2rem;
   }
 
-  .social-links {
-    margin-top: 1rem;
+  .developer-card p {
+    font-size: 0.9rem;
+  }
+}
+
+/* Estilos para celulares */
+@media (max-width: 576px) {
+  .developer-card {
+    flex: 0 0 calc(100% - 2rem);
+    max-width: calc(100% - 2rem);
   }
 
-  .social-links a {
+  .developer-card h3 {
     font-size: 1rem;
-    padding: 0.3rem;
+  }
+
+  .developer-card p {
+    font-size: 0.8rem;
   }
 }
