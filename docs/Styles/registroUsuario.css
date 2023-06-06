@@ -1,6 +1,5 @@
 * {
   box-sizing: border-box;
-
 }
 
 body {
@@ -11,7 +10,6 @@ body {
   background-image: url("https://cdn.forbes.com.mx/2022/06/jared-brashier-duNHkmSkW6M-unsplash-scaled-e1655154058728.jpg");
   background-size: cover;
   background-repeat: no-repeat;
-  /* background-position: center; */
 }
 
 .form-container {
@@ -23,11 +21,8 @@ body {
   gap: 2rem;
   font-family: sans-serif;
   margin: 0.5rem;
-  /* equivalente a 400px si usamos 16px como tamaño de fuente */
   max-width: 95%;
-  /* máximo ancho del contenedor */
   margin: 0 auto;
-  /* centrado horizontal */
   border-radius: 5px;
 }
 
@@ -57,7 +52,7 @@ body {
   margin-bottom: 20px;
 }
 
-.login-form P {
+.register-form p {
   margin-top: 0;
   text-align: center;
   margin-bottom: 10px;
@@ -93,10 +88,16 @@ body {
 }
 
 @media (max-width: 768px) {
+  body {
+    padding: 0.5rem;
+    margin: 0.5rem;
+    margin-left: 0.5rem;
+  }
+
   .form-container {
     flex-direction: column;
-    margin-left: 1rem;
-    margin-right: 1rem;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
   }
 
   .register-form {
