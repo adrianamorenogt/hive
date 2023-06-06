@@ -1,0 +1,47 @@
+body{
+   background-color: #F3F2EF; 
+   font-family: inherit;
+}
+
+.grid-1{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+i {
+    color:rgb(87, 82, 82);
+    font-size: 2em;
+}
+
+.container{
+
+    display: grid;
+    column-gap: 5px;
+    grid-template-areas: "contacto-1 contacto-1 contacto-1"
+    "contacto-2 contacto-2 contacto-2";
+    gap: 5px;
+    background-color: #fff;
+    width: 80vw;
+    height: 40vh;
+    padding: 10% 5%;
+    border: 1px solid black;
+    font-size: 20px;
+
+    
+}
+
+
+.contacto-2{
+    width: 90%;
+    height: 80%;
+    
+    grid-area: "contacto-2";
+    display: block;
+    flex-direction: column;
+    border: none;
+    padding: 20px;
+    text-align: center;
+}
