@@ -19,21 +19,24 @@ body{
 /*ESTILOS HEADER*/
 header {
     position: fixed;
-    display: inline-block;
+    display: flex;
     width: 100%; 
+    
     z-index: 3; 
+
 }
 .navbar{
+  display: flex;
+  padding: .5rem;
+  width: 100%;
+  justify-content: space-between;
+}
+.nav-bar-web{
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding-top: 5px;
-    padding-left: 5%;
-    padding-right: 5%;
+    justify-content:end;
     font-weight: bold;
-    font-size: 1rem;
-    
-    
+    font-size: 1rem;  
+    padding-top: 1rem;
     
 }
 i{
@@ -49,7 +52,7 @@ a{
     text-decoration: none;
 }
 
-.navbar ul li a:hover {
+.nav-bar-web ul li a:hover {
     color: gold;
     transition: color 0.3s ease;
 }
@@ -57,13 +60,12 @@ a{
 .logo {
     width: 3rem;
     height: auto;  
+    
 }
 .navbar-scroll{
   background-color: #000;
   transition: all 1300ms;
 }
-
-
 
 /*ESTILOS SLIDER*/
 /* Google Fonts - Poppins */
@@ -216,6 +218,99 @@ a.button:hover {
   
 }
 
+
+/* ESTILOS SOBRE NOSOTROS TIENDA */
+#sobre_nosotros_tienda{
+
+  justify-content:end;
+}
+.title{
+  text-align: center;
+  margin-top: 5%;
+  letter-spacing: 2px;
+}
+
+.container-box{
+  width: 100%;
+  
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  
+}
+
+.box{
+  width: 380px;
+  height: 500px;
+  margin: 10px; 
+  padding: 0px;
+  border: 2px solid #eeeeee;
+  border-radius: 14px;
+  text-align: center;
+  margin-top: 100px;
+  position: relative;
+  box-shadow: 25px 25px 40px rgba(0, 0, 0,0.15);
+;
+
+}
+
+.box img{
+ width: 100%;
+ height: 70%;
+  transition: all 400ms;
+  border-radius: 13px;
+  border-bottom: 3px solid #4d4b4b;
+
+
+}
+
+.box h2{
+  font-size: 14px;
+  margin-top: 20px;
+  transition: all 500ms;
+}
+
+.box .container-p{
+  width: 100%;
+  height: 150px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  overflow: hidden;
+  padding: 20px 10px;
+  border-radius: 0px 0px 14px 14px;
+  text-align: justify;
+}
+
+.box p{
+  /* para que suba que le pongo  */
+  font-family: 'Hanuman' , sans-serif;
+  font-size: 14px;
+  color: #4d4b4b;
+  opacity: 0;
+  transform: translateY(150px);
+  transition: all 600ms;
+}
+
+
+.box:hover{
+  background: rgba(243, 242, 239, 1);
+}
+
+.box:hover img{
+  transform: translateY(-90px);
+}
+
+.box:hover h2{
+  transform: translateY(-90px);
+}
+
+.box:hover .container-p p{
+  transform: translateY(0px);
+  opacity: 1;
+}
+
+/*MEDIA RESPONSIVE SECCION*/
 @media screen and (max-width: 768px) {
   .nav-btn {
     visibility: hidden;
@@ -260,94 +355,71 @@ a.button:hover {
    
 }
 
-/* ESTILOS SOBRE NOSOTROS TIENDA */
-
-.title{
-  text-align: center;
-  margin-top: 60px;
-  letter-spacing: 2px;
+@media(max-width:850px){
+/*ESTILOS MENU HAMBURGUESA*/
+.burger_menu{
+  width: 40px;
+  height: 30px;
+  position: fixed;
+  top: 2%;
+  right: 3%; 
+    
 }
-
-.container-box{
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.box{
-  width: 250px;
-  height: 500px;
-  margin: 10px; 
-  padding: 0px;
-  border: 2px solid #eeeeee;
-  border-radius: 14px;
-  text-align: center;
-  margin-top: 100px;
-  position: relative;
-  box-shadow: 25px 25px 40px rgba(0, 0, 0,0.15);
-;
-
-}
-
-.box img{
-  height: 70%;
-  width: 100%;
-  transition: all 400ms;
-  border-radius: 13px;
-  border-bottom: 3px solid #4d4b4b;
-
-
-}
-
-.box h2{
-  font-size: 14px;
-  margin-top: 20px;
-  transition: all 500ms;
-}
-
-.box .container-p{
-  width: 100%;
-  height: 150px;
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  overflow: hidden;
-  padding: 0px 10px;
-  border-radius: 0px 0px 14px 14px;
-  text-align: justify;
-}
-
-.box p{
-  /* para que suba que le pongo  */
-  font-family: 'Hanuman' , sans-serif;
-  font-size: 14px;
-  color: #4d4b4b;
-  opacity: 0;
-  transform: translateY(150px);
+.burger_menu span{
+  display: block;
+  width: 80%;
+  height: 3px;
+  background-color: #ffffff;
+  margin-top: 6px;
+  cursor: pointer;
+  transform-origin: 0px 100%;
   transition: all 600ms;
+  
 }
 
-
-.box:hover{
-  background: rgba(243, 242, 239, 1);
+.activeline1_menu{
+  transform: rotate(45deg) translate(-2px, -1px);
+}
+.activeline2_menu{
+  opacity: 0;
+  margin-left: -30px;
+}
+.activeline3_menu{
+  transform: rotate(-45deg) translate(-1.2px, 2px);
+}
+.navbar{
+  display: flex;
+  padding: .2;
+ 
+}
+  
+  .nav-bar-web{
+    background-color: #000000c7;
+    /*background: linear-gradient(90deg, rgba(2, 0, 36, 0.651) 0%, rgba(9, 9, 121, 0.548) 35%, rgba(0, 213, 255, 0.466) 190%);*/
+    display: none;
+    margin: -1rem;
+    position: fixed;
+    width: 70vw;
+    height: 100vh;
+    padding: 0;
+    line-height: 6rem;
+    padding-top: 0;
+    font-weight: bold;
+    font-size: 1.2rem;
+    z-index: 3;
+  }
+  .nav-list{
+    display: block;
+  }
+  ul li{
+    display: block;
+    text-align: center;
+    margin: -1rem;
+    
+   
 }
 
-.box:hover img{
-  transform: translateY(-90px);
 }
-
-.box:hover h2{
-  transform: translateY(-90px);
-}
-
-.box:hover .container-p p{
-  transform: translateY(0px);
-  opacity: 1;
-}
-
-
-
 
 
 
