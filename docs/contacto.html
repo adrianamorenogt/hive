@@ -6,33 +6,30 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contáctenos</title>
   <link rel="stylesheet" href="./Styles/contacto.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="">
 
 </head>
 <body>
 
-
-  <section id="formulario">
-    <div class="container1">
-      <form action="" id="formulario">
-          <div class="nombre">
-            <label for="">Nombre<input type="text" id="nombre" class="form-control" placeholder="Ingrese su nombre"></label>
-          </div>
-          <div class="correo">
-            <label for="">Correo<input id="correo" type="text" class="form-control" placeholder="Ingrese su correo"></label></div>
-          <div class="mensaje">
-            <label for="">Mensaje<textarea cols="30" id="mensaje" rows="10" placeholder="Ingrese su mensaje"></textarea></label>
-          </div>
-          <div class="boton">
-            <button onclick="validarFormulario()">Enviar</button>
-          </div>
-      </form>
-    </div>
+<section id="contactForm">
+  <section id="imagen">
+    <img src="/docs/img/DronContacto.png" alt="">
   </section>
-
-
-  <script src="./script/contacto.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-  <script src="sweetalert2.all.min.js"></script>
+  <div class="container">
+    <div id="title">
+      <img src="./img/Ecomlogoblack.png" alt="">
+      <h1>Contacta con nosotros</h1>
+    </div>
+    <form id="formulario" action="https://formspree.io/f/mnqykgzv" method="POST">
+          <label for="">Nombre<input type="text" name="name" id="nombre" class="form-control" placeholder="Ingrese su nombre" required></label>
+          <label for="">Correo<input  name="email" id="correo" type="email" class="form-control" placeholder="Ingrese su correo" required></label>
+          <label id="mensajel">Mensaje<textarea name="message" id="mensaje" rows="6" placeholder="Ingrese su mensaje" required></textarea></label><br>
+          <button type="submit">Enviar</button>
+    </form>
+  </div>
+</section>
+<script src="./js/contacto.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="sweetalert2.all.min.js"></script>
 </body>
 </html>
