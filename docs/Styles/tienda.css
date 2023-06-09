@@ -6,13 +6,13 @@
   font-family: 'Open Sans';
 }
 
-header {
+/* header {
   background: url(../img/dron-flotante-captura-vista-aerea-naturaleza-generada-ia.jpg);
   background-size: cover;
   background-position: center;
   height: 300px;
 }
-
+ */
 header h1 {
   text-align: center;
   font-size: 35px;
