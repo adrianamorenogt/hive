@@ -45,3 +45,10 @@ var swiper = new Swiper(".mySwiper", {
       prevEl: ".swiper-button-prev",
       },
   });  
+
+
+
+
+  /**
+  *Código dedicado al login y registro mediante del local storage
+  */
