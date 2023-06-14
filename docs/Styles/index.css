@@ -1,68 +1,76 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Teko:wght@300&display=swap');
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Poppins", sans-serif;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
 }
 
-html{
-    scroll-behavior: smooth;
+html {
+  scroll-behavior: smooth;
 }
-body{
-    margin: 0;
-    background-color: #F3F2EF;
-  
+
+body {
+  margin: 0;
+  background-color: #F3F2EF;
+
 }
 
 /*ESTILOS HEADER*/
 header {
-    position: fixed;
-    display: flex;
-    width: 100%; 
-    
-    z-index: 3; 
+  position: fixed;
+  display: flex;
+  width: 100%;
+
+  z-index: 3;
 
 }
-.navbar{
+
+.navbar {
   display: flex;
   padding: .5rem;
   width: 100%;
   justify-content: space-between;
 }
-.nav-bar-web{
-    display: flex;
-    justify-content:end;
-    font-weight: bold;
-    font-size: 1rem;  
-    padding-top: 1rem;
-    
+
+.nav-bar-web {
+  display: flex;
+  justify-content: end;
+  font-weight: bold;
+  font-size: 1rem;
+  padding-top: 1rem;
+
 }
-i{
-    margin-left: 1rem;
-} 
-ul li{
-    display: inline-block;
-    padding: 0px 20px;
-   
+
+i {
+  margin-left: 1rem;
 }
-a{
-    color: white;
-    text-decoration: none;
+
+ul li {
+  display: inline-block;
+  padding: 0px 20px;
+
+}
+
+a {
+  color: white;
+  text-decoration: none;
 }
 
 .nav-bar-web ul li a:hover {
-    color: gold;
-    transition: color 0.3s ease;
+  color: gold;
+  transition: color 0.3s ease;
 }
 
 .logo {
-    width: 3rem;
-    height: auto;  
-    
+  width: 3rem;
+  height: auto;
+
 }
-.navbar-scroll{
+
+.navbar-scroll {
   background-color: #000;
   transition: all 1300ms;
 }
@@ -117,6 +125,12 @@ a{
   font-size: 14px;
   font-weight: 400;
   color: #fff;
+}
+
+.aH {
+  font-size: 34px;
+  font-weight: 400;
+  color: #272727;
 }
 
 .image-data h2 {
@@ -186,6 +200,7 @@ a.button:hover {
   text-align: center;
   padding: 30px 12px;
 }
+
 .nuestros-productos img {
   width: 80%;
   height: 60%;
@@ -194,69 +209,73 @@ a.button:hover {
   margin-top: 5%;
   transition: all 800ms;
 }
+
 .card img:hover {
   margin-top: 5.8%;
   box-shadow: 0px 0px 30px #000;
-  
-  
+
+
 }
+
 .nuestros-productos button {
   border-radius: 20px;
   background-color: black;
   color: white;
   width: 20%;
   height: 8%;
-  font-weight:bold;
+  font-weight: bold;
   font-size: 1.3rem;
   cursor: pointer;
   margin-top: 5%;
   transition: all 500ms;
 }
+
 .nuestros-productos button:hover {
   box-shadow: 0px 0px 40px #000;
   font-size: 1.3rem;
-  
+
 }
 
 
 /* ESTILOS SOBRE NOSOTROS TIENDA */
-#sobre_nosotros_tienda{
+#sobre_nosotros_tienda {
 
-  justify-content:end;
+  justify-content: end;
 }
-.title{
+
+.title {
   text-align: center;
   margin-top: 5%;
   letter-spacing: 2px;
 }
 
-.container-box{
+.container-box {
   width: 100%;
-  
+
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  
+
 }
 
-.box{
+.box {
   width: 380px;
   height: 500px;
-  margin: 10px; 
+  margin: 10px;
   padding: 0px;
   border: 2px solid #eeeeee;
   border-radius: 14px;
   text-align: center;
   margin-top: 100px;
   position: relative;
-  box-shadow: 25px 25px 40px rgba(0, 0, 0,0.15);
-;
+  box-shadow: 25px 25px 40px rgba(0, 0, 0, 0.15);
+  ;
 
 }
 
-.box img{
- width: 100%;
- height: 70%;
+.box img {
+  width: 100%;
+  height: 70%;
   transition: all 400ms;
   border-radius: 13px;
   border-bottom: 3px solid #4d4b4b;
@@ -264,13 +283,13 @@ a.button:hover {
 
 }
 
-.box h2{
+.box h2 {
   font-size: 14px;
   margin-top: 20px;
   transition: all 500ms;
 }
 
-.box .container-p{
+.box .container-p {
   width: 100%;
   height: 150px;
   position: absolute;
@@ -282,9 +301,9 @@ a.button:hover {
   text-align: justify;
 }
 
-.box p{
+.box p {
   /* para que suba que le pongo  */
-  font-family: 'Hanuman' , sans-serif;
+  font-family: 'Hanuman', sans-serif;
   font-size: 14px;
   color: #4d4b4b;
   opacity: 0;
@@ -293,19 +312,19 @@ a.button:hover {
 }
 
 
-.box:hover{
+.box:hover {
   background: rgba(243, 242, 239, 1);
 }
 
-.box:hover img{
+.box:hover img {
   transform: translateY(-90px);
 }
 
-.box:hover h2{
+.box:hover h2 {
   transform: translateY(-90px);
 }
 
-.box:hover .container-p p{
+.box:hover .container-p p {
   transform: translateY(0px);
   opacity: 1;
 }
@@ -319,81 +338,90 @@ a.button:hover {
   .swiper-pagination-bullet {
     visibility: visible;
   }
-  
+
 }
 
 @media(min-width:850px) {
   .nuestros-productos .container {
-      display: flex;
-      justify-content: space-around;
-   }
-   .nuestros-productos {
-      width: 100%;
-      max-width: 100%;
-      text-align: initial;
-      padding-left: 20px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      line-height: 0.3;
-   }
-   .nuestros-productos p{
-       font-size: 30px;
-       color: rgb(125, 122, 118);
-       font-family: 'Teko';
-       font-weight: 500;
-       margin-top: 5%;
-   }
-   .nuestros-productos h3{
-      margin-top: 5%;
-      font-size: 45px;
-      font-family: 'Teko';
-   }
-   .card button {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .nuestros-productos {
+    width: 100%;
+    max-width: 100%;
+    text-align: initial;
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    line-height: 0.3;
+  }
+
+  .nuestros-productos p {
+    font-size: 30px;
+    color: rgb(125, 122, 118);
+    font-family: 'Teko';
+    font-weight: 500;
+    margin-top: 5%;
+  }
+
+  .nuestros-productos h3 {
+    margin-top: 5%;
+    font-size: 45px;
+    font-family: 'Teko';
+  }
+
+  .card button {
     margin-top: 10%;
-   }
-   
+  }
+
 }
 
-@media(max-width:850px){
-/*ESTILOS MENU HAMBURGUESA*/
-.burger_menu{
-  width: 40px;
-  height: 30px;
-  position: fixed;
-  top: 2%;
-  right: 3%; 
-    
-}
-.burger_menu span{
-  display: block;
-  width: 80%;
-  height: 3px;
-  background-color: #ffffff;
-  margin-top: 6px;
-  cursor: pointer;
-  transform-origin: 0px 100%;
-  transition: all 600ms;
-  
-}
+@media(max-width:850px) {
 
-.activeline1_menu{
-  transform: rotate(45deg) translate(-2px, -1px);
-}
-.activeline2_menu{
-  opacity: 0;
-  margin-left: -30px;
-}
-.activeline3_menu{
-  transform: rotate(-45deg) translate(-1.2px, 2px);
-}
-.navbar{
-  display: flex;
-  padding: .2;
- 
-}
-  
-  .nav-bar-web{
+  /*ESTILOS MENU HAMBURGUESA*/
+  .burger_menu {
+    width: 40px;
+    height: 30px;
+    position: fixed;
+    top: 2%;
+    right: 3%;
+
+  }
+
+  .burger_menu span {
+    display: block;
+    width: 80%;
+    height: 3px;
+    background-color: #ffffff;
+    margin-top: 6px;
+    cursor: pointer;
+    transform-origin: 0px 100%;
+    transition: all 600ms;
+
+  }
+
+  .activeline1_menu {
+    transform: rotate(45deg) translate(-2px, -1px);
+  }
+
+  .activeline2_menu {
+    opacity: 0;
+    margin-left: -30px;
+  }
+
+  .activeline3_menu {
+    transform: rotate(-45deg) translate(-1.2px, 2px);
+  }
+
+  .navbar {
+    display: flex;
+    padding: .2;
+
+  }
+
+  .nav-bar-web {
     background-color: #000000c7;
     /*background: linear-gradient(90deg, rgba(2, 0, 36, 0.651) 0%, rgba(9, 9, 121, 0.548) 35%, rgba(0, 213, 255, 0.466) 190%);*/
     display: none;
@@ -408,18 +436,58 @@ a.button:hover {
     font-size: 1.2rem;
     z-index: 3;
   }
-  .nav-list{
+
+  .nav-list {
     display: block;
   }
-  ul li{
+
+  ul li {
     display: block;
     text-align: center;
     margin: -1rem;
-    
-   
-}
+
+  }
 
 }
 
+footer {
+  background-color: #1a1a1a;
+  padding: 20px;
+  text-align: center;
+}
 
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
 
+.social-icons a {
+  display: inline-block;
+  margin-right: 10px;
+  color: #f5f5f5;
+  font-size: 20px;
+}
+
+.contact-info a {
+  display: block;
+  margin-bottom: 10px;
+  color: #f5f5f5;
+  text-decoration: none;
+}
+
+.contact-info i {
+  margin-right: 5px;
+}
+
+.p-footer {
+  margin: 0;
+  color: #9e9e9e;
+}
+
+@media (max-width: 767px) {
+
+  .social-icons a,
+  .contact-info a {
+    font-size: 16px;
+  }
+}
