@@ -1,7 +1,7 @@
-const wrapper = document.querySelector(".wrapperMini");
-const carousel = document.querySelector(".carouselMini");
-const firstCardWidth = carousel.querySelector(".cardMini").offsetWidth;
-const arrowBtns = document.querySelectorAll(".wrapperMini i");
+const wrapper = document.querySelector(".wrapper");
+const carousel = document.querySelector(".carousel");
+const firstCardWidth = carousel.querySelector(".card").offsetWidth;
+const arrowBtns = document.querySelectorAll(".wrapper i");
 const carouselChildrens = [...carousel.children];
 
 let isDragging = false, isAutoPlay = true, startX, startScrollLeft, timeoutId;
@@ -19,7 +19,7 @@ carouselChildrens.slice(0, cardPerView).forEach(card => {
   carousel.insertAdjacentHTML("beforeend", card.outerHTML);
 });
 
-// Scroll the carousel at appropriate position to hide first few duplicate cards on Firefox
+// Scroll the carousel at appropriate postition to hide first few duplicate cards on Firefox
 carousel.classList.add("no-transition");
 carousel.scrollLeft = carousel.offsetWidth;
 carousel.classList.remove("no-transition");
