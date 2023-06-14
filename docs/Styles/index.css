@@ -9,6 +9,7 @@
 
 html{
     scroll-behavior: smooth;
+    
 }
 body{
     margin: 0;
@@ -419,6 +420,50 @@ a.button:hover {
    
 }
 
+}
+
+
+/*ESTILOS CONTACTO*/
+
+.grid-1{
+   display: flex;
+   justify-content: center;
+   text-align: center;
+   flex-direction: column;
+   align-items: center;
+   width: 100%;
+   height: 100vh;
+   margin: 5% 0;
+   background-color: #c87e4f;
+}
+
+.grid-1 i {
+   color:rgb(87, 82, 82);
+   font-size: 2em;
+}
+
+.container-contact{
+   display: grid;
+   column-gap: 5px;
+   grid-template-areas: "contacto-1 contacto-1 contacto-1"
+   "contacto-2 contacto-2 contacto-2";
+   gap: 5px;
+   background-color: #ff0000;
+   width: 90vw;
+   height: 100vh;
+   padding: 10% 5%;
+   border: 1px solid black;
+   font-size: 20px;  
+}
+.contacto-2{
+   width: 90%;
+   height: 80%;
+   grid-area: "contacto-2";
+   display: block;
+   flex-direction: column;
+   border: none;
+   padding: 20px;
+   text-align: center;
 }
 
 
