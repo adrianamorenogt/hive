@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="shortcut icon" href="img/Ecomlogoblack.png" type="image/x-icon">
+    <link rel="stylesheet" href="./Styles/tienda.css">
+    <link rel="stylesheet" href="./Styles/index.css">
+    <link rel="stylesheet" href="./Styles/SliderPrincipalTienda.css">
+    <link rel="stylesheet" href="./Styles/tiendaDetallesModalAdriana.css">
+    <title>HiveShop! </title>
+</head>
+<body>
+    <!-- HEADER -->
+<header>
+
+    <nav class="navbar">
+
+    <a  href="index.html"><img class="logo" src="img/Ecomlogowhite.png" alt="logo"></a>
+    <div class="burger_menu">
+        <span class="line1_menu"></span>
+        <span class="line2_menu"></span>
+        <span class="line3_menu"></span>
+    </div> 
+    <div class="nav-bar-web">
+    
+    <ul class="nav-list">
+        <li><a href="#">Inicio</a></li>
+        <li><a href="#sobre_nosotros_tienda">Sobre Nosotros</a></li>
+        <li><a href="./tienda.html">Tienda</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+        <li><a href="./sobreNosotros.html">Developers</a></li>
+        <li><a href="./inicioSesion.html"><i class="fa-solid fa-user" style="color: #ffffff;"></i></a></li>
+        <li><i class="fa-solid fa-cart-shopping" style="color: #ffffff;"></i></li>
+    </ul>
+    </div>
+    </nav>
+</header>    
+
+
+<!-- SLIDER -->
+<!-- <section class="main swiper mySwiper">
+<div class="wrapper swiper-wrapper">
+    <div class="slide swiper-slide">
+    <img src="./img/pexels-anton-trava-1545754.jpg" alt="" class="image" />
+    <div class="image-data">
+        <span class="text">INNOVACIÓN</span>
+        <h2>
+        Acelera tus cosechas
+        </h2>
+        <a href="./tienda.html" class="button">About Us</a>
+    </div>
+    </div>
+    <div class="slide swiper-slide">
+    <img src="./img/spraying-sugar-cane-2746350_1920.jpg" alt="" class="image" />
+    <div class="image-data">
+        <span class="text">DESCUBRE</span>
+        <h2>
+        El mundo de otra forma
+        </h2>
+        <a href="./tienda.html" class="button">Tienda</a>
+    </div>
+    </div>
+</div>
+
+<div class="swiper-button-next nav-btn"></div>
+<div class="swiper-button-prev nav-btn"></div>
+<div class="swiper-pagination"></div>
+</section> -->
+
+<!-- MINI CAROUSEL -->
+
+    <div class="wrapperMini">
+        <i id="left" class="fa-solid fa-angle-left"></i>
+        <ul class="carouselMini">
+        <li class="cardMini">
+            <div class="imgMini"><img src="./img/pexels-darrel-und-1087180.jpg" alt="img" draggable="false"></div>
+            <h2>INNOVACIÓN</h2>
+        </li>
+        <li class="cardMini">
+            <div class="imgMini"><img src="./img/pexels-darrel-und-1087180.jpg" alt="img" draggable="false"></div>
+            <h2>TECNOLOGIA</h2>
+        </li>
+        <li class="cardMini">
+            <div class="imgMini"><img src="./img/pexels-darrel-und-1087180.jpg" alt="img" draggable="false"></div>
+            <h2>ACCESORIOS</h2>
+        </li>
+        <li class="cardMini">
+            <div class="imgMini"><img src="./img/pexels-pok-rie-13310738.jpg" alt="img" draggable="false"></div>
+            <h2>CALIDAD</h2>
+        </li>
+        <li class="cardMini">
+            <div class="imgMini"><img src="./img/pexels-darrel-und-1087180.jpg" alt="img" draggable="false"></div>
+            <h2>DISEÑO</h2>
+        </li>
+        <li class="cardMini">
+            <div class="imgMini"><img src="./img/pexels-darrel-und-1087182.jpg" alt="img" draggable="false"></div>
+            <h2>VANGUARDIA</h2>
+        </li>
+        </ul>
+        <i id="right" class="fa-solid fa-angle-right"></i>
+    </div>
+
+
+    <!--Inicio de una sección con la clase "contenedor".-->
+    <section class="contenedor">
+        <div class="contenedor-items">
+            <div class="item">
+                <span class="titulo-item">SkyVortex</span>
+                <img src="./img/pexels-darrel-und-1087183.jpg" alt="" class="img-item">
+                <span class="precio-item">$299</span>
+                <button class="boton-item">Agregar<i class="fa-solid fa-cart-shopping" style="color: #ffffff;"></i>
+                </button>
+            <!--Modal-->
+                <button class="btn btn-dark ver-detalles"
+                    data-toggle="modal"
+                    data-target="#modalDetalles"
+                    data-imagen="./img/pexels-darrel-und-1087183.jpg""
+                    data-nombre="Dron 1 - SkyVortex"
+                    data-precio="$299">
+                    Detalles 
+                    <i class="fa-solid fa-magnifying-glass" style="color: #ffffff;"></i>
+                </button>
+            <!--Modal-->
+            </div>
+            <div class="item">
+                <span class="titulo-item">AeroStrike </span>
+                <img src="./img/pexels-pok-rie-13310738.jpg" alt="" class="img-item">
+                <span class="precio-item">$399</span>
+                <button class="boton-item">Agregar<i class="fa-solid fa-cart-shopping" style="color: #ffffff;"></i>
+                </button>
+                <!--Modal-->
+                <button class="btn btn-dark ver-detalles"
+                    data-toggle="modal"
+                    data-target="#modalDetalles"
+                    data-imagen="./img/pexels-pok-rie-13310738.jpg"
+                    data-nombre="Dron 1 - SkyVortex"
+                    data-precio="$99.99 DOLARAZOS">
+                    Detalles 
+                    <i class="fa-solid fa-magnifying-glass" style="color: #ffffff;"></i>
+                </button>
+            <!--Modal-->
+            </div>
+            <div class="item">
+                <span class="titulo-item">PhantomGlide</span>
+                <img src="./img/pexels-darrel-und-1087182.jpg" alt="" class="img-item">
+                <span class="precio-item">$449</span>
+                <button class="boton-item">Agregar<i class="fa-solid fa-cart-shopping" style="color: #ffffff;"></i>
+                </button>
+                <!--Modal-->
+                <button class="btn btn-dark ver-detalles"
+                    data-toggle="modal"
+                    data-target="#modalDetalles"
+                    data-imagen="./img/pexels-darrel-und-1087182.jpg"
+                    data-nombre="Dron 2 - PhantomGlide"
+                    data-precio="$449">
+                    Detalles 
+                    <i class="fa-solid fa-magnifying-glass" style="color: #ffffff;"></i>
+                </button>
+            <!--Modal-->
+            </div>
+            <div class="item">
+                <span class="titulo-item">StellarHawk</span>
+                <img src="./img/pexels-darrel-und-1087183.jpg" alt="" class="img-item">
+                <span class="precio-item">$499</span>
+                <button class="boton-item">Agregar<i class="fa-solid fa-cart-shopping" style="color: #ffffff;"></i>
+                </button>
+                <!--Modal-->
+                <button class="btn btn-dark ver-detalles"
+                    data-toggle="modal"
+                    data-target="#modalDetalles"
+                    data-imagen="./img/pexels-darrel-und-1087183.jpg"
+                    data-nombre="Dron 3 - StellarHawk"
+                    data-precio="$499">
+                    Detalles 
+                    <i class="fa-solid fa-magnifying-glass" style="color: #ffffff;"></i>
+                </button>
+            <!--Modal-->
+            </div>
+            <div class="item">
+                <span class="titulo-item">TurboDrone</span>
+                <img src="./img/technology-2734236_1920.jpg" alt="turboDrone" class="img-item">
+                <span class="precio-item">$549</span>
+                <button class="boton-item">Agregar<i class="fa-solid fa-cart-shopping" style="color: #ffffff;"></i>
+                </button>
+                <!--Modal-->
+                <button class="btn btn-dark ver-detalles"
+                    data-toggle="modal"
+                    data-target="#modalDetalles"
+                    data-imagen="./img/technology-2734236_1920.jpg"
+                    data-nombre="Dron 4 - TurboDrone"
+                    data-precio="$99.99 DOLARAZOS">
+                    Detalles 
+                    <i class="fa-solid fa-magnifying-glass" style="color: #ffffff;"></i>
+                </button>
+            </div>
+            <div class="item">
+                <span class="titulo-item">EliteSky </span>
+                <img src="./img/pexels-pok-rie-13310738.jpg" alt="" class="img-item">
+                <span class="precio-item">$649</span>
+                <button class="boton-item">Agregar<i class="fa-solid fa-cart-shopping" style="color: #ffffff;"></i>
+                </button>
+                <!--Modal-->
+                <button class="btn btn-dark ver-detalles"
+                    data-toggle="modal"
+                    data-target="#modalDetalles"
+                    data-imagen="./img/pexels-pok-rie-13310738.jpg"
+                    data-nombre="Dron 1 - SkyVortex"
+                    data-precio="$99.99 DOLARAZOS">
+                    Detalles 
+                    <i class="fa-solid fa-magnifying-glass" style="color: #ffffff;"></i>
+                </button>
+            <!--Modal-->
+            </div>
+            <div class="item">
+                <span class="titulo-item">AeroFalcon </span>
+                <img src="./img/pexels-darrel-und-1087182.jpg" alt="" class="img-item">
+                <span class="precio-item">$799</span>
+                <button class="boton-item">Agregar<i class="fa-solid fa-cart-shopping" style="color: #ffffff;"></i>
+                </button>
+                <!--Modal-->
+                <button class="btn btn-dark ver-detalles"
+                    data-toggle="modal"
+                    data-target="#modalDetalles"
+                    data-imagen="./img/pexels-darrel-und-1087182.jpg"
+                    data-nombre="Dron 1 - SkyVortex"
+                    data-precio="$99.99 DOLARAZOS">
+                    Detalles 
+                    <i class="fa-solid fa-magnifying-glass" style="color: #ffffff;"></i>
+                </button>
+            <!--Modal-->
+            </div>
+            <div class="item">
+                <span class="titulo-item">NanoGlide</span>
+                <img src="./img/pexels-darrel-und-1087183.jpg" alt="" class="img-item">
+                <span class="precio-item">$899</span>
+                <button class="boton-item">Agregar<i class="fa-solid fa-cart-shopping" style="color: #ffffff;"></i>
+                </button>
+                <!--Modal-->
+                <button class="btn btn-dark ver-detalles"
+                    data-toggle="modal"
+                    data-target="#modalDetalles"
+                    data-imagen="./img/pexels-darrel-und-1087183.jpg"
+                    data-nombre="Dron 1 - SkyVortex"
+                    data-precio="$99.99 DOLARAZOS">
+                    Detalles 
+                    <i class="fa-solid fa-magnifying-glass" style="color: #ffffff;"></i>
+                </button>
+            <!--Modal-->
+            </div>
+        </div>
+        <!-- Carrito de Compras -->
+        <div class="carrito" id="carrito">
+            <div class="header-carrito">
+                <h2>Tu Carrito</h2>
+            </div>
+
+            <div class="carrito-items"> 
+            </div>
+            <div class="carrito-total">
+                <div class="fila">
+                    <strong>El Total es</strong>
+                    <span class="carrito-precio-total">
+                        $899
+                    </span>
+                </div>
+                <button class="btn-pagar">Pagar <i class="fa-solid fa-bag-shopping"></i> </button>
+            </div>
+        </div>
+    </section>
+    <!-- Modal -->
+
+    <div class="modal fade" id="modalDetalles" tabindex="-1" role="dialog" aria-labelledby="modalDetallesLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content">
+        <div class="modal-header">
+            <h5 class="modal-title" id="modalDetallesLabel">Detalles del producto</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="modal-body">
+            <img src="" alt="" class="img-fluid modal-imagen">
+            <h3 class="modal-nombre"></h3>
+            <p class="modal-precio"></p>
+        </div>
+        </div>
+    </div>
+    </div>
+
+    <!-- footer starts -->
+	<footer class="bg-dark p-2 text-center">
+		<div class="container">
+			<p class="text-white">Hive 2023©</p>
+		</div>
+	</footer>
+	<!-- footer ends -->
+
+
+
+    <script src="js/tienda.js"></script>
+    <script src="JS/swiper-bundle.min.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/scriptDetalles.js"></script>
+    <script src="js/slidercircular.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function() {
+        $('.ver-detalles').click(function() {
+            var imagen = $(this).data('imagen');
+            var nombre = $(this).data('nombre');
+            var precio = $(this).data('precio');
+            $('#modalDetalles .modal-imagen').attr('src', imagen);
+            $('#modalDetalles .modal-nombre').text(nombre);
+            $('#modalDetalles .modal-precio').text(precio);
+        });
+        });
+    </script>
+</body>
+</html>
