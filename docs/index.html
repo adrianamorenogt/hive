@@ -163,8 +163,66 @@
 
     </div>
 
-</section>
-<section id="contacto">
+  </section>
+<!--Contacto-->
+  <section id="contactanos">
+    <h2>Contáctanos</h2>
+
+    <div class="container_contacto">
+      <div class="contacto-2">
+        <h3>Teléfono</h3>
+        <i class="fa-sharp fa-solid fa-phone-volume"></i>
+        <p>+57 333 333 3333</p>
+        <p><a href="#">Llama ahora</a></p>
+      </div>
+
+      <div class="contacto-2">
+        <h3>Correo</h3>
+        <i class="fa-sharp fa-solid fa-envelope"></i>
+        <p>projectdragonhive@gmail.com</p>
+        <p><a href="mailto:projectdragonhive@gmail.com">Envía tu correo</a></p>
+      </div>
+
+      <div class="contacto-2">
+        <h3>Comentarios</h3>
+        <i class="fa-solid fa-comments icono_contacto"></i>
+        <p>PQRS</p>
+        <p><a href="#contactForm" onclick="FormContact();">Envía tus comentarios</a></p>
+      </div>
+    </div>
+  </section>
+  <!--FORM PARA ENVIO DE PQRS-->
+  <section id="contactForm">
+    <div class="form">
+      <div id="imagen">
+        <img src="img/DronContacto.png" alt="Contacto">
+      </div>
+      <div class="container_Form">
+        <div id="title">
+          <img src="./img/Ecomlogoblack.png" alt="">
+          <h1>CONTACTANOS</h1>
+        
+        <form id="formulario" action="https://formspree.io/f/mnqykgzv" method="POST">
+         
+            <input type="text" name="name" id="nombre" class="form-control"
+              placeholder="Nombre Completo:" required>
+       
+       
+            <input name="email" id="correo" type="email" class="form-control"
+              placeholder="Correo electronico:" required>
+            
+     
+            <input name="phone" id="phone" type="number" class="form-control"
+              placeholder="Número telefonico:" required>
+       
+  
+            <textarea name="message" id="mensaje" rows="6" placeholder="Escribe tú solicitud aquí"
+              required></textarea>
+       
+          <button type="submit">Enviar</button>
+        </form>
+    </div>
+  </section>
 
 
   <!-- footer starts -->
