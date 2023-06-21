@@ -86,6 +86,11 @@ header h1 {
   cursor: pointer;
 }
 
+.ver-detalles {
+  display: block;
+  margin: auto;
+}
+
 /* seccion carrito */
 .carrito {
   border: 1px solid #666;
@@ -216,6 +221,10 @@ header h1 {
 
 .carrito-total .btn-pagar:hover {
   scale: 1.05;
+}
+
+.modal-body {
+  text-align: center;
 }
 
 /* SECCION RESPONSIVE */

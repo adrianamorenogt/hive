@@ -23,7 +23,6 @@ header {
   position: fixed;
   display: flex;
   width: 100%;
-
   z-index: 3;
 
 }
@@ -236,6 +235,154 @@ a.button:hover {
 
 }
 
+/*ESTILOS CONTACTANOS*/
+
+#contactanos {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  align-items: center;
+  margin: 5% 0;
+}
+
+.icono_contacto {
+  color: rgb(87, 82, 82);
+  font-size: 2rem;
+}
+
+.container_contacto {
+  display: grid;
+  grid-template-areas:
+    "contacto-2 contacto-2 contacto-2";
+  background-color: #fff;
+  padding: 5%;
+  margin-top: 3%;
+  border: 1px solid black;
+  font-size: 20px;
+}
+
+.contacto-2 {
+  grid-area: "contacto-2";
+  display: block;
+  flex-direction: column;
+  border: none;
+  margin: 3%;
+  text-align: center;
+  width: 25vw;
+
+}
+
+.contacto-2 a {
+  color: #e22e16;
+}
+
+
+.contact-info a {
+  display: block;
+  margin-bottom: 10px;
+  color: #ce0808;
+  text-decoration: none;
+}
+
+/*FORM DE ENVIO DE FORMULARIO CONTACTANOS*/
+#contactForm {
+  display: none;
+ 
+}
+
+#title img {
+  width: 120px;
+  padding: 5% 2%;
+}
+
+h1 {
+  color: black;
+  font-size: 2.5rem;
+}
+
+.form {
+  display: grid;
+  grid-template-columns: 45% 55%;
+  grid-template-areas:
+    "image container";
+  text-align: center;
+  margin: 5%;
+  font-family: "Poppins", sans-serif;
+}
+
+#imagen img {
+  grid-area: image;
+  width: 100%;
+  border-radius: 100px 0 0 100px;
+}
+
+.container_Form {
+  grid-area: container;
+  display: flex;
+  flex-direction: column;
+  border-radius: 0 100px 100px 0;
+  width: 100%;
+
+  background-color: rgba(255, 255, 255, 0.616);
+}
+
+#formulario {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  margin: 4%;
+  background-color: rgba(255, 255, 255, 0.452);
+  width: 90%;
+  flex-wrap: wrap;
+  border-radius: 20px;
+  border: 2px solid rgba(165, 161, 161, 0.1);
+  
+
+}
+
+#formulario input {
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  background-color: transparent;
+  border-bottom: 1px solid gray;
+  margin: 5% 0; 
+  padding: 2%;
+  width: 80%;
+
+}
+
+
+#formulario textarea {
+  width: 80%;
+  margin: 2% 0;
+  padding: 2%;
+  font-size: 1rem;
+  border: none;
+  outline: none;
+  text-align: center;
+  background-color: transparent;
+  border-bottom: 1px solid gray;
+}
+#formulario button {
+  background-color: #0f100f;
+  color: white;
+  width: 20%;
+  margin: 5%;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 1.3rem;
+  transition: all 300ms;
+}
+
+#formulario button:hover {
+  box-shadow: 0px 0px 10px 10px #1d1c1c21;
+  transition: all 300ms;
+}
+
 
 /* ESTILOS SOBRE NOSOTROS TIENDA */
 #sobre_nosotros_tienda {
@@ -251,7 +398,6 @@ a.button:hover {
 
 .container-box {
   width: 100%;
-
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
