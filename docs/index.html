@@ -1,195 +1,266 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="img/Ecomlogoblack.png" type="image/x-icon">
-    <!-- CSS -->
-    <link rel="stylesheet" href="./Styles/sliderBannerIndex.css" />
-    <!--<link rel="stylesheet" href="css/styleSlider.css" />-->
-    <!-- INDEX -->
-    <link rel="stylesheet" href="./Styles/index.css">
-    <!--JavaScript-->
-    <link rel="script" href="./js/script.js">
-    <script src="https://kit.fontawesome.com/57e129950d.js" crossorigin="anonymous"></script>
-    <title>Dragons Hive</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="img/Ecomlogoblack.png" type="image/x-icon">
+  <!-- CSS -->
+  <link rel="stylesheet" href="./Styles/sliderBannerIndex.css" />
+  <!--<link rel="stylesheet" href="css/styleSlider.css" />-->
+  <!-- INDEX -->
+  <link rel="stylesheet" href="./Styles/index.css">
+  <!--JavaScript-->
+  <link rel="script" href="./js/script.js">
+  <script src="https://kit.fontawesome.com/57e129950d.js" crossorigin="anonymous"></script>
+  <title>Dragons Hive</title>
 </head>
+
 <body>
-<!-- HEADER -->
-<header>
-      <nav class="navbar">
-        <a  href="index.html"><img class="logo" src="img/Ecomlogowhite.png" alt="logo"></a>
-        <ul>
-        <li><a href="#inicio">Inicio</a></li>
-        <li><a href="#sobre_nosotros">Sobre Nosotros</a></li>
-        <li><a href="./tienda.html" target="_blank">Tienda</a></li>
-        <li><a href="./contactanos.html" target="_blank">Contacto</a></li>
-        <a href="./inicioSesion.html" target="_blank"><i class="fa-solid fa-user" style="color: #ffffff;"></i></a>
-        <a href="./tienda.html" target="_blank"><i class="fa-solid fa-cart-shopping" style="color: #ffffff;"></i></a>
-      </ul>
-    </div>
-      </nav>
-</header>    
+  <!-- HEADER -->
+  <header>
+
+    <nav class="navbar">
+
+      <a href="index.html"><img class="logo" src="img/Ecomlogowhite.png" alt="logo"></a>
+      <div class="burger_menu">
+        <span class="line1_menu"></span>
+        <span class="line2_menu"></span>
+        <span class="line3_menu"></span>
+      </div>
+      <div class="nav-bar-web">
+
+        <ul class="nav-list">
+          <li><a href="#">Inicio</a></li>
+          <li><a href="#sobre_nosotros_tienda">Sobre Nosotros</a></li>
+          <li><a href="./tienda.html">Tienda</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+          <li><a href="./sobreNosotros.html">Developers</a></li>
+          <li><a href="./inicioSesion.html"><i class="fa-solid fa-user" style="color: #ffffff;"></i></a></li>
+          <li><i class="fa-solid fa-cart-shopping" style="color: #ffffff;"></i></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
 
 
-<!-- SLIDER -->
-<section class="main swiper mySwiper">
-  <div class="wrapper swiper-wrapper">
-    <!-- 1 IMG SLIDER -->
-    <div class="slide swiper-slide">
-      <img src="./img/pexels-simon-9442929.jpg" alt="" class="image" />
-      <div class="image-data">
-        <span class="text">MAVERICK LAST EDITION</span>
-        <h2>
-          TECNOLOGÍA <br />
-          AL ALCANCE DE TUS MANOS
-        </h2>
-        <a href="./tienda.html" class="button">Comprar ahora</a>
+  <!-- SLIDER -->
+  <section class="main swiper mySwiper">
+    <div class="wrapper swiper-wrapper">
+      <!-- 1 IMG SLIDER -->
+      <div class="slide swiper-slide">
+        <img src="./img/pexels-simon-9442929.jpg" alt="" class="image" />
+        <div class="image-data">
+          <span class="text">MAVERICK LAST EDITION</span>
+          <h2>
+            TECNOLOGÍA <br />
+            AL ALCANCE DE TUS MANOS
+          </h2>
+          <a href="./tienda.html" class="button">Comprar ahora</a>
+        </div>
+      </div>
+      <!-- 2 IMG SLIDER -->
+      <div class="slide swiper-slide">
+        <img
+          src="./img/drone-pulverizacion-fertilizantes-plantas-vegetales-verdes-tecnologia-agricola-automatizacion-agricola.jpg"
+          alt="" class="image" />
+        <div class="image-data">
+          <span class="text">CAMBIAMOS EL MUNDO</span>
+          <h2>
+            Impacto ambiental <br />
+            Semilla de cambio
+          </h2>
+          <a href="./tienda.html" class="button">About Us</a>
+        </div>
+      </div>
+      <!-- 3 IMG SLIDER -->
+      <div class="slide swiper-slide">
+        <img src="./img/pexels-darrel-und-1087182.jpg" alt="" class="image" />
+        <div class="image-data">
+          <span class="text">DECUBRE EL MUNDO DE OTRA FORMA</span>
+          <h2>
+            Transformación digital <br />
+            Herramientas innovadoras
+          </h2>
+          <a href="./tienda.html" class="button">Tienda</a>
+        </div>
       </div>
     </div>
-    <!-- 2 IMG SLIDER -->
-    <div class="slide swiper-slide">
-      <img src="./img/drone-pulverizacion-fertilizantes-plantas-vegetales-verdes-tecnologia-agricola-automatizacion-agricola.jpg" alt="" class="image" />
-      <div class="image-data">
-        <span class="text">CAMBIAMOS EL MUNDO</span>
-        <h2>
-          Impacto ambiental <br />
-          Semilla de cambio
-        </h2>
-        <a href="./tienda.html" class="button">About Us</a>
+
+    <div class="swiper-button-next nav-btn"></div>
+    <div class="swiper-button-prev nav-btn"></div>
+    <div class="swiper-pagination"></div>
+  </section>
+
+  <!-- CARDS Productos -->
+
+  <section class="nuestros-productos">
+    <div class="container">
+      <div class="card">
+        <img src="./img/pexels-darrel-und-1087180.jpg" alt="Vision">
+        <p>Mini Drone</p>
+        <h3>Sky Dragon</h3>
+        <a href="./tienda.html" target="_blank"><button>BUY</button></a>
+      </div>
+      <div class="card">
+        <img src="./img/pexels-pok-rie-13310738.jpg" alt="Vision">
+        <p>Mini Drone</p>
+        <h3>Vision</h3>
+        <a href="./tienda.html" target="_blank"><button>BUY</button></a>
       </div>
     </div>
-    <!-- 3 IMG SLIDER -->
-    <div class="slide swiper-slide">
-      <img src="./img/pexels-darrel-und-1087182.jpg" alt="" class="image" />
-      <div class="image-data">
-        <span class="text">DECUBRE EL MUNDO DE OTRA FORMA</span>
-        <h2>
-          Transformación digital <br />
-          Herramientas innovadoras
-        </h2>
-        <a href="./tienda.html" class="button">Tienda</a>
-      </div>
-    </div>
-  </div>
-
-  <div class="swiper-button-next nav-btn"></div>
-  <div class="swiper-button-prev nav-btn"></div>
-  <div class="swiper-pagination"></div>
-</section>
+  </section>
 
 
-  <!-- CARDS -->
+  <section id="tienda">
 
-<section class="nuestros-productos">
-  <div class="container">
-    <div class="card">
-      <img src="./img/pexels-darrel-und-1087180.jpg" alt="Vision">
-      <p>Mini Drone</p>
-      <h3>Sky Dragon</h3>
-      <a href="./tienda.html" target="_blank"><button>BUY</button></a>
-    </div>
-    <div class="card">
-      <img src="./img/pexels-pok-rie-13310738.jpg" alt="Vision">
-      <p>Mini Drone</p>
-      <h3>Vision</h3>
-      <a href="./tienda.html" target="_blank"><button>BUY</button></a>
-    </div>    
-  </div>
-</section>
-
-<section id="sobre_nosotros">
-
-<!-- EQUIPO -->
-</section>
-
-<section id="tienda">
-
-<!-- CONTACTO -->
-</section>
+    <!-- CONTACTO -->
+  </section>
 
 
-<!--  SOBRE NOSOTROS - TIENDA -->
+  <!--  SOBRE NOSOTROS - TIENDA -->
 
-<section id="sobre_nosotros_tienda">
-  
-  <h1 class="title">
-    <a href="./sobreNosotros.html" target="_blank" class="aH">SOBRE NOSOTROS</a>
-  </h1>
-  
+  <section id="sobre_nosotros_tienda">
 
-        <div class="container-box">
-
-            <div class="box box1">
-              <img src="img/about_us_adventrure.jpg" alt="">
-                <h2>Entretenimiento</h2>
-                <div class="container-p">
-                    <p> Podras experimentar nuestros servicios de entretenimiento, por medio de la 
-                        visualización de los drones cuando esten regando el campo, o bien 
-                        pregunta por nuestro servicio de enseñanza para volar drones
-                    </p>
-                </div>
-                
+    <h1 class="title">
+      <a href="./sobreNosotros.html" target="_blank" class="aH">SOBRE NOSOTROS</a>
+    </h1>
 
 
-            </div>
+    <div class="container-box">
 
-            <div class="box box2">
-              <img src="img/about_us_agriculture.jpg" alt="">
-              <h2>Agricultura</h2>
-              
-              <div class="container-p">
-                  <p>Brindamos servicios de drones de riego, siendo este nuestro
-                      principal servicio y uno de los mas importantes para la economia 
-                      y progreso de la agricultura en Colombia, con tecnologia de primera</p>
-              </div>
-
-            </div>
-
-            <div class="box box3">
-                <img src="img/about_us_explora.jpg" alt="">
-                <h2>Explora</h2>
-                <div class="container-p">
-                    <p>Servicio de alquiler de dron, si cuentas con 
-                        experiencia tienes total libertad para utilizarlo, con acompañamiento de un profesional, 
-                        para realizar cualquier nueva aventura que quieras realizar</p>
-                </div>
-
-            </div>
-
+      <div class="box box1">
+        <img src="img/about_us_adventrure.jpg" alt="">
+        <h2>Entretenimiento</h2>
+        <div class="container-p">
+          <p> Podras experimentar nuestros servicios de entretenimiento, por medio de la
+            visualización de los drones cuando esten regando el campo, o bien
+            pregunta por nuestro servicio de enseñanza para volar drones
+          </p>
         </div>
 
-</section>
-<section id="contacto">
 
 
-<!-- footer starts -->
-<footer>
-  <div class="container">
-    <div class="social-icons">
-      <a href="https://es-la.facebook.com/" class="fa fa-facebook" target="_blank"></a>
-      <a href="https://twitter.com/" class="fa fa-twitter" target="_blank"></a>
-      <a href="https://www.instagram.com/" class="fa fa-instagram" target="_blank"></a>
-    </div>    
-    <div class="contact-info">
-      <!-- <a href="tel:1234567890"><i class="fa fa-phone"></i> 1234567890</a> -->
-      <a href="#"><i class="fa fa-map-marker"></i> Bogotá D.C - Colombia</a>
+      </div>
+
+      <div class="box box2">
+        <img src="img/about_us_agriculture.jpg" alt="">
+        <h2>Agricultura</h2>
+
+        <div class="container-p">
+          <p>Brindamos servicios de drones de riego, siendo este nuestro
+            principal servicio y uno de los mas importantes para la economia
+            y progreso de la agricultura en Colombia, con tecnologia de primera</p>
+        </div>
+
+      </div>
+
+      <div class="box box3">
+        <img src="img/about_us_explora.jpg" alt="">
+        <h2>Explora</h2>
+        <div class="container-p">
+          <p>Servicio de alquiler de dron, si cuentas con
+            experiencia tienes total libertad para utilizarlo, con acompañamiento de un profesional,
+            para realizar cualquier nueva aventura que quieras realizar</p>
+        </div>
+
+      </div>
+
     </div>
-    <div class="copyright">
-      <p class="p-footer">&copy; 2023 Todos los derechos reservados Code Hunters</p>
+
+  </section>
+
+  <section id="contactanos">
+    <h2>Contáctanos</h2>
+
+    <div class="container_contacto">
+      <div class="contacto-2">
+        <h3>Teléfono</h3>
+        <i class="fa-sharp fa-solid fa-phone-volume"></i>
+        <p>+57 333 333 3333</p>
+        <p><a href="#">Llama ahora</a></p>
+      </div>
+
+      <div class="contacto-2">
+        <h3>Correo</h3>
+        <i class="fa-sharp fa-solid fa-envelope"></i>
+        <p>projectdragonhive@gmail.com</p>
+        <p><a href="mailto:projectdragonhive@gmail.com">Envía tu correo</a></p>
+      </div>
+
+      <div class="contacto-2">
+        <h3>Comentarios</h3>
+        <i class="fa-solid fa-comments icono_contacto"></i>
+        <p>PQRS</p>
+        <p><a href="#contactForm" onclick="FormContact();">Envía tus comentarios</a></p>
+      </div>
     </div>
-  </div>
-</footer>
-<!-- footer ends -->
-
-
-<!--Sección dedicada a los scripts-->
-    <!-- Swiper JS -->
-    <script src="JS/swiper-bundle.min.js"></script>
-    <!--Js script-->
-    <script src="js/script.js"></script>
-    
+  </section>
+  <!--FORM PARA ENVIO DE PQRS-->
+  <section id="contactForm">
+    <div class="form">
+      <div id="imagen">
+        <img src="img/DronContacto.png" alt="Contacto">
+      </div>
+      <div class="container_Form">
+        <div id="title">
+          <img src="./img/Ecomlogoblack.png" alt="">
+          <h1>CONTACTANOS</h1>
+        
+        <form id="formulario" action="https://formspree.io/f/mnqykgzv" method="POST">
+         
+            <input type="text" name="name" id="nombre" class="form-control"
+              placeholder="Nombre Completo:" required>
+       
+       
+            <input name="email" id="correo" type="email" class="form-control"
+              placeholder="Correo electronico:" required>
+            
+     
+            <input name="phone" id="phone" type="number" class="form-control"
+              placeholder="Número telefonico:" required>
+       
   
-  </body>
+            <textarea name="message" id="mensaje" rows="6" placeholder="Escribe tú solicitud aquí"
+              required></textarea>
+       
+          <button type="submit">Enviar</button>
+        </form>
+    </div>
+  </section>
+
+
+  <!-- footer starts -->
+  <footer>
+    <div class="container">
+      <div class="social-icons">
+        <a href="https://es-la.facebook.com/" class="fa fa-facebook" target="_blank"></a>
+        <a href="https://twitter.com/" class="fa fa-twitter" target="_blank"></a>
+        <a href="https://www.instagram.com/" class="fa fa-instagram" target="_blank"></a>
+      </div>
+      <div class="contact-info">
+        <!-- <a href="tel:1234567890"><i class="fa fa-phone"></i> 1234567890</a> -->
+        <a href="#"><i class="fa fa-map-marker"></i> Bogotá D.C - Colombia</a>
+      </div>
+      <div class="copyright">
+        <p class="p-footer">&copy; 2023 Todos los derechos reservados Code Hunters</p>
+      </div>
+    </div>
+  </footer>
+  <!-- footer ends -->
+
+
+  <!--Sección dedicada a los scripts-->
+  <!-- Swiper JS -->
+  <script src="JS/swiper-bundle.min.js"></script>
+  <!--ALERT SCRIPT-->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="sweetalert2.all.min.js"></script>
+  <!--Js script-->
+  <script src="js/script.js"></script>
+
+
+</body>
+
 </html>

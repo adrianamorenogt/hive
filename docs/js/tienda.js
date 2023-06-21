@@ -1,3 +1,4 @@
+
 //Variable que mantiene el estado visible del carrito
 let carritoVisible = false;
 
@@ -195,6 +196,26 @@ function actualizarTotalCarrito() {
   document.getElementsByClassName('carrito-precio-total')[0].innerText = '$' + total.toLocaleString("es") + ",00";
 
 }
+
+
+
+//JAVASCRIPT PARA EL MODAL 
+
+  //Jquery para seleccion de los componentes de la tarjeta activado por click event button ver-detalle
+  $(document).ready(function() {//DOCUMENT READY espera a que el documento html se haya cargado
+    $('.ver-detalles').click(function() {
+        var imagen = $(this).data('imagen'); //SELECCIONAMOS LOS ELEMENTOS QUE TENEMOS EN EL MISMO BTN
+        var nombre = $(this).data('nombre');
+        var precio = $(this).data('precio');
+        $('#modalDetalles .modal-imagen').attr('src', imagen); 
+        $('#modalDetalles .modal-nombre').text(nombre);
+        $('#modalDetalles .modal-precio').text(precio);
+    });
+    });
+
+
+
+
 
 
 
