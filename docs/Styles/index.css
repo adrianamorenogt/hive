@@ -288,7 +288,7 @@ a.button:hover {
 /*FORM DE ENVIO DE FORMULARIO CONTACTANOS diseño*/
 #contactForm {
   display: none;
- 
+
 }
 
 #title img {
@@ -339,7 +339,7 @@ h1 {
   flex-wrap: wrap;
   border-radius: 20px;
   border: 2px solid rgba(165, 161, 161, 0.1);
-  
+
 
 }
 
@@ -349,7 +349,7 @@ h1 {
   font-size: 1rem;
   background-color: transparent;
   border-bottom: 1px solid gray;
-  margin: 5% 0; 
+  margin: 5% 0;
   padding: 2%;
   width: 80%;
 
@@ -367,6 +367,7 @@ h1 {
   background-color: transparent;
   border-bottom: 1px solid gray;
 }
+
 #formulario button {
   background-color: #0f100f;
   color: white;
