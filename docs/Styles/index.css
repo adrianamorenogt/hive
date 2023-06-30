@@ -2,9 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Teko:wght@300&display=swap');
 
 * {
-  margin: 0;
   padding: 0;
-  box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
 
@@ -15,7 +13,6 @@ html {
 body {
   margin: 0;
   background-color: #F3F2EF;
-
 }
 
 /*ESTILOS HEADER*/
@@ -27,25 +24,25 @@ header {
 
 }
 
+
 .navbar {
   display: flex;
-  padding: .5rem;
-  width: 100%;
   justify-content: space-between;
+  width: 100%;
+  padding: .8rem .8rem;
+
 }
 
 .nav-bar-web {
   display: flex;
-  justify-content: end;
   font-weight: bold;
   font-size: 1rem;
-  padding-top: 1rem;
+  
+  
+  
 
 }
 
-i {
-  margin-left: 1rem;
-}
 
 ul li {
   display: inline-block;
@@ -66,8 +63,13 @@ a {
 .logo {
   width: 3rem;
   height: auto;
-
 }
+
+.lord-icon{
+  width:30px;
+  height:30px;
+}
+
 
 .navbar-scroll {
   background-color: #000;
@@ -211,7 +213,7 @@ a.button:hover {
 
 .card img:hover {
   margin-top: 5.8%;
-  box-shadow: 0px 0px 30px #000;
+  box-shadow: 0px 0px 20px #000;
 
 
 }
@@ -230,7 +232,7 @@ a.button:hover {
 }
 
 .nuestros-productos button:hover {
-  box-shadow: 0px 0px 40px #000;
+  box-shadow: 0px 0px 12px #000;
   font-size: 1.3rem;
 
 }
@@ -244,6 +246,7 @@ a.button:hover {
   flex-direction: column;
   align-items: center;
   margin: 5% 0;
+
 }
 
 .icono_contacto {
@@ -258,8 +261,10 @@ a.button:hover {
   background-color: #fff;
   padding: 5%;
   margin-top: 3%;
-  border: 1px solid black;
+  border: 1px solid rgba(0, 0, 0, 0.5);
   font-size: 20px;
+
+  border-radius: 30px;
 }
 
 .contacto-2 {
@@ -289,16 +294,17 @@ a.button:hover {
 #contactForm {
   display: none;
 
+
 }
 
 #title img {
   width: 120px;
-  padding: 5% 2%;
+  padding: 2% 2%;
 }
 
 h1 {
   color: black;
-  font-size: 2.5rem;
+  font-size: 2.2rem;
 }
 
 .form {
@@ -308,23 +314,25 @@ h1 {
     "image container";
   text-align: center;
   margin: 5%;
+
   font-family: "Poppins", sans-serif;
 }
 
 #imagen img {
   grid-area: image;
   width: 100%;
+  height: 100%;
   border-radius: 100px 0 0 100px;
 }
 
 .container_Form {
   grid-area: container;
-  display: flex;
+  display: block;
   flex-direction: column;
   border-radius: 0 100px 100px 0;
   width: 100%;
-
-  background-color: rgba(255, 255, 255, 0.616);
+  background-color: rgba(255, 255, 255, 0.74);
+  ;
 }
 
 #formulario {
@@ -333,13 +341,11 @@ h1 {
   text-align: center;
   justify-content: center;
   align-items: center;
-  margin: 4%;
+  margin: 10% 5%;
   background-color: rgba(255, 255, 255, 0.452);
-  width: 90%;
   flex-wrap: wrap;
   border-radius: 20px;
   border: 2px solid rgba(165, 161, 161, 0.1);
-
 
 }
 
@@ -475,18 +481,42 @@ h1 {
   transform: translateY(0px);
   opacity: 1;
 }
+footer {
+  background-color: #1a1a1a;
+  padding: 20px;
+  text-align: center;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.social-icons a {
+  display: inline-block;
+  margin-right: 10px;
+  color: #f5f5f5;
+  font-size: 20px;
+}
+
+.contact-info a {
+  display: block;
+  margin-bottom: 10px;
+  color: #f5f5f5;
+  text-decoration: none;
+}
+
+.contact-info i {
+  margin-right: 5px;
+}
+
+.p-footer {
+  margin: 0;
+  color: #9e9e9e;
+}
 
 /*MEDIA RESPONSIVE SECCION*/
-@media screen and (max-width: 768px) {
-  .nav-btn {
-    visibility: hidden;
-  }
 
-  .swiper-pagination-bullet {
-    visibility: visible;
-  }
-
-}
 
 @media(min-width:850px) {
   .nuestros-productos .container {
@@ -597,39 +627,7 @@ h1 {
 
 }
 
-footer {
-  background-color: #1a1a1a;
-  padding: 20px;
-  text-align: center;
-}
 
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.social-icons a {
-  display: inline-block;
-  margin-right: 10px;
-  color: #f5f5f5;
-  font-size: 20px;
-}
-
-.contact-info a {
-  display: block;
-  margin-bottom: 10px;
-  color: #f5f5f5;
-  text-decoration: none;
-}
-
-.contact-info i {
-  margin-right: 5px;
-}
-
-.p-footer {
-  margin: 0;
-  color: #9e9e9e;
-}
 
 @media (max-width: 767px) {
 
@@ -637,4 +635,15 @@ footer {
   .contact-info a {
     font-size: 16px;
   }
+}
+
+@media screen and (max-width: 768px) {
+  .nav-btn {
+    visibility: hidden;
+  }
+
+  .swiper-pagination-bullet {
+    visibility: visible;
+  }
+
 }
