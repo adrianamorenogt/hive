@@ -22,6 +22,7 @@ header h1 {
   justify-content: space-between;
   /* oculto lo que queda fuera del .contenedor */
   contain: paint;
+  list-style: none;
 }
 
 /* SECCION CONTENEDOR DE ITEMS */
@@ -217,9 +218,83 @@ header h1 {
   scale: 1.05;
 }
 
+.search {
+  flex-grow: 1;
+  padding: 1%;
+  height: 35px;
+  width: 50%;
+  margin-left: 45%;
+  background-color: #d0cdcd;
+  border-radius: 30px;
+}
+
+.search:hover {
+  background-color: #E1E1E1;
+}
+
+.search:focus-within {
+  border: 3px solid #636567;
+}
+
+.bar {
+  display: flex;
+  align-items: center;
+  height: 22px;
+  padding: 1%;
+}
+
+.bar input {
+  border: none;
+  outline: none;
+  background-color: inherit;
+  font-size: 16px;
+  flex-grow: 1;
+}
+
+
 .modal-body {
   text-align: center;
 }
+
+.modal-body div{
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 10% 90%;
+  grid-template-areas: 
+  "img h5"
+  "img p";
+}
+
+.modal {
+  width: 70%;
+  margin-left: 20%;
+}
+
+.modal .close {
+  width: 5%;
+}
+
+.modal .close:hover {
+  background-color: #000;
+  color: white;
+}
+
+.modal-imagen {
+  grid-area: img;
+  max-width: 90%;
+}
+
+.modal-descripcion {
+  grid-area: p;
+  padding: 3%;
+  margin: auto;
+  text-align: justify;
+}
+
+.modal-precio {
+  margin-top: 2%;
+}
+
 
 .pagination {
   margin-left: 25em;
@@ -229,6 +304,8 @@ header h1 {
 .page-link{
   color: #000;
 }
+
+
 /* SECCION RESPONSIVE */
 @media screen and (max-width: 850px) {
   .contenedor {
@@ -241,5 +318,13 @@ header h1 {
 
   .carrito {
     width: 100%;
+  }
+
+  .modal-body div {
+    display: block;
+  }
+
+  .modal .close {
+    width: 10%;
   }
 }

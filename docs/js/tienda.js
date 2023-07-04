@@ -247,13 +247,30 @@ $(document).ready(function () {//DOCUMENT READY espera a que el documento html s
   $('.ver-detalles').click(function () {
     var imagen = $(this).data('imagen'); //SELECCIONAMOS LOS ELEMENTOS QUE TENEMOS EN EL MISMO BTN
     var nombre = $(this).data('nombre');
+    var descripcion = $(this).data('descripcion');
     var precio = $(this).data('precio');
     $('#modalDetalles .modal-imagen').attr('src', imagen);
     $('#modalDetalles .modal-nombre').text(nombre);
+    $('#modalDetalles .modal-descripcion').text(descripcion);
     $('#modalDetalles .modal-precio').text(precio);
   });
 });
 
+
+function search_item() {
+  let input = document.getElementById('searchbar').value
+  input=input.toLowerCase();
+  let x = document.getElementsByClassName('item');
+    
+  for (i = 0; i < x.length; i++) { 
+      if (!x[i].innerHTML.toLowerCase().includes(input)) {
+          x[i].style.display="none";
+      }
+      else {
+          x[i].style.display="list-item";                 
+      }
+  }
+}
 
 
 

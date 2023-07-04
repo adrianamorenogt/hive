@@ -27,7 +27,7 @@
     <header>
 
         <nav class="navbar">
-    
+
             <a href="index.html"><img class="logo" src="img/Ecomlogowhite.webp" alt="logo"></a>
             <div class="burger_menu">
                 <span class="line1_menu"></span>
@@ -46,9 +46,10 @@
                                 colors="primary:#ffffff">
                             </lord-icon>
                         </a>
-                    </li>                            
-                    <li> 
-                        <lord-icon class="lord-icon" src="https://cdn.lordicon.com/udbbfuld.json" trigger="hover" colors="primary:#ffffff">
+                    </li>
+                    <li>
+                        <lord-icon class="lord-icon" src="https://cdn.lordicon.com/udbbfuld.json" trigger="hover"
+                            colors="primary:#ffffff">
                         </lord-icon>
                     </li>
                 </ul>
@@ -128,7 +129,8 @@
                     <h2>Desarrollo</h2>
                 </li>
                 <li class="cardMini">
-                    <div class="imgMini"><img src="img/pexels-darrel-und-1087180.webp" alt="img" draggable="false"></div>
+                    <div class="imgMini"><img src="img/pexels-darrel-und-1087180.webp" alt="img" draggable="false">
+                    </div>
                     <h2>Analítica</h2>
                 </li>
                 <li class="cardMini">
@@ -139,136 +141,149 @@
             </ul>
             <i id="right" class="fa-solid fa-angle-right"></i>
         </div>
-        <div class="navbar">
-            <div class="container-fluid">
-                <a class="navbar-brand"></a>
-                <form class="d-flex" role="search">
-                    <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Buscar">
-                    <button class="btn btn-outline-success" type="submit">Buscar</button>
-                </form>
-            </div>
-        </div>
     </section>
+
+    <!--Inicio Barra de busqueda.-->
+    <div class="search">
+        <div class="bar">
+            <div><span><lord-icon  id="glass" src="https://cdn.lordicon.com/rlizirgt.json" trigger="hover" colors="primary:#121331">
+            </lord-icon></span></div>
+            <input type="text" placeholder="Buscar" class="finder" id="searchbar" onkeyup="search_item()">
+        </div>
+    </div>
+    <!-- Fin Barra de busqueda.-->
 
     <!--Inicio de una sección con la clase "contenedor".-->
     <section class="contenedor">
         <div class="contenedor-items">
             <div class="item">
-                <span class="titulo-item">SkyVortex</span>
+                <span class="titulo-item">AGRAS T40 Drone</span>
                 <img src="./img/pexels-darrel-und-1087183.webp" alt="" class="img-item">
-                <span class="precio-item">$299</span>
-                <button class="boton-item">Agregar<i class="fa-solid fa-cart-shopping" ></i>
+                <span class="precio-item">$120.980.000</span>
+                <button class="boton-item">Agregar<i class="fa-solid fa-cart-shopping"></i>
                 </button>
                 <!--Modal-->
                 <button class="btn btn-dark ver-detalles" data-toggle="modal" data-target="#modalDetalles"
-                    data-imagen="./img/pexels-darrel-und-1087183.webp""
-                data-nombre=" Dron 1 - SkyVortex" data-precio="$299">
+                    data-imagen="./img/pexels-darrel-und-1087183.webp"
+                    data-descripcion="Es el más eficiente drone fumigador del mundo, su capacidad de tanque es de 40 litros para aspersión y 50 kg para esparcir semillas.
+                    Además ahora cuenta con un nuevo sistema de mapeo inteligente innovador para terrenos complicados y árboles frutales." data-nombre="AGRAS T40 Drone"
+                    data-precio="$120.980.000 Pesos">
                     Detalles
-                    <i class="fa-solid fa-magnifying-glass" ></i>
+                    <i class="fa-solid fa-magnifying-glass"></i>
                 </button>
                 <!--Modal-->
             </div>
             <div class="item">
-                <span class="titulo-item">AeroStrike </span>
+                <span class="titulo-item">AGRAS T30 Drone</span>
                 <img src="./img/pexels-pok-rie-13310738.webp" alt="" class="img-item">
-                <span class="precio-item">$399</span>
-                <button class="boton-item">Agregar<i class="fa-solid fa-cart-shopping" ></i>
+                <span class="precio-item">$110.000.000</span>
+                <button class="boton-item">Agregar<i class="fa-solid fa-cart-shopping"></i>
                 </button>
                 <!--Modal-->
                 <button class="btn btn-dark ver-detalles" data-toggle="modal" data-target="#modalDetalles"
-                    data-imagen="./img/pexels-pok-rie-13310738.webp" data-nombre="Dron 1 - SkyVortex"
-                    data-precio="$99.99 DOLARAZOS">
+                    data-imagen="./img/pexels-pok-rie-13310738.webp" data-nombre="AGRAS T30 Drone"
+                    data-descripcion="Es lo más nuevo de la generación de drones fumigadores con una capacidad de 30 Litros, eficiente, seguro de operar, con gran cobertura y fácil manejo, es considerado como la solución perfecta para la agricultura de precisión."
+                    data-precio="$110.000.000 Pesos">
                     Detalles
-                    <i class="fa-solid fa-magnifying-glass" ></i>
+                    <i class="fa-solid fa-magnifying-glass"></i>
                 </button>
                 <!--Modal-->
             </div>
             <div class="item">
-                <span class="titulo-item">PhantomGlide</span>
+                <span class="titulo-item">DJI Agras T10</span>
                 <img src="./img/pexels-darrel-und-1087182.webp" alt="" class="img-item">
-                <span class="precio-item">$449</span>
-                <button class="boton-item">Agregar<i class="fa-solid fa-cart-shopping" ></i>
+                <span class="precio-item">$45.000.000</span>
+                <button class="boton-item">Agregar<i class="fa-solid fa-cart-shopping"></i>
                 </button>
                 <!--Modal-->
                 <button class="btn btn-dark ver-detalles" data-toggle="modal" data-target="#modalDetalles"
-                    data-imagen="./img/pexels-darrel-und-1087182.webp" data-nombre="Dron 2 - PhantomGlide"
-                    data-precio="$449">
+                    data-imagen="./img/pexels-darrel-und-1087182.webp" data-nombre="DJI Agras T10"
+                    data-descripcion="Agras T10 es un drone aspersor con capacidad de 8 Litros, cuenta con toda la tecnología de última generación y es muy conveniente por su tamaño, precio y eficiencia."
+                    data-precio="$45.000.000 Pesos">
                     Detalles
-                    <i class="fa-solid fa-magnifying-glass" ></i>
+                    <i class="fa-solid fa-magnifying-glass"></i>
                 </button>
                 <!--Modal-->
             </div>
             <div class="item">
-                <span class="titulo-item">StellarHawk</span>
-                <img src="./img/pexels-darrel-und-1087183.webp" alt="" class="img-item">
-                <span class="precio-item">$499</span>
-                <button class="boton-item">Agregar<i class="fa-solid fa-cart-shopping" ></i>
+                <span class="titulo-item">DJI MAVIC 3</span>
+                <img src="./img/pexels-masood-aslami-11178057.webp" alt="" class="img-item">
+                <span class="precio-item">$38.850.000</span>
+                <button class="boton-item">Agregar<i class="fa-solid fa-cart-shopping"></i>
                 </button>
                 <!--Modal-->
                 <button class="btn btn-dark ver-detalles" data-toggle="modal" data-target="#modalDetalles"
-                    data-imagen="./img/pexels-darrel-und-1087183.webp" data-nombre="Dron 3 - StellarHawk"
-                    data-precio="$499">
+                    data-imagen="./img/pexels-masood-aslami-11178057.webp" data-nombre="DJI MAVIC 3 MULTISPECTRAL"
+                    data-descripcion="Es un drone con cámara multiespectral y RGB que permite obtener imágenes de precisión útiles en el análisis de cultivos, con la finalidad de crear mapas para detectar enfermedades, plagas o estrés que permite el monitoreo y ahorro de insumos agrícolas."
+                    data-precio="$38.850.000 pesos">
                     Detalles
-                    <i class="fa-solid fa-magnifying-glass" ></i>
+                    <i class="fa-solid fa-magnifying-glass"></i>
                 </button>
                 <!--Modal-->
             </div>
             <div class="item">
-                <span class="titulo-item">TurboDrone</span>
+                <span class="titulo-item">DJI MATRICE 350</span>
                 <img src="./img/technology-2734236_1920.webp" alt="turboDrone" class="img-item">
-                <span class="precio-item">$549</span>
-                <button class="boton-item">Agregar<i class="fa-solid fa-cart-shopping" ></i>
+                <span class="precio-item">$48.900.000</span>
+                <button class="boton-item">Agregar<i class="fa-solid fa-cart-shopping"></i>
                 </button>
                 <!--Modal-->
                 <button class="btn btn-dark ver-detalles" data-toggle="modal" data-target="#modalDetalles"
                     data-imagen="./img/technology-2734236_1920.webp" data-nombre="Dron 4 - TurboDrone"
-                    data-precio="$99.99 DOLARAZOS">
+                    data-descripcion="El mejor drone industrial, ofrece un tiempo de vuelo de 55 minutos sin cámara, 15 km de distancia máxima de alcance de vuelo, IP55 de protección contra agua y polvo, compatibilidad con otras cámaras lo que permite ampliar el abanico de servicios."
+                    data-precio="$48.900.000 Pesos">
                     Detalles
-                    <i class="fa-solid fa-magnifying-glass" ></i>
+                    <i class="fa-solid fa-magnifying-glass"></i>
                 </button>
             </div>
             <div class="item">
-                <span class="titulo-item">EliteSky </span>
-                <img src="./img/pexels-pok-rie-13310738.webp" alt="" class="img-item">
-                <span class="precio-item">$649</span>
-                <button class="boton-item">Agregar<i class="fa-solid fa-cart-shopping" ></i>
+                <span class="titulo-item">DJI Mavic 3</span>
+                <img src="./img/dron-futurista-captura-vista-aerea-al-atardecer-generada-ia.webp" alt=""
+                    class="img-item">
+                <span class="precio-item">$68.000.000</span>
+                <button class="boton-item">Agregar<i class="fa-solid fa-cart-shopping"></i>
                 </button>
                 <!--Modal-->
                 <button class="btn btn-dark ver-detalles" data-toggle="modal" data-target="#modalDetalles"
-                    data-imagen="./img/pexels-pok-rie-13310738.webp" data-nombre="Dron 1 - SkyVortex"
-                    data-precio="$99.99 DOLARAZOS">
+                    data-imagen="./img/dron-futurista-captura-vista-aerea-al-atardecer-generada-ia.webp"
+                    data-nombre="Dron 1 - SkyVortex"
+                    data-descripcion="Son drones muy fáciles de transportar y operar, ideales para personas, empresas y gobierno que desean iniciar y simplificar el trabajo con un drone compacto, pero de grandes capacidades en seguridad."
+                    data-precio="$68.000.000 Pesos">
                     Detalles
-                    <i class="fa-solid fa-magnifying-glass" ></i>
-                </button>
-                <!--Modal-->
-            </div>
-            <div class="item">
-                <span class="titulo-item">AeroFalcon </span>
-                <img src="./img/pexels-darrel-und-1087182.webp" alt="" class="img-item">
-                <span class="precio-item">$799</span>
-                <button class="boton-item">Agregar<i class="fa-solid fa-cart-shopping" ></i>
-                </button>
-                <!--Modal-->
-                <button class="btn btn-dark ver-detalles" data-toggle="modal" data-target="#modalDetalles"
-                    data-imagen="./img/pexels-darrel-und-1087182.webp" data-nombre="Dron 1 - SkyVortex"
-                    data-precio="$99.99 DOLARAZOS">
-                    Detalles
-                    <i class="fa-solid fa-magnifying-glass" ></i>
+                    <i class="fa-solid fa-magnifying-glass"></i>
                 </button>
                 <!--Modal-->
             </div>
             <div class="item">
-                <span class="titulo-item">NanoGlide</span>
-                <img src="./img/pexels-darrel-und-1087183.webp" alt="" class="img-item">
-                <span class="precio-item">$899</span>
-                <button class="boton-item">Agregar<i class="fa-solid fa-cart-shopping" ></i>
+                <span class="titulo-item">DJI Matrice 30</span>
+                <img src="./img/dron-flotante-captura-vista-aerea-naturaleza-generada-ia.webp" alt="" class="img-item">
+                <span class="precio-item">$59.870.000</span>
+                <button class="boton-item">Agregar<i class="fa-solid fa-cart-shopping"></i>
                 </button>
                 <!--Modal-->
                 <button class="btn btn-dark ver-detalles" data-toggle="modal" data-target="#modalDetalles"
-                    data-imagen="./img/pexels-darrel-und-1087183.webp" data-nombre="Dron 1 - SkyVortex"
-                    data-precio="$99.99 DOLARAZOS">
+                    data-imagen="./img/dron-flotante-captura-vista-aerea-naturaleza-generada-ia.webp"
+                    data-nombre="DJI Matrice 30"
+                    data-descripcion="Son drones comerciales más sorprendentes dirigidos especialmente a la seguridad pública, privada, SAR, bomberos, búsqueda y rescate, protección civil e inspecciones."
+                    data-precio="$59.870.000 Pesos">
                     Detalles
-                    <i class="fa-solid fa-magnifying-glass" ></i>
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+                <!--Modal-->
+            </div>
+            <div class="item">
+                <span class="titulo-item">DJI Mavic 2</span>
+                <img src="./img/pexels-darrel-und-1087180.webp" alt="" class="img-item">
+                <span class="precio-item">$62.000.000</span>
+                <button class="boton-item">Agregar<i class="fa-solid fa-cart-shopping"></i>
+                </button>
+                <!--Modal-->
+                <button class="btn btn-dark ver-detalles" data-toggle="modal" data-target="#modalDetalles"
+                    data-imagen="./img/pexels-darrel-und-1087180.webp" data-nombre="DJI Mavic 2 Enterprise Advanced"
+                    data-descripcion="Ha sido diseñado para ser el dron más pequeño con grandes capacidades industriales y de seguridad gracias a su cámara térmica, cámara visual, zoom digital y módulo RTK, el más compacto y versátil que puedes encontrar."
+                    data-precio="$62.000.000 Pesos">
+                    Detalles
+                    <i class="fa-solid fa-magnifying-glass"></i>
                 </button>
                 <!--Modal-->
             </div>
@@ -299,7 +314,7 @@
 
             </div>
             <div class="carrito-items">
-                
+
             </div>
             <div class="carrito-total">
                 <div class="fila">
@@ -325,8 +340,12 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    <img src="" alt="" class="img-fluid modal-imagen">
                     <h3 class="modal-nombre"></h3>
+                    <div>
+                        <img src="" alt="" class="img-fluid modal-imagen">
+                        <h5 class="modal-title" id="modalDescripcionLabel">Descripción</h5>
+                        <p class="modal-descripcion"></p>
+                    </div>
                     <p class="modal-precio"></p>
                 </div>
             </div>
