@@ -1,3 +1,9 @@
+//Ejecutamos serviceworker
+if('serviceWorker' in navigator){
+  navigator.serviceWorker.register('./js/ServiceWorker.js')
+    .then(reg => console.log('Registro con ServiceWorker exitosa', reg))
+    .catch(err => console.warn('Error Con el registro del service worker',err))
+}
 //evento para cambio de color en el navbar
 window.addEventListener('scroll', function () {
   var navbar = document.querySelector('.navbar');
@@ -9,6 +15,7 @@ window.addEventListener('scroll', function () {
     navbar.classList.remove('navbar-scroll');
   }
 });
+
 //Evento para menu hamburguesa  
 //Animation con js para menu
 document.querySelector(".burger_menu").addEventListener("click", animateBars);
