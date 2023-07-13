@@ -180,41 +180,39 @@ a.button:hover {
 .nuestros-productos .container {
   text-align: center;
   padding: 30px 12px;
+  gap: 1rem;
 }
 
 .nuestros-productos img {
   width: 80%;
-  height: 60%;
+  height: 55%;
   border: none;
   border-radius: 30px;
-  margin-top: 5%;
+  margin: 2% auto 0;
   transition: all 800ms;
 }
 
 .card img:hover {
   margin-top: 5.8%;
   box-shadow: 0px 0px 20px #000;
-
-
 }
 
 .nuestros-productos button {
   border-radius: 20px;
   background-color: black;
   color: white;
-  width: 20%;
-  height: 8%;
+  width: 30%;
+  height: 65%;
   font-weight: bold;
   font-size: 1.3rem;
   cursor: pointer;
-  margin-top: 5%;
   transition: all 500ms;
 }
 
 .nuestros-productos button:hover {
   box-shadow: 0px 0px 12px #000;
   font-size: 1.3rem;
-
+  transform: scale(1.05);
 }
 
 /*ESTILOS CONTACTANOS*/
@@ -272,8 +270,6 @@ a.button:hover {
 /*FORM DE ENVIO DE FORMULARIO CONTACTANOS diseño*/
 #contactForm {
   display: none;
-
-
 }
 
 #title img {
@@ -507,6 +503,7 @@ footer {
     padding: 3% 0;
     font-size: 20px;
     border-radius: 30px;
+
   }
   .contacto-2{
     width: 100%;
@@ -515,6 +512,7 @@ footer {
     text-align:center;
     justify-content: flex-start;
   }
+
 }
 
 @media(min-width:850px) {

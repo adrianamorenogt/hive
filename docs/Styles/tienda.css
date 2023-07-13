@@ -70,7 +70,7 @@ header h1 {
   font-size: 22px;
 }
 
-.contenedor .contenedor-items .item .boton-item {
+.contenedor .contenedor-items .item .boton-item, .ver-detalles {
   display: block;
   margin: 10px auto;
   border: none;
@@ -81,10 +81,6 @@ header h1 {
   cursor: pointer;
 }
 
-.ver-detalles {
-  display: block;
-  margin: auto;
-}
 
 /* seccion carrito */
 .carrito {
@@ -220,7 +216,7 @@ header h1 {
 
 .search {
   flex-grow: 1;
-  padding: 1%;
+  padding: 2%;
   height: 35px;
   width: 50%;
   margin-left: 45%;
@@ -298,9 +294,10 @@ header h1 {
 
 
 .pagination {
-  margin-left: 25em;
-  
+  margin: auto;
+  margin-left: 100%;
 }
+
 /*COLOR DE PAFINACION*/
 .page-link{
   color: #000;

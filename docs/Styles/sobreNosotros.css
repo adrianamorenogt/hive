@@ -11,72 +11,16 @@
 body {
   background-image: url("https://img.freepik.com/vector-gratis/diseno-fondo-abstracto-blanco_23-2148825582.jpg?w=1380&t=st=1683774935~exp=1683775535~hmac=53574d9c1e3c4d5ca52b28d009a10f7152dd215fb2027660cea2874f46dfc49b");
   background-color: rgba(255, 255, 255, 0.705);
-  /*  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed; */
   margin: 0;
 }
 
 header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  display: flex;
-  z-index: 3;
-  background-color: #1a1a1a;
+  background-color: black !important; 
+  position: absolute;
 }
 
-.navbar {
-  display: flex;
-  padding: .5rem;
-  width: 100%;
-  justify-content: space-between;
-}
-
-.nav-bar-web {
-  display: flex;
-  justify-content: flex-end;
-  font-weight: bold;
-  font-size: 1rem;
-  padding-top: 1rem;
-}
-
-i {
-  margin-left: 1rem;
-  color: #ffffff;
-}
-.icono_sesion{
-  width: 30px;
-  height: 30px;
-  margin-top: 10%;
-}
-ul li {
-  display: inline-block;
-  padding: 0 20px;
-  font-weight: bold;
-  
-}
-li .icono_sesion {
-  margin-top: 10px;
-}
-a {
-  color: rgb(19, 19, 19);
-  text-decoration: none;
-}
-a.aHeader:hover {
-  color: gold;
-  transition: color 0.3s ease;
-}
-
-.logo {
-  width: 3rem;
-  height: auto;
-}
-
-.navbar-scroll {
-  background-color: #000;
-  transition: all 1300ms;
+.bg-light {
+  background-color: black !important;
 }
 
 .about-us-section {
@@ -97,10 +41,6 @@ p {
   font-family: sans-serif;
 }
 
-.aHeader {
-  color: white;
-  text-decoration: none;
-}
 
 .developers-container {
   display: flex;
@@ -108,11 +48,8 @@ p {
   justify-content: center;
   align-items: center;
   gap: 1rem;
-
   margin: 10% 0;
   /* Ajusta el margen superior según tus necesidades */
-
-
   border-radius: 5px;
 }
 
