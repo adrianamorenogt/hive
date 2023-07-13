@@ -282,6 +282,7 @@ header h1 {
 .modal-imagen {
   grid-area: img;
   max-width: 90%;
+  border-radius: 5px;
 }
 
 .modal-descripcion {
@@ -307,7 +308,7 @@ header h1 {
 
 
 /* SECCION RESPONSIVE */
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 1000px) {
   .contenedor {
     display: block;
   }
