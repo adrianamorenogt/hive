@@ -1,8 +1,8 @@
 ;
 const CACHE_NAME = 'dragons-hive';
 const urlsToCache = [
-    './',
-    './index.html'
+    '../',
+    '../index.html'
 
   ];
 

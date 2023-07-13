@@ -14,72 +14,48 @@ body {
   margin: 0;
   background-color: #F3F2EF;
 }
-
-/*ESTILOS HEADER*/
 header {
   position: fixed;
   display: flex;
-  width: 100%;
+  align-self: flex-end;
+  justify-content: end;
+  width: 100vw;
+  height: auto;
+  background-color: #1a1a1a;
   z-index: 3;
 
 }
+.bg-light{
+  background-color: rgba(236, 224, 224)!important;
+  color: #fff;
+ 
+}
 
-
-.navbar {
+.navbar{
+  width: 100%;
+  background-color: #1a1a1a!important;
+  color: #ffffff;
   display: flex;
   justify-content: space-between;
-  width: 100%;
-  padding: .8rem .8rem;
-
 }
-
-.nav-bar-web {
+.nav-link{
   display: flex;
-  font-weight: bold;
-  font-size: 1rem;
+  color: #ffffff!important;
+  justify-content: space-between;
+}
+.navbar-light .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke=' rgba(255, 255, 255, 0.918)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
   
+}
+.navbar-light .navbar-toggler{
+  border-color: white;
+  margin: 1%;
   
-  
-
 }
-
-
-ul li {
-  display: inline-block;
-  padding: 0px 20px;
-
+.collapse{
+  justify-content: end;
+  align-items: end;
 }
-
-a {
-  color: white;
-  text-decoration: none;
-}
-
-.nav-bar-web ul li a:hover {
-  color: gold;
-  transition: color 0.3s ease;
-}
-
-.logo {
-  width: 3rem;
-  height: auto;
-}
-
-.lord-icon{
-  width:30px;
-  height:30px;
-}
-
-
-.navbar-scroll {
-  background-color: #000;
-  transition: all 1300ms;
-}
-
-/*ESTILOS SLIDER*/
-/* Google Fonts - Poppins */
-
-
 
 .main {
   height: 100vh;
@@ -268,9 +244,8 @@ a.button:hover {
 }
 
 .contacto-2 {
-  grid-area: "contacto-2";
+  
   display: block;
-  flex-direction: column;
   border: none;
   margin: 3%;
   text-align: center;
@@ -516,7 +491,27 @@ footer {
 }
 
 /*MEDIA RESPONSIVE SECCION*/
-
+@media(max-width:980px){
+  .container_contacto {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    justify-content: center;
+    align-items:center;
+    background-color: #fff;
+    margin: 0;
+    padding: 3% 0;
+    font-size: 20px;
+    border-radius: 30px;
+  }
+  .contacto-2{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align:center;
+    justify-content: flex-start;
+  }
+}
 
 @media(min-width:850px) {
   .nuestros-productos .container {
@@ -557,73 +552,12 @@ footer {
 
 @media(max-width:850px) {
 
-  /*ESTILOS MENU HAMBURGUESA*/
-  .burger_menu {
-    width: 40px;
-    height: 30px;
-    position: fixed;
-    top: 2%;
-    right: 3%;
-
+  .collapse.show li{
+    padding: 5% 2%;
   }
 
-  .burger_menu span {
-    display: block;
-    width: 80%;
-    height: 3px;
-    background-color: #ffffff;
-    margin-top: 6px;
-    cursor: pointer;
-    transform-origin: 0px 100%;
-    transition: all 600ms;
 
-  }
-
-  .activeline1_menu {
-    transform: rotate(45deg) translate(-2px, -1px);
-  }
-
-  .activeline2_menu {
-    opacity: 0;
-    margin-left: -30px;
-  }
-
-  .activeline3_menu {
-    transform: rotate(-45deg) translate(-1.2px, 2px);
-  }
-
-  .navbar {
-    display: flex;
-    padding: .2;
-
-  }
-
-  .nav-bar-web {
-    background-color: #000000c7;
-    /*background: linear-gradient(90deg, rgba(2, 0, 36, 0.651) 0%, rgba(9, 9, 121, 0.548) 35%, rgba(0, 213, 255, 0.466) 190%);*/
-    display: none;
-    margin: -1rem;
-    position: fixed;
-    width: 70vw;
-    height: 100vh;
-    padding: 0;
-    line-height: 6rem;
-    padding-top: 0;
-    font-weight: bold;
-    font-size: 1.2rem;
-    z-index: 3;
-  }
-
-  .nav-list {
-    display: block;
-  }
-
-  ul li {
-    display: block;
-    text-align: center;
-    margin: -1rem;
-
-  }
+  
 
 }
 
