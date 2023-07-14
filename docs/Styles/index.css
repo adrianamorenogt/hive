@@ -182,14 +182,17 @@ a.button:hover {
   padding: 30px 12px;
   gap: 1rem;
 }
-
+.card{
+  margin: 3% 0;
+  padding: 1%;
+}
 .nuestros-productos img {
   width: 80%;
   height: 55%;
   border: none;
   border-radius: 30px;
-  margin: 2% auto 0;
-  transition: all 800ms;
+  margin: 2% auto;
+  transition: all 400ms;
 }
 
 .card img:hover {
@@ -203,7 +206,8 @@ a.button:hover {
   color: white;
   width: 30%;
   height: 65%;
-  font-weight: bold;
+  font-weight:300;
+  margin: 3%;
   font-size: 1.3rem;
   cursor: pointer;
   transition: all 500ms;
