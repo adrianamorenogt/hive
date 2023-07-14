@@ -25,7 +25,7 @@ body {
   justify-content: center;
   align-items: center;
   gap: 1rem;
-  padding: 5%;
+  padding: 10% 0;
   /* Ajusta el margen superior según tus necesidades */
   border-radius: 5px;
 }
@@ -36,7 +36,7 @@ body {
   align-items: center;
   justify-content: center;
   width: 250px;
-  height: auto;
+  height: 400px;
   gap: 1rem;
   transition: transform 0.3s ease-in-out;
   
