@@ -5,55 +5,127 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="./Styles/sesion.css">
 	<link rel="shortcut icon" href="img/Ecomlogoblack.webp" type="image/x-icon">
-	<link rel="shortcut icon" href="img/Ecomlogoblack.png" type="image/x-icon">
-	<link rel="shortcut icon" href="img/Ecomlogoblack.png" type="image/x-icon">
+	<!--BOOSTRAP NAV BAR-->
 	<link rel="stylesheet"
-		href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css">
+		href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+		integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+		crossorigin="anonymous">
+	<!-- CSS -->
+	<link rel="stylesheet" href="./Styles/sliderBannerIndex.css" />
+	<!--<link rel="stylesheet" href="css/styleSlider.css" />-->
+	<!-- INDEX -->
+	<link rel="stylesheet" href="./Styles/index.css">
+
+	<!--JavaScript-->
+	<link rel="script" href="./js/script.js">
 	<script src="https://kit.fontawesome.com/57e129950d.js" crossorigin="anonymous"></script>
+	<script src="https://cdn.lordicon.com/bhenfmcm.js"></script>
+	<!--CONFIGURACION PWA-->
+	<meta name="description"
+		content="El ecommerce de Drones que se preocupa por el campesino, ofrecemos las mejores herramientas para la agricultura colombiana">
+	<meta name="theme-color" content="#000000">
+	<meta name="MobileOptimized" content="width">
+	<meta name="HandheldFriendly" content="true">
+	<meta name="mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+	<link rel="shortcut icon" href="./img/iconos/1024x1024.png" type="image/x-icon">
+	<link rel="apple-touch-icon" href="./img/iconos/128x128.png">
+	<link rel="apple-touch-startup-image" href="./img/iconos/128x128.png">
+	<link rel="manifest" href="./manifest.json">
+	<link rel="stylesheet" href="./Styles/sesion.css">
+	<link rel="stylesheet" href="./Styles/index.css">
 	<title>Sesión</title>
 </head>
 
 <body>
+
+	<!-- HEADER -->
+	<header>
+
+		<nav class="navbar navbar-expand-lg navbar-light bg-light">
+			<div class="nav-icon">
+				<a class="navbar-brand" href="#">
+					<img src="img/Ecomlogowhite.webp" width="50" height="50" alt="Logo">
+				</a>
+			</div>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+				aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarNav">
+				<ul class="navbar-nav">
+
+					<li class="nav-item"><a class="nav-link" href="./index.html" target="_blank">Inicio</a>
+					</li>
+					<li class="nav-item"><a class="nav-link" href="./index.html" target="_blank">Sobre
+							Nosotros</a>
+					</li>
+					<li class="nav-item"><a class="nav-link" href="./tienda.html" target="_blank">Tienda</a>
+					</li>
+					<li class="nav-item"><a class="nav-link" href="./index.html" target="_blank">Contacto</a>
+					</li>
+					<li class="nav-item"><a class="nav-link" href="./sobreNosotros.html"
+							target="_blank">Developers</a></li>
+					<li class="nav-item"><a class="nav-link" href="./sesion.html " title="Sesion"
+							target="_blank">
+							<lord-icon src="https://cdn.lordicon.com/bhfjfgqz.json" trigger="hover"
+								colors="primary:#ffffff">
+							</lord-icon>
+						</a>
+					</li>
+					<li class="nav-item"> <a class="nav-link" href="./tienda.html" title="Tienda"
+							target="_blank">
+							<lord-icon class="lord-icon" src="https://cdn.lordicon.com/udbbfuld.json"
+								trigger="hover" colors="primary:#ffffff">
+							</lord-icon></a></li>
+					</li>
+				</ul>
+			</div>
+
+		</nav>
+
+	</header>
+
+
 	<section id="sesion">
-	<!--INICIO DE SESIÓN-->
-	<div class="form-container">
-		<form class="login-form" id="loginForm">
-			<h2>Iniciar sesión</h2>
-			<hr>
-			<input type="email" placeholder="Correo electrónico*" id="emailregistro" required>
-			<input type="password" placeholder="Contraseña*" id="passwordregistro" required>
-			<p for="Por favor registrese"></p>
-			<p>*Campos obligatorios</p>
-			<button type="submit"> Ingresar</button>
-			<hr>
-			<p>¿Aún no estás registrado?</p>
-			<p><a href="#form-container2" onclick="registroform();">Regístrate aquí</a></p>
-			</hr>
-		</form>
-	</div>
-	<!--REGISTRO DE USUARIOS-->
-	<div class="form-container2">
-		<form class="register-form" id="registro">
-		  <h2>Crea tú cuenta</h2>
-		  <hr>
-		  <input type="text" placeholder="Nombre de usuario*" id="name" required autofocus>
-		  <input type="email" placeholder="Correo electrónico*" id="email" required>
-		  <input type="password" placeholder="Contraseña*" id="password" required>
-		  <input type="password" placeholder="Confirmar contraseña*" id="password2" required>
-		  <p>*Campos obligatorios</p>
-	
-		  <button type="submit">Registrarse</button>
-		  <p>Ya tienes una cuenta? <a href="#form-container" onclick="registroform();">Login</a></p>
-		</form>
-	  </div>
+		<!--INICIO DE SESIÓN-->
+		<div class="form-container">
+			<form class="login-form" id="loginForm">
+				<h2>Iniciar sesión</h2>
+				<hr>
+				<input type="email" placeholder="Correo electrónico*" id="emailregistro" required>
+				<input type="password" placeholder="Contraseña*" id="passwordregistro" required>
+				<p for="Por favor registrese"></p>
+				<p>*Campos obligatorios</p>
+				<button type="submit"> Ingresar</button>
+				<hr>
+				<p>¿Aún no estás registrado?</p>
+				<p><a href="#form-container2" onclick="registroform();">Regístrate aquí</a></p>
+				</hr>
+			</form>
+		</div>
+		<!--REGISTRO DE USUARIOS-->
+		<div class="form-container2">
+			<form class="register-form" id="registro">
+				<h2>Crea tú cuenta</h2>
+				<hr>
+				<input type="text" placeholder="Nombre de usuario*" id="name" required autofocus>
+				<input type="email" placeholder="Correo electrónico*" id="email" required>
+				<input type="password" placeholder="Contraseña*" id="password" required>
+				<input type="password" placeholder="Confirmar contraseña*" id="password2" required>
+				<p>*Campos obligatorios</p>
+
+				<button type="submit">Registrarse</button>
+				<p>Ya tienes una cuenta? <a href="#form-container" onclick="registroform();">Login</a></p>
+			</form>
+		</div>
 	</section>
 	<!-- footer starts -->
 	<footer>
 		<div class="container">
 			<div class="social-icons">
-				<a href="https://es-la.facebook.com/" class="fa fa-facebook"  title="facebook"></a>
+				<a href="https://es-la.facebook.com/" class="fa fa-facebook" title="facebook"></a>
 				<a href="https://twitter.com/" class="fa fa-twitter" title="twitter"></a>
 				<a href="https://www.instagram.com/" class="fa fa-instagram" title="instagram"></a>
 			</div>
@@ -70,6 +142,20 @@
 	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 	<script src="./js/login.js"></script>
 	<script src="./js/registro.js"></script>
+	<script src="./js/script.js"></script>
+
+	<!--Js script-->
+	<!--BOOSTRAP Integración-->
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+		integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+		crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+		integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+		crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+		integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+		crossorigin="anonymous"></script>
+
 </body>
 
 </html>

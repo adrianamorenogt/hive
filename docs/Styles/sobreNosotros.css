@@ -15,9 +15,14 @@ body {
 }
 
 header {
-  background-color: black !important; 
-  position: absolute;
+  background-color: black !important;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 9999;
+  /* Asegura que el encabezado esté por encima de otros elementos */
 }
+
 
 .bg-light {
   background-color: black !important;
