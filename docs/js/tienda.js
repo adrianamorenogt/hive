@@ -44,7 +44,16 @@ function ready() {
 }
 //Eliminamos todos los elementos del carrito y lo ocultamos
 function pagarClicked() {
-  alert("Gracias por la compra");
+  Swal.fire({
+    title: '¿Has terminado?',
+    text: 'Finaliza tu compra',
+    imageUrl: './img/paymentgif.gif',
+    imageWidth: 140,
+    imageAlt: 'Custom image',
+    confirmButtonText: 'Finalizar',
+    confirmButtonColor: '#4ED712',
+    
+  })
   //Elimino todos los elmentos del carrito
   let carritoItems = document.getElementsByClassName('carrito-items')[0];
   while (carritoItems.hasChildNodes()) {
@@ -88,7 +97,13 @@ function agregarItemAlCarrito(titulo, precio, imagenSrc) {
   let nombresItemsCarrito = itemsCarrito.getElementsByClassName('carrito-item-titulo');
   for (var i = 0; i < nombresItemsCarrito.length; i++) {
     if (nombresItemsCarrito[i].innerText == titulo) {
-      alert("El item ya se encuentra en el carrito");
+      Swal.fire({
+        position: 'center',
+        icon: 'success',
+        title: 'El producto ya se añadio al carrito!',
+        showConfirmButton: false,
+        timer: 1500
+      })
       return;
     }
   }
@@ -106,7 +121,13 @@ function agregarItemAlCarrito(titulo, precio, imagenSrc) {
                 <span class="carrito-item-precio">${precio}</span>
             </div>
             <button class="btn-eliminar">
-                <i class="fa-solid fa-trash"></i>
+            <lord-icon class="iconoBorrar"
+              src="https://cdn.lordicon.com/jmkrnisz.json"
+              trigger="loop"
+              delay="3500"
+              colors="primary:#121331"
+              state="morph-fill"
+            </lord-icon>
             </button>
         </div>
     `
@@ -152,19 +173,39 @@ function restarCantidad(event) {
 
 //Elimino el item seleccionado del carrito
 function eliminarItemCarrito(event) {
-  let buttonClicked = event.target;
-  buttonClicked.parentElement.parentElement.remove();
-  //Actualizamos el total del carrito
-  actualizarTotalCarrito();
+  Swal.fire({
+    title: '¿Desea eliminar el producto?',
+    icon: 'warning',
+    showCancelButton: true,
+    confirmButtonColor: '#d33',
+    cancelButtonColor: '#4ED712',
+    cancelButtonText: 'Cancelar',
+    confirmButtonText: 'Si, eliminar!'
+  }).then((result) => {
+    if (result.isConfirmed) {
+      Swal.fire(
+        'Eliminado!',
+        'Se ha eliminado del carrito.',
+        'success'
+      )
+      let buttonClicked = event.target;
+      buttonClicked.parentElement.parentElement.remove();
+      //Actualizamos el total del carrito
+      actualizarTotalCarrito();
 
-  //la siguiente funciòn controla si hay elementos en el carrito
-  //Si no hay elimino el carrito
-  ocultarCarrito();
+      //la siguiente funciòn controla si hay elementos en el carrito
+      //Si no hay elimino el carrito
+      ocultarCarrito();
+    }
+  })
+
 }
 //Funciòn que controla si hay elementos en el carrito. Si no hay oculto el carrito.
 function ocultarCarrito() {
+
   let carritoItems = document.getElementsByClassName('carrito-items')[0];
   if (carritoItems.childElementCount == 0) {
+
     let carrito = document.getElementsByClassName('carrito')[0];
     carrito.style.marginRight = '-100%';
     carrito.style.opacity = '0';
@@ -201,18 +242,35 @@ function actualizarTotalCarrito() {
 
 //JAVASCRIPT PARA EL MODAL 
 
-  //Jquery para seleccion de los componentes de la tarjeta activado por click event button ver-detalle
-  $(document).ready(function() {//DOCUMENT READY espera a que el documento html se haya cargado
-    $('.ver-detalles').click(function() {
-        var imagen = $(this).data('imagen'); //SELECCIONAMOS LOS ELEMENTOS QUE TENEMOS EN EL MISMO BTN
-        var nombre = $(this).data('nombre');
-        var precio = $(this).data('precio');
-        $('#modalDetalles .modal-imagen').attr('src', imagen); 
-        $('#modalDetalles .modal-nombre').text(nombre);
-        $('#modalDetalles .modal-precio').text(precio);
-    });
-    });
+//Jquery para seleccion de los componentes de la tarjeta activado por click event button ver-detalle
+$(document).ready(function () {//DOCUMENT READY espera a que el documento html se haya cargado
+  $('.ver-detalles').click(function () {
+    var imagen = $(this).data('imagen'); //SELECCIONAMOS LOS ELEMENTOS QUE TENEMOS EN EL MISMO BTN
+    var nombre = $(this).data('nombre');
+    var descripcion = $(this).data('descripcion');
+    var precio = $(this).data('precio');
+    $('#modalDetalles .modal-imagen').attr('src', imagen);
+    $('#modalDetalles .modal-nombre').text(nombre);
+    $('#modalDetalles .modal-descripcion').text(descripcion);
+    $('#modalDetalles .modal-precio').text(precio);
+  });
+});
 
+
+function search_item() {
+  let input = document.getElementById('searchbar').value
+  input=input.toLowerCase();
+  let x = document.getElementsByClassName('item');
+    
+  for (i = 0; i < x.length; i++) { 
+      if (!x[i].innerHTML.toLowerCase().includes(input)) {
+          x[i].style.display="none";
+      }
+      else {
+          x[i].style.display="list-item";                 
+      }
+  }
+}
 
 
 

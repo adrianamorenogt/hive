@@ -6,13 +6,6 @@
   font-family: 'Open Sans';
 }
 
-/* header {
-  background: url(../img/dron-flotante-captura-vista-aerea-naturaleza-generada-ia.jpg);
-  background-size: cover;
-  background-position: center;
-  height: 300px;
-}
- */
 header h1 {
   text-align: center;
   font-size: 35px;
@@ -20,8 +13,6 @@ header h1 {
   color: #fff;
   padding: 80px 0;
 }
-
-
 
 .contenedor {
   max-width: 1200px;
@@ -31,6 +22,7 @@ header h1 {
   justify-content: space-between;
   /* oculto lo que queda fuera del .contenedor */
   contain: paint;
+  list-style: none;
 }
 
 /* SECCION CONTENEDOR DE ITEMS */
@@ -56,6 +48,7 @@ header h1 {
 
 .contenedor .contenedor-items .item .img-item {
   width: 100%;
+  border-radius: 10px;
 }
 
 .contenedor .contenedor-items .item:hover {
@@ -77,7 +70,7 @@ header h1 {
   font-size: 22px;
 }
 
-.contenedor .contenedor-items .item .boton-item {
+.contenedor .contenedor-items .item .boton-item, .ver-detalles {
   display: block;
   margin: 10px auto;
   border: none;
@@ -88,10 +81,6 @@ header h1 {
   cursor: pointer;
 }
 
-.ver-detalles {
-  display: block;
-  margin: auto;
-}
 
 /* seccion carrito */
 .carrito {
@@ -153,12 +142,12 @@ header h1 {
 
 .carrito .carrito-item .selector-cantidad i {
   font-size: 18px;
-  width: 32px;
-  height: 32px;
+  width: 35px;
+  height: 35px;
   line-height: 32px;
   text-align: center;
   border-radius: 50%;
-  border: 1px solid #000;
+  border: 2px solid #636161;
   cursor: pointer;
 }
 
@@ -187,7 +176,7 @@ header h1 {
   z-index: 20;
 }
 
-.carrito .carrito-item .btn-eliminar i {
+.carrito .carrito-item .btn-eliminar .iconoBorrar{
   pointer-events: none;
 }
 
@@ -225,16 +214,98 @@ header h1 {
   scale: 1.05;
 }
 
+.search {
+  flex-grow: 1;
+  padding: 2%;
+  height: 35px;
+  width: 50%;
+  margin-left: 45%;
+  background-color: #d0cdcd;
+  border-radius: 30px;
+}
+
+.search:hover {
+  background-color: #E1E1E1;
+}
+
+.search:focus-within {
+  border: 3px solid #636567;
+}
+
+.bar {
+  display: flex;
+  align-items: center;
+  height: 22px;
+  padding: 1%;
+}
+
+.bar input {
+  border: none;
+  outline: none;
+  background-color: inherit;
+  font-size: 16px;
+  flex-grow: 1;
+}
+
+
 .modal-body {
   text-align: center;
 }
 
-.pagination{
-  margin-left: 25em;
+.modal-body div{
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 10% 90%;
+  grid-template-areas: 
+  "img h5"
+  "img p";
 }
 
+.modal {
+  width: 70%;
+  margin-left: 20%;
+}
+
+.modal .close {
+  width: 5%;
+}
+
+.modal .close:hover {
+  background-color: #000;
+  color: white;
+}
+
+.modal-imagen {
+  grid-area: img;
+  max-width: 90%;
+  border-radius: 5px;
+}
+
+.modal-descripcion {
+  grid-area: p;
+  padding: 3%;
+  margin: auto;
+  text-align: justify;
+}
+
+.modal-precio {
+  margin-top: 2%;
+}
+
+
+.pagination {
+  margin: auto;
+  margin-left: 100%;
+}
+
+/*COLOR DE PAFINACION*/
+.page-link{
+  color: #000;
+}
+
+
 /* SECCION RESPONSIVE */
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 1000px) {
   .contenedor {
     display: block;
   }
@@ -245,5 +316,13 @@ header h1 {
 
   .carrito {
     width: 100%;
+  }
+
+  .modal-body div {
+    display: block;
+  }
+
+  .modal .close {
+    width: 10%;
   }
 }

@@ -1,0 +1,82 @@
+{
+    "name":"Dragons Hive",
+    "short_name": "Hive",
+    "description": "El ecommerce de Drones que se preocupa por el campesino, ofrecemos las mejores herramientas para la agricultura colombiana",
+    "background_color":"#ffffff",
+    "theme-color":"#ffffff",
+    "orientation":"portrait",
+    "display":"standalone",
+    "start_url":"./index.html",
+    "scope":"./",
+    "lang":"es-CO",
+    "theme_color": "#ffffff",
+    "icons":[
+        {
+            "src":"./img/iconos/1024x1024.png",
+            "sizes":"1024x1024",
+            "type":"image/png",
+            "purpose": "any"
+        },
+        {
+            "src":"./img/iconos/512x512.png",
+            "sizes":"512x512",
+            "type":"image/png",
+            "purpose": "any"
+        },
+        {
+            "src":"./img/iconos/384x384.png",
+            "sizes":"384x384",
+            "type":"image/png",
+            "purpose": "any"
+        },
+        {
+            "src":"./img/iconos/256x256.png",
+            "sizes":"256x256",
+            "type":"image/png",
+            "purpose": "any"
+        },
+        {
+            "src":"./img/iconos/192x192.png",
+            "sizes":"192x192",
+            "type":"image/png",
+            "purpose": "any"
+        },
+        {
+            "src": "./img/iconos/144X144.png",
+            "sizes": "144x144",
+            "type": "image/png",
+            "purpose": "any"
+        },
+        {
+            "src":"./img/iconos/128x128.png",
+            "sizes":"128x128",
+            "type":"image/png",
+            "purpose": "maskable"
+        },
+        {
+            "src":"./img/iconos/96x96.png",
+            "sizes":"96x96",
+            "type":"image/png",
+            "purpose": "any"
+        },
+        {
+            "src":"./img/iconos/64x64.png",
+            "sizes":"64x64",
+            "type":"image/png",
+            "purpose": "any"
+        },
+        {
+            "src":"./img/iconos/32x32.png",
+            "sizes":"32x32",
+            "type":"image/png",
+            "purpose": "any"
+        },
+        {
+            "src":"./img/iconos/16x16.png",
+            "sizes":"16x16",
+            "type":"image/png",
+            "purpose": "any"
+        }
+    ]
+
+}

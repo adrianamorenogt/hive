@@ -2,9 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Teko:wght@300&display=swap');
 
 * {
-  margin: 0;
   padding: 0;
-  box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
 
@@ -15,69 +13,53 @@ html {
 body {
   margin: 0;
   background-color: #F3F2EF;
-
 }
-
-/*ESTILOS HEADER*/
 header {
   position: fixed;
   display: flex;
-  width: 100%;
+  align-self: flex-end;
+  justify-content: end;
+  width: 100vw;
+  height: auto;
+  background-color: #1a1a1a;
   z-index: 3;
 
 }
-
-.navbar {
-  display: flex;
-  padding: .5rem;
+.bg-light{
+  background-color: rgba(236, 224, 224)!important;
+  color: #fff;
+}
+.navbar{
   width: 100%;
+  background-color: #1a1a1a!important;
+  color: #ffffff;
+  display: flex;
   justify-content: space-between;
 }
 
-.nav-bar-web {
+.navbar .logo{
+  width: 50px;
+  height: 50px;
+}
+
+.nav-link{
   display: flex;
+  color: #ffffff!important;
+  justify-content: space-between;
+}
+.navbar-light .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke=' rgba(255, 255, 255, 0.918)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+  
+}
+.navbar-light .navbar-toggler{
+  border-color: white;
+  margin: 1%;
+  
+}
+.collapse{
   justify-content: end;
-  font-weight: bold;
-  font-size: 1rem;
-  padding-top: 1rem;
-
+  align-items: end;
 }
-
-i {
-  margin-left: 1rem;
-}
-
-ul li {
-  display: inline-block;
-  padding: 0px 20px;
-
-}
-
-a {
-  color: white;
-  text-decoration: none;
-}
-
-.nav-bar-web ul li a:hover {
-  color: gold;
-  transition: color 0.3s ease;
-}
-
-.logo {
-  width: 3rem;
-  height: auto;
-
-}
-
-.navbar-scroll {
-  background-color: #000;
-  transition: all 1300ms;
-}
-
-/*ESTILOS SLIDER*/
-/* Google Fonts - Poppins */
-
-
 
 .main {
   height: 100vh;
@@ -198,41 +180,39 @@ a.button:hover {
 .nuestros-productos .container {
   text-align: center;
   padding: 30px 12px;
+  gap: 1rem;
 }
 
 .nuestros-productos img {
   width: 80%;
-  height: 60%;
+  height: 55%;
   border: none;
   border-radius: 30px;
-  margin-top: 5%;
+  margin: 2% auto 0;
   transition: all 800ms;
 }
 
 .card img:hover {
   margin-top: 5.8%;
-  box-shadow: 0px 0px 30px #000;
-
-
+  box-shadow: 0px 0px 20px #000;
 }
 
 .nuestros-productos button {
   border-radius: 20px;
   background-color: black;
   color: white;
-  width: 20%;
-  height: 8%;
+  width: 30%;
+  height: 65%;
   font-weight: bold;
   font-size: 1.3rem;
   cursor: pointer;
-  margin-top: 5%;
   transition: all 500ms;
 }
 
 .nuestros-productos button:hover {
-  box-shadow: 0px 0px 40px #000;
+  box-shadow: 0px 0px 12px #000;
   font-size: 1.3rem;
-
+  transform: scale(1.05);
 }
 
 /*ESTILOS CONTACTANOS*/
@@ -244,6 +224,7 @@ a.button:hover {
   flex-direction: column;
   align-items: center;
   margin: 5% 0;
+
 }
 
 .icono_contacto {
@@ -258,14 +239,15 @@ a.button:hover {
   background-color: #fff;
   padding: 5%;
   margin-top: 3%;
-  border: 1px solid black;
+  border: 1px solid rgba(0, 0, 0, 0.5);
   font-size: 20px;
+
+  border-radius: 30px;
 }
 
 .contacto-2 {
-  grid-area: "contacto-2";
+  
   display: block;
-  flex-direction: column;
   border: none;
   margin: 3%;
   text-align: center;
@@ -288,17 +270,16 @@ a.button:hover {
 /*FORM DE ENVIO DE FORMULARIO CONTACTANOS diseño*/
 #contactForm {
   display: none;
-
 }
 
 #title img {
   width: 120px;
-  padding: 5% 2%;
+  padding: 2% 2%;
 }
 
 h1 {
   color: black;
-  font-size: 2.5rem;
+  font-size: 2.2rem;
 }
 
 .form {
@@ -308,23 +289,25 @@ h1 {
     "image container";
   text-align: center;
   margin: 5%;
+
   font-family: "Poppins", sans-serif;
 }
 
 #imagen img {
   grid-area: image;
   width: 100%;
+  height: 100%;
   border-radius: 100px 0 0 100px;
 }
 
 .container_Form {
   grid-area: container;
-  display: flex;
+  display: block;
   flex-direction: column;
   border-radius: 0 100px 100px 0;
   width: 100%;
-
-  background-color: rgba(255, 255, 255, 0.616);
+  background-color: rgba(255, 255, 255, 0.74);
+  ;
 }
 
 #formulario {
@@ -333,13 +316,11 @@ h1 {
   text-align: center;
   justify-content: center;
   align-items: center;
-  margin: 4%;
+  margin: 10% 5%;
   background-color: rgba(255, 255, 255, 0.452);
-  width: 90%;
   flex-wrap: wrap;
   border-radius: 20px;
   border: 2px solid rgba(165, 161, 161, 0.1);
-
 
 }
 
@@ -475,15 +456,61 @@ h1 {
   transform: translateY(0px);
   opacity: 1;
 }
+footer {
+  background-color: #1a1a1a;
+  padding: 20px;
+  text-align: center;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.social-icons a {
+  display: inline-block;
+  margin-right: 10px;
+  color: #f5f5f5;
+  font-size: 20px;
+}
+
+.contact-info a {
+  display: block;
+  margin-bottom: 10px;
+  color: #f5f5f5;
+  text-decoration: none;
+}
+
+.contact-info i {
+  margin-right: 5px;
+}
+
+.p-footer {
+  margin: 0;
+  color: #9e9e9e;
+}
 
 /*MEDIA RESPONSIVE SECCION*/
-@media screen and (max-width: 768px) {
-  .nav-btn {
-    visibility: hidden;
-  }
+@media(max-width:980px){
+  .container_contacto {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    justify-content: center;
+    align-items:center;
+    background-color: #fff;
+    margin: 0;
+    padding: 3% 0;
+    font-size: 20px;
+    border-radius: 30px;
 
-  .swiper-pagination-bullet {
-    visibility: visible;
+  }
+  .contacto-2{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align:center;
+    justify-content: flex-start;
   }
 
 }
@@ -527,109 +554,12 @@ h1 {
 
 @media(max-width:850px) {
 
-  /*ESTILOS MENU HAMBURGUESA*/
-  .burger_menu {
-    width: 40px;
-    height: 30px;
-    position: fixed;
-    top: 2%;
-    right: 3%;
-
-  }
-
-  .burger_menu span {
-    display: block;
-    width: 80%;
-    height: 3px;
-    background-color: #ffffff;
-    margin-top: 6px;
-    cursor: pointer;
-    transform-origin: 0px 100%;
-    transition: all 600ms;
-
-  }
-
-  .activeline1_menu {
-    transform: rotate(45deg) translate(-2px, -1px);
-  }
-
-  .activeline2_menu {
-    opacity: 0;
-    margin-left: -30px;
-  }
-
-  .activeline3_menu {
-    transform: rotate(-45deg) translate(-1.2px, 2px);
-  }
-
-  .navbar {
-    display: flex;
-    padding: .2;
-
-  }
-
-  .nav-bar-web {
-    background-color: #000000c7;
-    /*background: linear-gradient(90deg, rgba(2, 0, 36, 0.651) 0%, rgba(9, 9, 121, 0.548) 35%, rgba(0, 213, 255, 0.466) 190%);*/
-    display: none;
-    margin: -1rem;
-    position: fixed;
-    width: 70vw;
-    height: 100vh;
-    padding: 0;
-    line-height: 6rem;
-    padding-top: 0;
-    font-weight: bold;
-    font-size: 1.2rem;
-    z-index: 3;
-  }
-
-  .nav-list {
-    display: block;
-  }
-
-  ul li {
-    display: block;
-    text-align: center;
-    margin: -1rem;
-
+  .collapse.show li{
+    padding: 5% 2%;
   }
 
 }
 
-footer {
-  background-color: #1a1a1a;
-  padding: 20px;
-  text-align: center;
-}
-
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.social-icons a {
-  display: inline-block;
-  margin-right: 10px;
-  color: #f5f5f5;
-  font-size: 20px;
-}
-
-.contact-info a {
-  display: block;
-  margin-bottom: 10px;
-  color: #f5f5f5;
-  text-decoration: none;
-}
-
-.contact-info i {
-  margin-right: 5px;
-}
-
-.p-footer {
-  margin: 0;
-  color: #9e9e9e;
-}
 
 @media (max-width: 767px) {
 
@@ -637,4 +567,15 @@ footer {
   .contact-info a {
     font-size: 16px;
   }
+}
+
+@media screen and (max-width: 768px) {
+  .nav-btn {
+    visibility: hidden;
+  }
+
+  .swiper-pagination-bullet {
+    visibility: visible;
+  }
+
 }
