@@ -6,7 +6,22 @@ body {
   background-image: url("https://img.freepik.com/vector-gratis/diseno-fondo-abstracto-blanco_23-2148825582.jpg?w=1380&t=st=1683774935~exp=1683775535~hmac=53574d9c1e3c4d5ca52b28d009a10f7152dd215fb2027660cea2874f46dfc49b");
   background-repeat: no-repeat;
   background-color: rgba(255, 255, 255, 0.705);
-  
+  margin: 0;
+}
+
+header {
+  background-color: black !important;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 9999;
+  /* Asegura que el encabezado esté por encima de otros elementos */
+}
+
+
+.bg-light {
+  background-color: black !important;
+
 }
 .about-us-section {
   padding-top: 8%;

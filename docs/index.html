@@ -7,14 +7,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="shortcut icon" href="img/Ecomlogoblack.webp" type="image/x-icon">
   <!--BOOSTRAP NAV BAR-->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
-    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+    crossorigin="anonymous">
   <!-- CSS -->
   <link rel="stylesheet" href="./Styles/sliderBannerIndex.css" />
   <!--<link rel="stylesheet" href="css/styleSlider.css" />-->
   <!-- INDEX -->
   <link rel="stylesheet" href="./Styles/index.css">
-  
+
   <!--JavaScript-->
   <link rel="script" href="./js/script.js">
   <script src="https://kit.fontawesome.com/57e129950d.js" crossorigin="anonymous"></script>
@@ -38,38 +40,40 @@
 <body>
   <!-- HEADER -->
   <header>
-    
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="nav-icon">
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="nav-icon">
         <a class="navbar-brand" href="#">
           <img src="img/Ecomlogowhite.webp" width="50" height="50" alt="Logo">
         </a>
       </div>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav">
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
 
-            <li class="nav-item"><a class="nav-link" href="#">Inicio</a></li>
-            <li class="nav-item"><a class="nav-link" href="#sobre_nosotros_tienda">Sobre Nosotros</a></li>
-            <li class="nav-item"><a class="nav-link" href="./tienda.html">Tienda</a></li>
-            <li class="nav-item"><a class="nav-link" href="#contactanos">Contacto</a></li>
-            <li class="nav-item"><a class="nav-link" href="./sobreNosotros.html">Developers</a></li>
-            <li class="nav-item"><a class="nav-link" href="./sesion.html" title="Sesion">
-                <lord-icon src="https://cdn.lordicon.com/bhfjfgqz.json" trigger="hover" colors="primary:#ffffff">
-                </lord-icon>
-              </a>
-            </li>
-            <li class="nav-item"> <a class="nav-link" href="./tienda.html" title="Tienda">
-                <lord-icon class="lord-icon" src="https://cdn.lordicon.com/udbbfuld.json" trigger="hover"
-                  colors="primary:#ffffff">
-                </lord-icon></a></li>
-            </li>
-          </ul>
-        </div>
-    
+          <li class="nav-item"><a class="nav-link" href="#">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="#sobre_nosotros_tienda">Sobre Nosotros</a>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="./tienda.html">Tienda</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contactanos">Contacto</a></li>
+          <li class="nav-item"><a class="nav-link" href="./sobreNosotros.html">Developers</a></li>
+          <li class="nav-item"><a class="nav-link" href="./sesion.html" title="Sesion">
+              <lord-icon src="https://cdn.lordicon.com/bhfjfgqz.json" trigger="hover"
+                colors="primary:#ffffff">
+              </lord-icon>
+            </a>
+          </li>
+          <li class="nav-item"> <a class="nav-link" href="./tienda.html" title="Tienda">
+              <lord-icon class="lord-icon" src="https://cdn.lordicon.com/udbbfuld.json"
+                trigger="hover" colors="primary:#ffffff">
+              </lord-icon></a></li>
+          </li>
+        </ul>
+      </div>
+
     </nav>
 
   </header>
@@ -232,16 +236,21 @@
         <!--Formulario para la recepción del de peticiones del usuario envio directo al correo empresarial metodo post-->
         <form id="formulario" action="https://formspree.io/f/mnqykgzv" method="POST">
 
-          <input type="text" name="name" id="nombre" class="form-control" placeholder="Nombre Completo:" required>
+
+        <input name="email" id="correo" type="email" class="form-control"
+          placeholder="Correo electronico:" required>
 
 
-          <input name="email" id="correo" type="email" class="form-control" placeholder="Correo electronico:" required>
+        <input name="phone" id="phone" type="number" class="form-control"
+          placeholder="Número telefonico:" required>
 
 
-          <input name="phone" id="phone" type="number" class="form-control" placeholder="Número telefonico:" required>
+        <textarea name="message" id="mensaje" rows="6" placeholder="Escribe tú solicitud aquí"
+          required></textarea>
 
+        <button type="submit">Enviar</button>
+      </form>
 
-          <textarea name="message" id="mensaje" rows="6" placeholder="Escribe tú solicitud aquí" required></textarea>
 
           <button type="submit">Enviar</button>
         </form>
