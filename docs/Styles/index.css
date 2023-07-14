@@ -182,19 +182,22 @@ a.button:hover {
   padding: 30px 12px;
   gap: 1rem;
 }
-
+.card{
+  margin: 3% 0;
+  padding: 1%;
+}
 .nuestros-productos img {
   width: 80%;
   height: 55%;
   border: none;
   border-radius: 30px;
-  margin: 2% auto 0;
-  transition: all 800ms;
+  margin: 2% auto;
+  transition: all 400ms;
 }
 
 .card img:hover {
-  margin-top: 5.8%;
-  box-shadow: 0px 0px 20px #000;
+  
+  box-shadow: 0px 0px 10px #000;
 }
 
 .nuestros-productos button {
@@ -203,7 +206,8 @@ a.button:hover {
   color: white;
   width: 30%;
   height: 65%;
-  font-weight: bold;
+  font-weight:300;
+  margin: 3%;
   font-size: 1.3rem;
   cursor: pointer;
   transition: all 500ms;
@@ -212,7 +216,7 @@ a.button:hover {
 .nuestros-productos button:hover {
   box-shadow: 0px 0px 12px #000;
   font-size: 1.3rem;
-  transform: scale(1.05);
+  
 }
 
 /*ESTILOS CONTACTANOS*/
@@ -241,12 +245,10 @@ a.button:hover {
   margin-top: 3%;
   border: 1px solid rgba(0, 0, 0, 0.5);
   font-size: 20px;
-
   border-radius: 30px;
 }
 
 .contacto-2 {
-  
   display: block;
   border: none;
   margin: 3%;
@@ -562,7 +564,22 @@ footer {
 
 
 @media (max-width: 767px) {
-
+  .form {
+    display: grid;
+    grid-template-columns: 45% 55%;
+    grid-template-areas:
+      "container container";
+    text-align: center;
+    margin: 5%;
+    font-family: "Poppins", sans-serif;
+  }
+  
+.container_Form {
+  border-radius: 80px 80px ;
+}
+  #imagen{
+    display: none;
+  }
   .social-icons a,
   .contact-info a {
     font-size: 16px;

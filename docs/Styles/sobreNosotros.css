@@ -1,15 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Teko:wght@300&display=swap');
 
-* {
-  padding: 0;
-  font-family: "Poppins", sans-serif;
-  box-sizing: border-box;
-}
-
 
 body {
   background-image: url("https://img.freepik.com/vector-gratis/diseno-fondo-abstracto-blanco_23-2148825582.jpg?w=1380&t=st=1683774935~exp=1683775535~hmac=53574d9c1e3c4d5ca52b28d009a10f7152dd215fb2027660cea2874f46dfc49b");
+  background-repeat: no-repeat;
   background-color: rgba(255, 255, 255, 0.705);
   margin: 0;
 }
@@ -26,23 +21,15 @@ header {
 
 .bg-light {
   background-color: black !important;
-}
 
+}
 .about-us-section {
-  margin-top: 1rem;
+  padding-top: 8%;
   text-align: center;
 }
 
 .about-us-section p {
   font-size: 1rem;
-  margin-bottom: 2rem;
-  font-family: sans-serif;
-}
-
-p {
-  text-align: center;
-  font-size: 1rem;
-  margin: 0;
   font-family: sans-serif;
 }
 
@@ -53,7 +40,7 @@ p {
   justify-content: center;
   align-items: center;
   gap: 1rem;
-  margin: 10% 0;
+  padding: 10% 0;
   /* Ajusta el margen superior según tus necesidades */
   border-radius: 5px;
 }
@@ -63,10 +50,11 @@ p {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-height: 20rem;
+  width: 250px;
+  height: 400px;
   gap: 1rem;
   transition: transform 0.3s ease-in-out;
-  padding: 1.25rem;
+  
   background-color: #ffffff8f;
   border-radius: 5px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.603);
@@ -74,8 +62,8 @@ p {
 }
 
 .developer-card img {
-  width: 10rem;
-  height: 10rem;
+  width: 170px;
+  height: 170px;
   object-fit: cover;
   border-radius: 50%;
   margin-bottom: 1rem;
@@ -92,7 +80,7 @@ p {
 }
 
 .developer-card h3 {
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   text-align: center;
   margin-bottom: 1rem;
   font-family: sans-serif;
@@ -132,14 +120,10 @@ p {
 
 footer {
   background-color: #1a1a1a;
-  padding: 20px;
   text-align: center;
 }
 
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-}
+
 
 .social-icons a {
   display: inline-block;
@@ -194,8 +178,18 @@ footer {
   .developer-card p {
     font-size: 0.9rem;
   }
+  .social-icons a,
+  .contact-info a {
+    font-size: 16px;
+  }
 }
+@media(max-width:630px){
+  .about-us-section {
+    padding-top: 20%;
+    text-align: center;
+  }
 
+}
 @media (max-width: 576px) {
   .developer-card {
     flex: 0 0 calc(100% - 2rem);
@@ -210,11 +204,11 @@ footer {
     font-size: 0.8rem;
   }
 }
-
-@media (max-width: 767px) {
-
-  .social-icons a,
-  .contact-info a {
-    font-size: 16px;
+@media(max-width:330px){
+  .about-us-section {
+    padding-top: 30%;
+    text-align: center;
   }
+
 }
+
