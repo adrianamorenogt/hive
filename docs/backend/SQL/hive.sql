@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 06-07-2023 a las 01:59:43
+-- Tiempo de generación: 14-07-2023 a las 22:40:08
 -- Versión del servidor: 10.4.28-MariaDB
 -- Versión de PHP: 8.2.4
 
@@ -33,6 +33,13 @@ CREATE TABLE `categoria` (
   `Tipo_Categoria` varchar(40) CHARACTER SET utf8 COLLATE utf8_spanish2_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+--
+-- Volcado de datos para la tabla `categoria`
+--
+
+INSERT INTO `categoria` (`id_categoria`, `Nombre_Categoria`, `Tipo_Categoria`) VALUES
+(1, 'Granja', 'Riego');
+
 -- --------------------------------------------------------
 
 --
@@ -48,6 +55,13 @@ CREATE TABLE `clientes` (
   `Direccion` varchar(60) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish2_ci;
 
+--
+-- Volcado de datos para la tabla `clientes`
+--
+
+INSERT INTO `clientes` (`id_cliente`, `Nombre`, `Apellido`, `Telefono`, `Correo`, `Direccion`) VALUES
+(1, 'Carlos', 'Mantilla', '2314912', 'carlos@gmail.com', 'AK 29 #52');
+
 -- --------------------------------------------------------
 
 --
@@ -58,9 +72,16 @@ CREATE TABLE `producto` (
   `id_producto` int(10) NOT NULL,
   `id_categoria` int(10) NOT NULL,
   `Nombre_producto` varchar(40) NOT NULL,
-  `Descripcion_producto` varchar(100) DEFAULT NULL,
+  `Descripcion_producto` varchar(1000) DEFAULT NULL,
   `Precio_producto` double NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish2_ci;
+
+--
+-- Volcado de datos para la tabla `producto`
+--
+
+INSERT INTO `producto` (`id_producto`, `id_categoria`, `Nombre_producto`, `Descripcion_producto`, `Precio_producto`) VALUES
+(1, 1, 'AGRAS T40 DRONE', 'Es el más eficiente drone fumigador del mundo, su capacidad de tanque es de 40 litros para aspersión y 50 kg para esparcir semillas. Además ahora cuenta con un nuevo sistema de mapeo inteligente innovador para terrenos complicados y árboles frutales.', 20000000);
 
 -- --------------------------------------------------------
 
@@ -76,6 +97,13 @@ CREATE TABLE `transaccion` (
   `saldo_venta` double NOT NULL,
   `fecha` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish2_ci;
+
+--
+-- Volcado de datos para la tabla `transaccion`
+--
+
+INSERT INTO `transaccion` (`id_transaccion`, `id_cliente`, `id_producto`, `cantidad_producto`, `saldo_venta`, `fecha`) VALUES
+(1, 1, 1, 2, 40000000, '2023-05-17');
 
 --
 -- Índices para tablas volcadas
@@ -116,25 +144,25 @@ ALTER TABLE `transaccion`
 -- AUTO_INCREMENT de la tabla `categoria`
 --
 ALTER TABLE `categoria`
-  MODIFY `id_categoria` int(10) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_categoria` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT de la tabla `clientes`
 --
 ALTER TABLE `clientes`
-  MODIFY `id_cliente` int(10) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_cliente` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT de la tabla `producto`
 --
 ALTER TABLE `producto`
-  MODIFY `id_producto` int(10) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_producto` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT de la tabla `transaccion`
 --
 ALTER TABLE `transaccion`
-  MODIFY `id_transaccion` int(10) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_transaccion` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- Restricciones para tablas volcadas
