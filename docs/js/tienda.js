@@ -40,25 +40,7 @@ function ready() {
   }
 
   //Agregamos funcionalidad al botón comprar
-  function pagarClicked() {
-    Swal.fire({
-      title: '¿Has terminado?',
-      text: 'Finaliza tu compra',
-      imageUrl: './img/paymentgif.gif',
-      imageWidth: 140,
-      imageAlt: 'Custom image',
-      confirmButtonText: 'Finalizar',
-      confirmButtonColor: '#4ED712',
-    });
-
-    let carritoItems = document.getElementsByClassName('carrito-items')[0];
-    while (carritoItems.hasChildNodes()) {
-      carritoItems.removeChild(carritoItems.firstChild);
-    }
-
-    ocultarCarrito();
-    actualizarCarritoTotal(); // Reemplaza actualizarTotalCarrito() por actualizarCarritoTotal()
-  }
+  document.getElementsByClassName('btn-pagar')[0].addEventListener('click', pagarClicked)
 }
 //Eliminamos todos los elementos del carrito y lo ocultamos
 function pagarClicked() {
@@ -85,7 +67,8 @@ function agregarAlCarritoClicked(event) {
   let button = event.target;
   let item = button.parentElement;
   let titulo = item.getElementsByClassName('titulo-item')[0].innerText;
-  let precio = item.getElementsByClassName('precio-item')[0].innerText;
+  let precio1 = item.getElementsByClassName('precio-item')[0].innerText;
+  let precio = precio1.replace(/[.,]/g, "");
   let imagenSrc = item.getElementsByClassName('img-item')[0].src;
   console.log(imagenSrc);
 
@@ -234,7 +217,7 @@ function ocultarCarrito() {
   }
 }
 //Actualizamos el total de Carrito
-/* function actualizarTotalCarrito() {
+function actualizarTotalCarrito() {
   //seleccionamos el contenedor carrito
   let carritoContenedor = document.getElementsByClassName('carrito')[0];
   let carritoItems = carritoContenedor.getElementsByClassName('carrito-item');
@@ -254,35 +237,6 @@ function ocultarCarrito() {
 
   document.getElementsByClassName('carrito-precio-total')[0].innerText = '$' + total.toLocaleString("es") + ",00";
 
-}
- */
-// Función para obtener la tasa de cambio actualizada
-async function obtenerTasaDeCambio() {
-  const response = await fetch('https://api.exchangeratesapi.io/latest?base=USD&symbols=COP');
-  const data = await response.json();
-  return data.rates.COP;
-}
-
-async function actualizarTotalPesosColombianos(totalDolares) {
-  const tasaDeCambio = await obtenerTasaDeCambio();
-  const totalPesosColombianos = totalDolares * tasaDeCambio;
-  document.getElementsByClassName('carrito-total-precio')[0].innerText = '$' + totalDolares.toFixed(2) + ' (COP ' + totalPesosColombianos.toFixed(2) + ')';
-}
-function actualizarTotalCarrito() {
-  let carritoContenedor = document.getElementsByClassName('carrito')[0];
-  let carritoItems = carritoContenedor.getElementsByClassName('carrito-item');
-  let total = 0;
-
-  for (let i = 0; i < carritoItems.length; i++) {
-    let item = carritoItems[i];
-    let precioElemento = item.getElementsByClassName('carrito-item-precio')[0];
-    let precio = parseFloat(precioElemento.innerText.replace('$', '').replace('.', '')) / 1000;
-    let cantidadItem = item.getElementsByClassName('carrito-item-cantidad')[0].value;
-    let subtotal = precio * cantidadItem;
-    total += subtotal;
-  }
-
-  document.getElementsByClassName('carrito-precio-total')[0].innerText = '$' + total.toLocaleString("es") + ',00';
 }
 
 
