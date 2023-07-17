@@ -227,7 +227,7 @@
       <div id="imagen">
         <img src="img/DronContacto.webp" alt="Contacto">
       </div>
-    
+
       <div class="container_Form">
         <div id="title">
           <img src="./img/Ecomlogoblack.webp" alt="logo">
@@ -237,29 +237,51 @@
         <form id="formulario" action="https://formspree.io/f/mnqykgzv" method="POST">
 
 
-        <input name="email" id="correo" type="email" class="form-control"
-          placeholder="Correo electronico:" required>
+          <input name="email" id="correo" type="email" class="form-control"
+            placeholder="Correo electronico:" required>
 
 
-        <input name="phone" id="phone" type="number" class="form-control"
-          placeholder="Número telefonico:" required>
+          <input name="phone" id="phone" type="number" class="form-control"
+            placeholder="Número telefonico:" required>
 
 
-        <textarea name="message" id="mensaje" rows="6" placeholder="Escribe tú solicitud aquí"
-          required></textarea>
+          <textarea name="message" id="mensaje" rows="6" placeholder="Escribe tú solicitud aquí"
+            required></textarea>
 
-        <button type="submit">Enviar</button>
-      </form>
+          <button type="submit">Enviar</button>
+        </form>
 
       </div>
     </div>
   </section>
 
+  <!-- Cookies -->
+  <div class="cookie-bar">
+    <p>Este sitio web utiliza cookies. Al continuar navegando en este sitio, aceptas nuestro uso de
+      cookies para almacenar información en tu dispositivo, como tus preferencias de idioma o inicio
+      de sesión.
+      <br>
+      Esto puede mejorar tu experiencia en el sitio y hacer que sea más fácil de usar.
+    </p>
+    <button onclick="acceptCookies()">
+      <script src="https://cdn.lordicon.com/bhenfmcm.js"></script>
+      <lord-icon src="https://cdn.lordicon.com/egiwmiit.json" trigger="hover"
+        colors="primary:#ffffff" style="width:35px;height:35px"></lord-icon>
+    </button>
+    <button onclick="rejectCookies()">
+      <script src="https://cdn.lordicon.com/bhenfmcm.js"></script>
+      <lord-icon src="https://cdn.lordicon.com/nhfyhmlt.json" trigger="hover"
+        colors="primary:#ffffff" style="width:35px;height:35px">
+      </lord-icon>
+    </button>
+
+  </div>
+  <!-- Cookies -->
 
   <!-- footer starts -->
   <footer>
     <div class="container">
-      
+
       <div class="social-icons">
         <a href="https://es-la.facebook.com/" class="fa fa-facebook" title="facebook"></a>
         <a href="https://twitter.com/" class="fa fa-twitter" title="twitter"></a>
@@ -276,7 +298,6 @@
     </div>
   </footer>
   <!-- footer ends -->
-  <!-- footer ends -->
 
 
   <!--Sección dedicada a los scripts-->
@@ -287,6 +308,7 @@
 
   <!--Js script-->
   <script src="js/script.js"></script>
+  <script src="./js/cookies.js"></script>
   <!--BOOSTRAP Integración-->
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
     integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
@@ -298,6 +320,8 @@
     integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
     crossorigin="anonymous"></script>
   <script src="./gestor.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/numeral.js/2.0.6/numeral.min.js"></script>
+
 
 </body>
 
