@@ -505,11 +505,16 @@ footer {
 
 /* Estilos para la barra de cookies */
 
+.cookie-bar-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
 .cookie-bar {
   position: fixed;
   bottom: 0;
   left: 0;
-  background-color: #1a1a1a;
+  background-color: #1a1a1aab;
   color: #ffffff;
   padding: 10px;
   text-align: center;
@@ -519,12 +524,10 @@ footer {
   margin-bottom: 30px;
 }
 
-
 .cookie-text {
   flex: 1;
   margin-right: 50px;
   font-size: 14px;
-
 }
 
 .cookie-button button {
@@ -534,12 +537,10 @@ footer {
   display: inline;
 }
 
-
 .cookie-button lord-icon {
   width: 35px;
   height: 35px;
 }
-
 
 .cookie-button button:hover {
   opacity: 0.7;
