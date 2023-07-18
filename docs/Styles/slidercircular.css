@@ -99,6 +99,8 @@
   font-size: 1rem;
 }
 
+/*MEDIA RESPONSIVE SECCION*/
+
 @media screen and (max-width: 900px) {
   .wrapperMini .carouselMini {
     grid-auto-columns: calc((100% / 3) - 9px);

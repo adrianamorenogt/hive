@@ -72,6 +72,8 @@ footer {
 }
 
 
+/*MEDIA RESPONSIVE SECCION*/
+
 @media (max-width: 900px) {
 
   .social-icons a,
