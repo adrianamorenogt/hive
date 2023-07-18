@@ -14,6 +14,7 @@ body {
   margin: 0;
   background-color: #F3F2EF;
 }
+
 header {
   position: fixed;
   display: flex;
@@ -25,38 +26,43 @@ header {
   z-index: 3;
 
 }
-.bg-light{
-  background-color: rgba(236, 224, 224)!important;
+
+.bg-light {
+  background-color: rgba(236, 224, 224) !important;
   color: #fff;
 }
-.navbar{
+
+.navbar {
   width: 100%;
-  background-color: #1a1a1a!important;
+  background-color: #1a1a1a !important;
   color: #ffffff;
   display: flex;
   justify-content: space-between;
 }
 
-.navbar .logo{
+.navbar .logo {
   width: 50px;
   height: 50px;
 }
 
-.nav-link{
+.nav-link {
   display: flex;
-  color: #ffffff!important;
+  color: #ffffff !important;
   justify-content: space-between;
 }
+
 .navbar-light .navbar-toggler-icon {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke=' rgba(255, 255, 255, 0.918)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
-  
+
 }
-.navbar-light .navbar-toggler{
+
+.navbar-light .navbar-toggler {
   border-color: white;
   margin: 1%;
-  
+
 }
-.collapse{
+
+.collapse {
   justify-content: end;
   align-items: end;
 }
@@ -182,10 +188,12 @@ a.button:hover {
   padding: 30px 12px;
   gap: 1rem;
 }
-.card{
+
+.card {
   margin: 3% 0;
   padding: 1%;
 }
+
 .nuestros-productos img {
   width: 80%;
   height: 55%;
@@ -196,7 +204,7 @@ a.button:hover {
 }
 
 .card img:hover {
-  
+
   box-shadow: 0px 0px 10px #000;
 }
 
@@ -206,7 +214,7 @@ a.button:hover {
   color: white;
   width: 30%;
   height: 65%;
-  font-weight:300;
+  font-weight: 300;
   margin: 3%;
   font-size: 1.3rem;
   cursor: pointer;
@@ -216,7 +224,7 @@ a.button:hover {
 .nuestros-productos button:hover {
   box-shadow: 0px 0px 12px #000;
   font-size: 1.3rem;
-  
+
 }
 
 /*ESTILOS CONTACTANOS*/
@@ -458,6 +466,7 @@ h1 {
   transform: translateY(0px);
   opacity: 1;
 }
+
 footer {
   background-color: #1a1a1a;
   padding: 20px;
@@ -468,6 +477,7 @@ footer {
   max-width: 1200px;
   margin: 0 auto;
 }
+
 
 .social-icons a {
   display: inline-block;
@@ -492,14 +502,60 @@ footer {
   color: #9e9e9e;
 }
 
+
+/* Estilos para la barra de cookies */
+
+.cookie-bar-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.cookie-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background-color: #1a1a1aab;
+  color: #ffffff;
+  padding: 10px;
+  text-align: center;
+}
+
+.cookie-text h2 {
+  margin-bottom: 30px;
+}
+
+.cookie-text {
+  flex: 1;
+  margin-right: 50px;
+  font-size: 14px;
+}
+
+.cookie-button button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: inline;
+}
+
+.cookie-button lord-icon {
+  width: 35px;
+  height: 35px;
+}
+
+.cookie-button button:hover {
+  opacity: 0.7;
+}
+
+
+
 /*MEDIA RESPONSIVE SECCION*/
-@media(max-width:980px){
+@media(max-width:980px) {
   .container_contacto {
     display: flex;
     flex-direction: column;
     width: 80%;
     justify-content: center;
-    align-items:center;
+    align-items: center;
     background-color: #fff;
     margin: 0;
     padding: 3% 0;
@@ -507,11 +563,12 @@ footer {
     border-radius: 30px;
 
   }
-  .contacto-2{
+
+  .contacto-2 {
     width: 100%;
     display: flex;
     flex-direction: column;
-    text-align:center;
+    text-align: center;
     justify-content: flex-start;
   }
 
@@ -556,7 +613,7 @@ footer {
 
 @media(max-width:850px) {
 
-  .collapse.show li{
+  .collapse.show li {
     padding: 5% 2%;
   }
 
@@ -573,13 +630,15 @@ footer {
     margin: 5%;
     font-family: "Poppins", sans-serif;
   }
-  
-.container_Form {
-  border-radius: 80px 80px ;
-}
-  #imagen{
+
+  .container_Form {
+    border-radius: 80px 80px;
+  }
+
+  #imagen {
     display: none;
   }
+
   .social-icons a,
   .contact-info a {
     font-size: 16px;

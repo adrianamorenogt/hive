@@ -52,7 +52,7 @@ function pagarClicked() {
     imageAlt: 'Custom image',
     confirmButtonText: 'Finalizar',
     confirmButtonColor: '#4ED712',
-    
+
   })
   //Elimino todos los elmentos del carrito
   let carritoItems = document.getElementsByClassName('carrito-items')[0];
@@ -67,7 +67,8 @@ function agregarAlCarritoClicked(event) {
   let button = event.target;
   let item = button.parentElement;
   let titulo = item.getElementsByClassName('titulo-item')[0].innerText;
-  let precio = item.getElementsByClassName('precio-item')[0].innerText;
+  let precio1 = item.getElementsByClassName('precio-item')[0].innerText;
+  let precio = precio1.replace(/[.,]/g, "");
   let imagenSrc = item.getElementsByClassName('img-item')[0].src;
   console.log(imagenSrc);
 
@@ -259,19 +260,18 @@ $(document).ready(function () {//DOCUMENT READY espera a que el documento html s
 
 function search_item() {
   let input = document.getElementById('searchbar').value
-  input=input.toLowerCase();
+  input = input.toLowerCase();
   let x = document.getElementsByClassName('item');
-    
-  for (i = 0; i < x.length; i++) { 
-      if (!x[i].innerHTML.toLowerCase().includes(input)) {
-          x[i].style.display="none";
-      }
-      else {
-          x[i].style.display="list-item";                 
-      }
+
+  for (i = 0; i < x.length; i++) {
+    if (!x[i].innerHTML.toLowerCase().includes(input)) {
+      x[i].style.display = "none";
+    }
+    else {
+      x[i].style.display = "list-item";
+    }
   }
 }
-
 
 
 

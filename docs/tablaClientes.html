@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./Styles/sobreNosotros.css">
+  <link rel="stylesheet" href="./Styles/tabla2.css">
 
   <link rel="stylesheet"
     href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css">
@@ -26,7 +26,8 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   <link rel="stylesheet" href="Styles/index.css">
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-  <title>Sobre Nosotros</title>
+
+  <title>Cliente</title>
 </head>
 
 <body>
@@ -45,9 +46,17 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
-
-          <li class="nav-item"><a class="nav-link" href="./index.html">Inicio</a></li>
-          <li class="nav-item"><a class="nav-link" href="./tienda.html">Tienda</a></li>
+          <li class="nav-item"><a class="nav-link" href="./index.html" target="_blank">Inicio</a>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="./index.html" target="_blank">Sobre
+              Nosotros</a>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="./tienda.html" target="_blank">Tienda</a>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="./index.html" target="_blank">Contacto</a>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="./sobreNosotros.html"
+              target="_blank">Developers</a></li>
           <li class="nav-item"><a class="nav-link" href="./sesion.html" title="Sesion">
               <lord-icon src="https://cdn.lordicon.com/bhfjfgqz.json" trigger="hover"
                 colors="primary:#ffffff">
@@ -68,87 +77,45 @@
   <!-- HEADER -->
 
   <section class="about-us-section">
-    <!-- <h2>Team Code Hunters</h2> -->
-    <div class="developers-container">
-      <div class="developer-card">
-        <img src="https://avatars.githubusercontent.com/u/77415169?v=4" alt="Desarrollador 1">
-        <h3>Héctor
-          <br>
-          Beltrán
-        </h3>
-        <p>Developer Jr FullStack Java</p>
-        <div class="social-links">
-          <a href="https://www.linkedin.com/in/hmbc/" title="linkedin">
-            <i class="fa-solid fa-briefcase fa-lg"></i>
-          </a>
-          <a href="https://www.linkedin.com/in/hmbc/" title="linkedin">
-            <i class="fab fa-linkedin-in fa-lg"></i>
-          </a>
-          <a href="https://github.com/HMBC03" title="github">
-            <i class="fa-brands fa-github fa-lg"></i>
-          </a>
-        </div>
-      </div>
-      <div class="developer-card">
-        <img src="https://avatars.githubusercontent.com/u/111825505?v=4" alt="Desarrollador 2">
-        <h3>Adriana
-          <br>
-          Moreno
-        </h3>
-        <p>Developer Jr FullStack Java</p>
-        <div class="social-links">
-          <a href="https://adrianamorenogt.github.io/me/" title="github">
-            <i class="fa-solid fa-briefcase fa-lg"></i>
-          </a>
-          <a href="https://www.linkedin.com/in/adrianamorenogt/" title="linkedin">
-            <i class="fab fa-linkedin-in fa-lg"></i>
-          </a>
-          <a href="https://github.com/adrianamorenogt" title="github">
-            <i class="fa-brands fa-github fa-lg"></i>
-          </a>
-        </div>
-      </div>
-      <div class="developer-card">
-        <img
-          src="https://media.licdn.com/dms/image/C5603AQGWzqryiY8B2Q/profile-displayphoto-shrink_800_800/0/1539707298078?e=2147483647&v=beta&t=k1xwpd6g4Ir1jtGQROpmHMuaiOZHRJP79cfrdOks9xI"
-          alt="Desarrollador 3">
-        <h3>Camila
-          <br>
-          Peña
-        </h3>
-        <p>Developer Jr FullStack Java</p>
-        <div class="social-links">
-          <a href="https://www.linkedin.com/in/angela-camila-pe%C3%B1a-cortes/" title="linkedin">
-            <i class="fa-solid fa-briefcase fa-lg"></i>
-          </a>
-          <a href="https://www.linkedin.com/in/angela-camila-pe%C3%B1a-cortes/" title="linkedin">
-            <i class="fab fa-linkedin-in fa-lg"></i>
-          </a>
-          <a href="https://github.com/milup12" title="github">
-            <i class="fa-brands fa-github fa-lg"></i>
-          </a>
-        </div>
-      </div>
-      <div class="developer-card">
-        <img src="https://avatars.githubusercontent.com/u/108376706?v=4" alt="Desarrollador 4">
-        <h3>Andrea
-          <br>
-          Ruiz
-        </h3>
-        <p>Developer Jr FullStack Java</p>
-        <div class="social-links">
-          <a href="https://www.linkedin.com/in/andrea-paola-ruiz/" title="linkedin">
-            <i class="fa-solid fa-briefcase fa-lg"></i>
-          </a>
-          <a href="https://www.linkedin.com/in/andrea-paola-ruiz/" title="linkedin">
-            <i class="fab fa-linkedin-in fa-lg"></i>
-          </a>
-          <a href="https://github.com/Andre842" title="github">
-            <i class="fa-brands fa-github fa-lg"></i>
-          </a>
-        </div>
-      </div>
-    </div>
+    <h1>Clientes</h1>
+    <table class="table">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">Id</th>
+          <th scope="col">Nombre</th>
+          <th scope="col">Apellido</th>
+          <th scope="col">Teléfono</th>
+          <th scope="col">Correo Electrónico</th>
+          <th scope="col">Dirección</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th></th>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <th></th>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <th></th>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
   </section>
 
   <!-- footer starts -->

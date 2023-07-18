@@ -3,9 +3,10 @@
 
 
 body {
-  background-image: url("https://img.freepik.com/vector-gratis/diseno-fondo-abstracto-blanco_23-2148825582.jpg?w=1380&t=st=1683774935~exp=1683775535~hmac=53574d9c1e3c4d5ca52b28d009a10f7152dd215fb2027660cea2874f46dfc49b");
+  background-image: url("../img/fondoBlanco.jpg");
   background-repeat: no-repeat;
   background-color: rgba(255, 255, 255, 0.705);
+  background-size: cover;
   margin: 0;
 }
 
@@ -23,6 +24,7 @@ header {
   background-color: black !important;
 
 }
+
 .about-us-section {
   padding-top: 8%;
   text-align: center;
@@ -54,7 +56,7 @@ header {
   height: 400px;
   gap: 1rem;
   transition: transform 0.3s ease-in-out;
-  
+
   background-color: #ffffff8f;
   border-radius: 5px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.603);
@@ -178,18 +180,21 @@ footer {
   .developer-card p {
     font-size: 0.9rem;
   }
+
   .social-icons a,
   .contact-info a {
     font-size: 16px;
   }
 }
-@media(max-width:630px){
+
+@media(max-width:630px) {
   .about-us-section {
     padding-top: 20%;
     text-align: center;
   }
 
 }
+
 @media (max-width: 576px) {
   .developer-card {
     flex: 0 0 calc(100% - 2rem);
@@ -204,11 +209,11 @@ footer {
     font-size: 0.8rem;
   }
 }
-@media(max-width:330px){
+
+@media(max-width:330px) {
   .about-us-section {
     padding-top: 30%;
     text-align: center;
   }
 
 }
-
