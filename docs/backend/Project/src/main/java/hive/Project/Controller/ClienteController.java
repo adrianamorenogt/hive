@@ -22,12 +22,12 @@ public class ClienteController {
             return  ResponseEntity.ok(clienteList);
 
     }
-    @PostMapping
-    @RequestMapping(value = "CrearCliente", method = RequestMethod.POST)
-    public ResponseEntity<?>CrearCliente(@RequestBody Cliente clientes){
-        Cliente crearCliente = this.clienteConsulta.CrearCliente(clientes);
-        return ResponseEntity.status(HttpStatus.CREATED).body(crearCliente);
-    }
+        @PostMapping
+        @RequestMapping(value = "CrearCliente", method = RequestMethod.POST)
+        public ResponseEntity<?>CrearCliente(@RequestBody Cliente clientes){
+            Cliente crearCliente = this.clienteConsulta.CrearCliente(clientes);
+            return ResponseEntity.status(HttpStatus.CREATED).body(crearCliente);
+        }
     @PutMapping
     @RequestMapping(value = "ModificarCliente", method = RequestMethod.PUT)
     public ResponseEntity<?>ModificarCliente(@RequestBody Cliente clientes){
@@ -44,8 +44,8 @@ public class ClienteController {
     @DeleteMapping
     @RequestMapping(value = "EliminarCliente/{id_cliente}", method = RequestMethod.DELETE)
     public ResponseEntity<?> EliminarCliente(@PathVariable int id_cliente){
-        this.EliminarCliente(id_cliente);
-        return ResponseEntity.ok().build();
+        Cliente clientes =this.clienteConsulta.EliminarCliente(id_cliente);
+        return ResponseEntity.ok(clientes);
     }
 
 }

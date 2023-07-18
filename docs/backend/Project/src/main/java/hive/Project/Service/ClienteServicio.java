@@ -13,7 +13,7 @@ public interface ClienteServicio {
 
     public Cliente BuscarCliente(int id);
 
-    public void EliminarCliente(int id);
+    public Cliente EliminarCliente(int id);
 
     Cliente ModificarCliente(Cliente clientes);
 }
