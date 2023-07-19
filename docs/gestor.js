@@ -43,7 +43,7 @@ function ConsultarCliente() {
     });
 }
 
-
+//ASIGNAR BOTON PARA MODIFICAR EL USUARIO
 function Asignaridbutton(id) {
   const enviarboton = document.createElement("button");
   const btndiv = document.getElementById("registro");
@@ -60,7 +60,23 @@ function Asignaridbutton(id) {
   })
   MostarForm();
 }
-
+//ASIGNAR EL BTN PARA CREAR EL USUARIO
+function asignarBtnCrear() {
+  const enviarboton = document.createElement("button");
+  const btndiv = document.getElementById("registro");
+  enviarboton.textContent = "Enviar";
+  enviarboton.addEventListener('click', () => crearCliente());
+  btndiv.appendChild(enviarboton);
+  //Alerta para indicar que debe hacer
+  Swal.fire({
+    position: 'center',
+    icon: 'info',
+    title: 'Ingrese los datos en el formulario y luego presione enviar',
+    showConfirmButton: false,
+    timer: 4500
+  })
+  MostarForm();
+}
 //MOSTRAR EL FORMULARIO AL USUARIO
 function MostarForm() {
   //Muestra al usuario el formulario para actualizar los datos
@@ -78,143 +94,141 @@ function MostarForm() {
   }
 }
 
-
+//EDICION DE LOS CLIENTES REGISTRADOS
 function editarCliente(id) {
+  
+    const nombre = document.getElementById("nombre").value;
+    const apellido = document.getElementById("apellido").value;
+    const telefono = document.getElementById("telefono").value;
+    const correo = document.getElementById("correo").value;
+    const direccion = document.getElementById("direccion").value;
+    if (nombre !== "") {
+      
+      const url = 'http://localhost:8080/acceso/ModificarCliente';
+      const data = {
+        id_cliente: id,
+        nombreCliente: nombre,
+        apellidoCliente: apellido,
+        telefonoCliente: telefono,
+        correCliente: correo,
+        direccionCliente: direccion
+      };
+      fetch(url, {
+        method: 'PUT',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
+      })
+        .then(response => {
+          if (response.ok) {
+            
+          } else {
+            throw new Error('Error en la respuesta de la solicitud Actualizar');
+          }
+        })
+        .catch(error => {
+          console.error('Error en la solicitud Actualizar:', error);
+          // Maneja el error por si no se logra la actualización
+        });
+      
+    } else {
+      Swal.fire({
+        position: 'center',
+        icon: 'warning',
+        title: 'Debe llenar los campos',
+        showConfirmButton: false,
+        timer: 2500
+      });
+    
+    } 
+}
+
+//Eliminar Cliente de la bd
+function eliminarCliente(id) {
+  const url = `http://localhost:8080/acceso/EliminarCliente/${id}`;
+  Swal.fire({
+    title: '¿Seguro?',
+    text: "Esta Operación no se puede revertir",
+    icon: 'warning',
+    showCancelButton: true,
+    confirmButtonColor: '#d33',
+    cancelButtonColor: '#4ED712',
+    confirmButtonText: 'Si eliminar!',
+    cancelButtonText: 'Cancelar'
+  }).then((result) => {
+    if (result.isConfirmed) {
+
+      fetch(url, {
+        method: 'DELETE',
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      })
+        .then(response => {
+          if (response.ok) {
+            Swal.fire(
+              'Eliminado!',
+              'Cliente eliminado del sistema.',
+              'success'
+            );
+            ConsultarCliente();
+
+          } else {
+            console.error('Error al eliminar el cliente');
+            // Manejar el error de alguna manera si la respuesta no es exitosa
+          }
+        })
+        .catch(error => {
+          console.error('Error en la solicitud DELETE:', error);
+          // Manejar el error en caso de que la solicitud falle por alguna razón
+        });
+
+    }
+  });
+
+}
+
+
+
+
+//CREAR USUARIO EN LA BASE DE DATOS SOLO PARA EL ADMINISTRADOR 
+function crearCliente() {
 
   const nombre = document.getElementById("nombre").value;
   const apellido = document.getElementById("apellido").value;
   const telefono = document.getElementById("telefono").value;
   const correo = document.getElementById("correo").value;
   const direccion = document.getElementById("direccion").value;
-  if (nombre !== "") {
-    const url = 'http://localhost:8080/acceso/ModificarCliente';
-    const data = {
-      id_cliente: id,
-      nombreCliente: nombre,
-      apellidoCliente: apellido,
-      telefonoCliente: telefono,
-      correCliente: correo,
-      direccionCliente: direccion
-    };
-
+  const url = 'http://localhost:8080/acceso/CrearCliente';
+  const data = {
+    nombreCliente: nombre,
+    apellidoCliente: apellido,
+    telefonoCliente: telefono,
+    correCliente: correo,
+    direccionCliente: direccion
+  };
+  //CREAMOS UN NUEVO CLIENTE
+  if (data.nombreCliente !== "") {
     fetch(url, {
-      method: 'PUT',
+      method: 'POST',
       headers: {
         'Content-Type': 'application/json'
       },
       body: JSON.stringify(data)
     })
-      .then(response => {
-        if (response.ok) {
-          // Operación exitosa
-          
-          MostarForm();//Retiramos de la vista el form
-          ConsultarCliente(); //Actualiza la tabla
-          Swal.fire({
-            position: 'center',
-            icon: 'success',
-            title: 'Actualizado',
-            showConfirmButton: false,
-            timer: 2500
-          });
+      .then(response => response.json())
+      .then(responseData => {
 
-        } else {
-          throw new Error('Error en la respuesta de la solicitud Actualizar');
-        }
+        console.log(responseData);
       })
       .catch(error => {
-        console.error('Error en la solicitud Actualizar:', error);
-        // Maneja el error por si no se logra la actualización
+        console.error('No se pudo crear el usuario: ', error);
       });
   } else {
-    Swal.fire({
-      position: 'center',
-      icon: 'warning',
-      title: 'Debe llenar los campos',
-      showConfirmButton: false,
-      timer: 2500
-    });
+    console.log("Error");
   }
+
 }
-  //Eliminar Cliente de la bd
-  function eliminarCliente(id) {
-    const url = `http://localhost:8080/acceso/EliminarCliente/${id}`;
-    Swal.fire({
-      title: '¿Seguro?',
-      text: "Esta Operación no se puede revertir",
-      icon: 'warning',
-      showCancelButton: true,
-      confirmButtonColor: '#d33',
-      cancelButtonColor: '#4ED712',
-      confirmButtonText: 'Si eliminar!',
-      cancelButtonText: 'Cancelar'
-    }).then((result) => {
-      if (result.isConfirmed) {
-
-        fetch(url, {
-          method: 'DELETE',
-          headers: {
-            'Content-Type': 'application/json'
-          }
-        })
-          .then(response => {
-            if (response.ok) {
-              Swal.fire(
-                'Eliminado!',
-                'Cliente eliminado del sistema.',
-                'success'
-              );
-              ConsultarCliente();
-
-            } else {
-              console.error('Error al eliminar el cliente');
-              // Manejar el error de alguna manera si la respuesta no es exitosa
-            }
-          })
-          .catch(error => {
-            console.error('Error en la solicitud DELETE:', error);
-            // Manejar el error en caso de que la solicitud falle por alguna razón
-          });
-
-      }
-    });
-
-  }
-
-
-
-
-  //CREAR USUARIO EN LA BASE DE DATOS SOLO PARA EL ADMINISTRADOR 
-  function crearCliente() {
-    const url = 'http://localhost:8080/acceso/CrearCliente';
-    const data = {
-      nombreCliente: '',
-      apellidoCliente: '',
-      telefonoCliente: '',
-      correCliente: '',
-      direccionCliente: ''
-    };
-    //CREAMOS UN NUEVO CLIENTE
-    if (data.nombreCliente != "") {
-      fetch(url, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(data)
-      })
-        .then(response => response.json())
-        .then(responseData => {
-
-          console.log(responseData);
-        })
-        .catch(error => {
-          console.error('No se pudo crear el usuario: ', error);
-        });
-    } else {
-      console.log("Error");
-    }
-
-  }
 
 
