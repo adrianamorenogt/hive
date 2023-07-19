@@ -5,29 +5,26 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./Styles/tabla2.css">
 
-  <link rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css">
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css">
   <link rel="shortcut icon" href="img/Ecomlogoblack.webp" type="image/x-icon">
-  <link rel="script" href="./js/script.js">
+
   <script src="https://kit.fontawesome.com/57e129950d.js" crossorigin="anonymous"></script>
   <script src="https://cdn.lordicon.com/bhenfmcm.js"></script><!--iconos interactivos-->
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script><!--PARA LAS ALERTAS-->
-  <script src="JS/swiper-bundle.min.js"></script>
-  <link rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
-    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
-    crossorigin="anonymous">
-  <script src="js/script.js"></script>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-  <script src="js/tienda.js"></script>
+
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-  <link rel="stylesheet" href="Styles/index.css">
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
-  <title>Cliente</title>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="./Styles/tabla2.css">
+  <script src="gestor.js" defer></script>
+  <title>Gestor</title>
 </head>
 
 <body>
@@ -55,17 +52,15 @@
           </li>
           <li class="nav-item"><a class="nav-link" href="./index.html" target="_blank">Contacto</a>
           </li>
-          <li class="nav-item"><a class="nav-link" href="./sobreNosotros.html"
-              target="_blank">Developers</a></li>
+          <li class="nav-item"><a class="nav-link" href="./sobreNosotros.html" target="_blank">Developers</a></li>
           <li class="nav-item"><a class="nav-link" href="./sesion.html" title="Sesion">
-              <lord-icon src="https://cdn.lordicon.com/bhfjfgqz.json" trigger="hover"
-                colors="primary:#ffffff">
+              <lord-icon src="https://cdn.lordicon.com/bhfjfgqz.json" trigger="hover" colors="primary:#ffffff">
               </lord-icon>
             </a>
           </li>
           <li class="nav-item"> <a class="nav-link" href="./tienda.html" title="Tienda">
-              <lord-icon class="lord-icon" src="https://cdn.lordicon.com/udbbfuld.json"
-                trigger="hover" colors="primary:#ffffff">
+              <lord-icon class="lord-icon" src="https://cdn.lordicon.com/udbbfuld.json" trigger="hover"
+                colors="primary:#ffffff">
               </lord-icon></a></li>
           </li>
 
@@ -75,9 +70,12 @@
     </nav>
   </header>
   <!-- HEADER -->
-
-  <section class="about-us-section">
+  <section id="capa"></section>
+  <section class="Clientes_seccion">
+    
     <h1>Clientes</h1>
+    <button id="CrearCliente" onclick="">Crear Usuario</button>
+    <div class="table-responsive">
     <table class="table">
       <thead class="thead-dark">
         <tr>
@@ -87,58 +85,35 @@
           <th scope="col">Teléfono</th>
           <th scope="col">Correo Electrónico</th>
           <th scope="col">Dirección</th>
+          <th scope="col">Acciones</th>
         </tr>
       </thead>
-      <tbody>
-        <tr>
-          <th></th>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <th></th>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <th></th>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
+      <tbody id="listaNombres">
       </tbody>
     </table>
+  </div>
+    <form class="register-form" id="registro">
+      <h2>Actualizar Usuario</h2>
+      <input type="text" placeholder="Nombre*" id="nombre" required autofocus>
+      <input type="text" placeholder="Apellido*" id="apellido" required
+        autofocus><!--AÑADIDO RECIENTE MODIFICAR SCRIPT-->
+      <input type="tel" placeholder="Teléfono*" id="telefono" required><!--AÑADIDO RECIENTE MODIFICAR SCRIPT-->
+      <input type="email" placeholder="Correo electrónico*" id="correo" required>
+      <input type="text" placeholder="Dirección*" id="direccion" required>
+
+      <p>*Campos obligatorios</p>
+      
+      
+
+    </form>
   </section>
 
-  <!-- footer starts -->
-  <footer>
-    <!-- <div class="container"> -->
-    <div class="social-icons">
-      <a href="https://es-la.facebook.com/" class="fa fa-facebook" class="aFooter"
-        title="facebook"></a>
-      <a href="https://twitter.com/" class="fa fa-twitter" class="aFooter" title="twitter"></a>
-      <a href="https://www.instagram.com/" class="fa fa-instagram" title="instagram"
-        class="aFooter"></a>
-    </div>
-    <div class="contact-info">
-      <a href="#"><i class="fa fa-map-marker"></i> Bogotá D.C - Colombia</a>
-    </div>
-    <div class="copyright">
-      <p class="p-footer">&copy; 2023 Todos los derechos reservados Code Hunters</p>
-    </div>
-    <!-- </div> -->
-  </footer>
-  <!-- footer ends -->
-  <!--Js script-->
 
+
+
+
+  <!--Js script-->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 </body>
 
