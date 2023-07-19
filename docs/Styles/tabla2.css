@@ -7,20 +7,24 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-color: rgba(255, 255, 255, 0.705);
-  
+
 }
 
-#capa{
+#capa {
   top: 0;
-  position:fixed;
+  left: 0;
+  position: fixed;
   visibility: hidden;
   background-color: #1a1a1a;
-  opacity:.7 !important;
+  opacity: .7 !important;
   z-index: 1;
   width: 100vw;
   height: 100vh;
 }
-
+.container{
+  width: 100vw!important;
+  margin-left: auto!important;
+}
 
 .bg-light {
   background-color: #050505 !important;
@@ -70,10 +74,10 @@ body {
   padding-top: 8%;
   text-align: center;
   height: 85vh;
-  width: 80%;
+  width: 100%;
   margin: auto;
   margin-bottom: 12%;
-  
+
 }
 
 
@@ -82,7 +86,7 @@ body {
   font-family: sans-serif;
 }
 
-#registro{
+#registro {
   bottom: 5%;
   position: fixed;
   width: 50%;
@@ -95,43 +99,54 @@ body {
   border-radius: 20px;
   color: #000;
   background: rgba(255, 255, 255, 0.85);
--webkit-backdrop-filter: blur(13px);
-backdrop-filter: blur(83px);
-border: 1px solid rgba(255,255,255,0.425);
-::placeholder{color: #000;}
+  -webkit-backdrop-filter: blur(13px);
+  backdrop-filter: blur(83px);
+  border: 1px solid rgba(255, 255, 255, 0.425);
+
+  ::placeholder {
+    color: #000;
+  }
 }
-#registro input{
+
+#registro input {
   margin: 2% 0;
   border: none;
   width: 80%;
   height: 40px;
   border-radius: 6px;
 }
-#boton{
+
+#boton {
   width: 100vw;
+  height: 391px;
 }
-#registro button{
+.table-resposive{
+  overflow-x: auto;
+}
+#registro button {
   color: #fff;
   border: none;
   border-radius: 10px;
   margin: 3% auto;
   width: 40%;
   height: 45px;
-  background:#023b4e;
+  background: #023b4e;
 }
-#CrearCliente{
+
+#CrearCliente {
   color: #fff;
   border: none;
   border-radius: 10px;
-  margin: 3% 0;
-  width: 30%;
-  height: 45px;
-  background:#023b4e;
+  margin: 3% 0!important;
+  width: 20%;
+  height: 100px!important;
+  background: #023b4e;
   align-self: flex-end;
 }
-.btn{
-  margin: 2%!important;
-  
+
+.btn {
+  margin: 2% !important;
+
 }
 
 .social-icons a {
