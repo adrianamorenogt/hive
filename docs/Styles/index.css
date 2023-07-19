@@ -511,7 +511,7 @@ footer {
 .cookie-bar {
   position: fixed;
   bottom: 0;
-  left: 0;
+  margin-left:50px;
   background-color: #1a1a1aab;
   color: #ffffff;
   padding: 10px;
@@ -619,6 +619,11 @@ footer {
 
 
 @media (max-width: 767px) {
+
+  .cookie-bar {
+    position: fixed;
+  
+  }
   .form {
     display: grid;
     grid-template-columns: 45% 55%;
