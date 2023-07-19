@@ -32,7 +32,8 @@ public class ClienteController {
     @RequestMapping(value = "ModificarCliente", method = RequestMethod.PUT)
     public ResponseEntity<?>ModificarCliente(@RequestBody Cliente clientes){
         Cliente modificarCliente =this.clienteConsulta.ModificarCliente(clientes);
-            return ResponseEntity.status(HttpStatus.CREATED).body(modificarCliente);
+            //return ResponseEntity.status(HttpStatus.CREATED).body(modificarCliente);
+        return ResponseEntity.ok(clientes);
     }
 
     @GetMapping
