@@ -72,8 +72,10 @@
   <!-- HEADER -->
   <section id="capa"></section>
   <section class="Clientes_seccion">
+    
     <h1>Clientes</h1>
-    <button onclick="">Crear Usuario</button>
+    <button id="CrearCliente" onclick="">Crear Usuario</button>
+    <div class="table-responsive">
     <table class="table">
       <thead class="thead-dark">
         <tr>
@@ -89,7 +91,7 @@
       <tbody id="listaNombres">
       </tbody>
     </table>
-
+  </div>
     <form class="register-form" id="registro">
       <h2>Actualizar Usuario</h2>
       <input type="text" placeholder="Nombre*" id="nombre" required autofocus>
@@ -100,7 +102,7 @@
       <input type="text" placeholder="Dirección*" id="direccion" required>
 
       <p>*Campos obligatorios</p>
-      <div id="boton"></div>
+      
       
 
     </form>
