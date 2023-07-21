@@ -76,7 +76,7 @@ a {
 }
 
 /*ESTILOS SLIDER*/
-/* Google Fonts - Poppins */
+
 
 
 
@@ -296,7 +296,7 @@ a.button:hover {
 }
 
 .box p {
-  /* para que suba que le pongo  */
+
   font-family: 'Hanuman', sans-serif;
   font-size: 14px;
   color: #4d4b4b;
@@ -417,7 +417,7 @@ a.button:hover {
 
   .nav-bar-web {
     background-color: #000000c7;
-    /*background: linear-gradient(90deg, rgba(2, 0, 36, 0.651) 0%, rgba(9, 9, 121, 0.548) 35%, rgba(0, 213, 255, 0.466) 190%);*/
+   
     display: none;
     margin: -1rem;
     position: fixed;

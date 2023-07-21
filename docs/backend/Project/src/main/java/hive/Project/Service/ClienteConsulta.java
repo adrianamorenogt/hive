@@ -31,8 +31,9 @@ public class ClienteConsulta implements ClienteServicio{
     }
 
     @Override
-    public void EliminarCliente(int id_cliente) {
+    public Cliente EliminarCliente(int id_cliente) {
         this.clienteRepositorio.deleteById(id_cliente);
+        return null;
     }
 
     @Override

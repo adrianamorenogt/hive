@@ -14,7 +14,7 @@ header {
 header h1 {
   text-align: center;
   font-size: 35px;
-  /* background-color: #000; */
+
   color: #fff;
   padding: 80px 0;
 }
@@ -402,20 +402,9 @@ header h1 {
   }
 }
 
-@media screen and (max-width: 1369px) and (min-width: 1100px){
-  .card-products-container {
-    width: 100%;
-    margin-bottom: 15%;
-  }
-
-  .ver-detalles {
-    bottom: 6vh;
-    margin-right: 7vh;
-    z-index: 1;
-  }
-  .img-modal {
-    margin-top: 2%;
-  }
+.modal-precio {
+  margin-top: 2%;
+}
 
 }
 @media screen and (max-width: 1100px) and (min-width: 768px) {
@@ -446,12 +435,10 @@ header h1 {
   }
 }
 
-/* Estilos para tabletas y dispositivos móviles */
-@media screen and (max-width: 767px) {
-  header h1 {
-    font-size: 25px;
-    padding: 30px 0;
-  }
+/*COLOR DE PAFINACION*/
+.page-link {
+  color: #000;
+}
 
   .search {
     width: 50%;
@@ -493,71 +480,9 @@ header h1 {
 
   .img-description {
     display: block;
-    margin-left: 2%;
   }
 
-  .modal-title {
-    font-size: 4vh;
-  }
-
-  .modal-close {
-    margin-right: 5%;
-  }
-
-  .product-info h4 {
-    font-size: 4vh;
-  }
-
-  .quantity-btn-decrese,
-  .quantity-btn-increse {
-    font-size: 14px;
-  }
-
-  .quantity-input {
-    font-size: 14px;
-    width: 40px;
-  }
-
-  .price {
-    font-size: 18px;
-  }
-
-  .modal-footer h3 {
-    font-size: 18px;
-  }
-
-  .modal-footer button {
-    font-size: 18px;
-  }
-
-  .modal-product-close {
-    margin-left: 30%;
-  }
-
-  .modal-product-container {
-    width: 90%;
-    margin-left: 5%;
-    max-height: 88vh;
-    color: #131212;
-    background-color: #f7f3f3f5;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: fixed;
-    overflow: auto;
-    z-index: 1;
-    top: 12vh;
-    scrollbar-color: none;
-    border-radius: 10px;
-  }
-
-  #img-modal {
-    width: 98%;
-    border-radius: 5%;
-  }
-
-  #description{
-    font-size: 3vh;
-    margin-top: 3%;
+  .modal .close {
+    width: 10%;
   }
 }
