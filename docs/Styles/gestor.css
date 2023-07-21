@@ -10,6 +10,16 @@ body {
 
 }
 
+.bg-dark {
+  background-color: #1a1a1a!important;
+}
+.text-primary {
+  color: #000!important;
+}
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+  color: #fff;
+  background-color: #05526b;
+}
 #capa {
   top: 0;
   left: 0;
@@ -39,6 +49,7 @@ body {
   justify-content: space-between;
 }
 
+
 .navbar .logo {
   width: 50px;
   height: 50px;
@@ -49,7 +60,6 @@ body {
   color: #ffffff !important;
   justify-content: space-between;
 }
-
 .navbar-light .navbar-toggler-icon {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke=' rgba(255, 255, 255, 0.918)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
 
@@ -66,7 +76,7 @@ body {
   align-items: end;
 }
 
-.Clientes_seccion {
+.Clientes_seccion, .Productos_seccion {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -81,12 +91,12 @@ body {
 }
 
 
-.Clientes_seccion p {
+.Clientes_seccion p, .Productos_seccion p {
   font-size: 1rem;
   font-family: sans-serif;
 }
 
-#registro {
+#registro, #registroProducto {
   bottom: 5%;
   position: fixed;
   width: 50%;
@@ -108,7 +118,7 @@ body {
   }
 }
 
-#registro input {
+#registro input, #registroProducto input {
   margin: 2% 0;
   border: none;
   width: 80%;
@@ -121,9 +131,14 @@ body {
   height: 391px;
 }
 .table-resposive{
-  overflow-x: auto;
+  max-width: 1200px;
+  display: flex;
 }
-#registro button {
+#registro button{
+  height: 45px;
+  background: #023b4e;
+}
+form button {
   color: #fff;
   border: none;
   border-radius: 10px;
@@ -132,18 +147,27 @@ body {
   height: 45px;
   background: #023b4e;
 }
-
-#CrearCliente {
+#CrearCliente, #CrearProducto {
   color: #fff;
   border: none;
   border-radius: 10px;
   margin: 3% 0!important;
   width: 20%;
-  height: 100px!important;
   background: #023b4e;
   align-self: flex-end;
 }
+.CerrarFormBoton{
+  width: 98%;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: end;
+}
+.cerrarForm{
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
 
+}
 .btn {
   margin: 2% !important;
 

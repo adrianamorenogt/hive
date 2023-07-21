@@ -11,7 +11,7 @@ public interface ProductoServicio {
     public Producto CrearProducto(Producto producto);
     public Producto BuscarProducto(int id); //ID PARA LA BUSQUEDA
 
-    public void EliminarProducto(int id);
+    public Producto EliminarProducto(int id);
 
     Producto ModificarProducto(Producto producto);
 
