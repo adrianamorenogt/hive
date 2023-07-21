@@ -1,7 +1,6 @@
 package hive.Project.Service;
 
 import hive.Project.Entity.Producto;
-import hive.Project.Entity.Transaccion;
 import hive.Project.Repository.ProductoRepositorio;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -30,8 +29,9 @@ public class ProductoConsulta implements ProductoServicio{
     }
 
     @Override
-    public void EliminarProducto(int id_producto) {
+    public Producto EliminarProducto(int id_producto) {
         this.productoRepositorio.deleteById(id_producto);
+        return null;
     }
 
     @Override
