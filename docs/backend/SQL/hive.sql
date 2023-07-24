@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 14-07-2023 a las 22:40:08
+-- Tiempo de generación: 24-07-2023 a las 22:23:16
 -- Versión del servidor: 10.4.28-MariaDB
 -- Versión de PHP: 8.2.4
 
@@ -48,10 +48,10 @@ INSERT INTO `categoria` (`id_categoria`, `Nombre_Categoria`, `Tipo_Categoria`) V
 
 CREATE TABLE `clientes` (
   `id_cliente` int(10) NOT NULL,
-  `Nombre` varchar(40) NOT NULL,
-  `Apellido` varchar(40) NOT NULL,
+  `Nombre` varchar(50) NOT NULL,
+  `Apellido` varchar(50) NOT NULL,
   `Telefono` varchar(10) NOT NULL,
-  `Correo` varchar(50) NOT NULL,
+  `Correo` varchar(70) NOT NULL,
   `Direccion` varchar(60) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish2_ci;
 
@@ -60,7 +60,17 @@ CREATE TABLE `clientes` (
 --
 
 INSERT INTO `clientes` (`id_cliente`, `Nombre`, `Apellido`, `Telefono`, `Correo`, `Direccion`) VALUES
-(1, 'Carlos', 'Mantilla', '2314912', 'carlos@gmail.com', 'AK 29 #52');
+(1, 'Carlos', 'Mantilla', '2314912', 'carlos@gmail.com', 'AK 29 #52'),
+(49, 'Luis', 'Velez', '3128775590', 'antonio@gmail.com', 'antonio@gmail.com'),
+(50, 'Luis', 'Velez', '3128775590', 'antonio@gmail.com', 'antonio@gmail.com'),
+(51, 'Luis', 'Velez', '3128775590', 'antonio@gmail.com', 'antonio@gmail.com'),
+(52, 'Luis', 'Velez', '3128775590', 'antonio@gmail.com', 'antonio@gmail.com'),
+(53, 'Luis', 'Velez', '3128775590', 'antonio@gmail.com', 'antonio@gmail.com'),
+(54, 'Luis', 'Velez', '3128775590', 'antonio@gmail.com', 'Calle 53 #27-24'),
+(55, 'Luis', 'Velez', '3128775590', 'antonio@gmail.com', 'Calle 53 #27-24'),
+(56, 'Luis', 'Velez', '3128775590', 'a@a.com', 'Calle 53 #27-24'),
+(57, 'Martin', 'Liscano', '23451', 'MartinLis@outlook.com', 'Calle 1'),
+(58, 'Paula', 'Matiz', '3212232123', 'paula@gmail.com', 'Calle 10');
 
 -- --------------------------------------------------------
 
@@ -105,6 +115,49 @@ CREATE TABLE `transaccion` (
 INSERT INTO `transaccion` (`id_transaccion`, `id_cliente`, `id_producto`, `cantidad_producto`, `saldo_venta`, `fecha`) VALUES
 (1, 1, 1, 2, 40000000, '2023-05-17');
 
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `usuarios`
+--
+
+CREATE TABLE `usuarios` (
+  `id` int(10) NOT NULL,
+  `Nombre` varchar(50) NOT NULL,
+  `Apellido` varchar(50) NOT NULL,
+  `Telefono` varchar(10) NOT NULL,
+  `Correo` varchar(70) NOT NULL,
+  `Direccion` varchar(60) NOT NULL,
+  `Pass` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `usuarios`
+--
+
+INSERT INTO `usuarios` (`id`, `Nombre`, `Apellido`, `Telefono`, `Correo`, `Direccion`, `Pass`) VALUES
+(48, 'Luis', 'Velez', '3128775590', 'antonio@gmail.com', 'antonio@gmail.com', '12345'),
+(49, 'Luis', 'Velez', '3128775590', 'antonio@gmail.com', 'antonio@gmail.com', '12345'),
+(50, 'Luis', 'Velez', '3128775590', 'antonio@gmail.com', 'antonio@gmail.com', '12345'),
+(51, 'Luis', 'Velez', '3128775590', 'antonio@gmail.com', 'antonio@gmail.com', '12345'),
+(52, 'Luis', 'Velez', '3128775590', 'antonio@gmail.com', 'antonio@gmail.com', '12345'),
+(53, 'Luis', 'Velez', '3128775590', 'antonio@gmail.com', 'Calle 53 #27-24', '12345'),
+(54, 'Luis', 'Velez', '3128775590', 'antonio@gmail.com', 'Calle 53 #27-24', '12345'),
+(55, 'Luis', 'Velez', '3128775590', 'a@a.com', 'Calle 53 #27-24', '12345'),
+(56, 'Martin', 'Liscano', '23451', 'MartinLis@outlook.com', 'Calle 1', '12345'),
+(57, 'Paula', 'Matiz', '3212232123', 'paula@gmail.com', 'Calle 10', '12345');
+
+--
+-- Disparadores `usuarios`
+--
+DELIMITER $$
+CREATE TRIGGER `tr_copiar_datos` AFTER INSERT ON `usuarios` FOR EACH ROW BEGIN
+    INSERT INTO clientes (Nombre, Apellido, Telefono, Correo, Direccion)
+    VALUES ( NEW.Nombre, NEW.Apellido, NEW.Telefono, NEW.Correo, NEW.Direccion);
+END
+$$
+DELIMITER ;
+
 --
 -- Índices para tablas volcadas
 --
@@ -137,6 +190,12 @@ ALTER TABLE `transaccion`
   ADD KEY `id_productoFK` (`id_producto`);
 
 --
+-- Indices de la tabla `usuarios`
+--
+ALTER TABLE `usuarios`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- AUTO_INCREMENT de las tablas volcadas
 --
 
@@ -150,7 +209,7 @@ ALTER TABLE `categoria`
 -- AUTO_INCREMENT de la tabla `clientes`
 --
 ALTER TABLE `clientes`
-  MODIFY `id_cliente` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_cliente` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=59;
 
 --
 -- AUTO_INCREMENT de la tabla `producto`
@@ -163,6 +222,12 @@ ALTER TABLE `producto`
 --
 ALTER TABLE `transaccion`
   MODIFY `id_transaccion` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT de la tabla `usuarios`
+--
+ALTER TABLE `usuarios`
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=58;
 
 --
 -- Restricciones para tablas volcadas

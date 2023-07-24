@@ -29,7 +29,7 @@ const displayCart = () => {
     modalClose.innerHTML = `
         <lord-icon
         src="https://cdn.lordicon.com/jfhbogmw.json"
-        trigger="loop" colors="primary:#fff"
+        trigger="hover" colors="primary:#fff"
         style="width:40px;height:40px; padding: 1px;">
         </lord-icon>
         `;
@@ -59,20 +59,20 @@ const displayCart = () => {
             <div class="quantity">
                 <span class="quantity-btn-decrese"><lord-icon
                 src="https://cdn.lordicon.com/albqovim.json"
-                trigger="loop" colors="primary:#121331"
+                trigger="hover" colors="primary:#1a1a1a"
                 style="width:40px;height:40px">
             </lord-icon></span>
                 <span class="quantity-input">${product.quanty}</span>
                 <span class="quantity-btn-increse"><lord-icon
                 src="https://cdn.lordicon.com/xdakhdsq.json"
-                trigger="loop" colors="primary:#121331"
+                trigger="hover" colors="primary:#1a1a1a"
                 style="width:40px;height:40px">
             </lord-icon></span>
             </div>
             <div class="price">$${product.price * product.quanty} </div>
             <div class="delete-product"><lord-icon
             src="https://cdn.lordicon.com/jmkrnisz.json"
-            trigger="loop" colors="primary:#121331"
+            trigger="hover" colors="primary:#1a1a1a"
             style="width:40px;height:40px"></lord-icon></div>
         </div>
         `;
@@ -137,8 +137,9 @@ const displayCart = () => {
         payButton.innerHTML = `
         <a href="http://mpago.li/2HmPNUV" class="a-pagar" target="_blank">
         Pagar  <lord-icon
+        class="cardicon"
         src="https://cdn.lordicon.com/xxwwxrom.json"
-        trigger="loop" colors="primary:#fff"
+        trigger="hover" colors="primary:#fff"
         style="width:35px;height:35px">
         </lord-icon> </a>
         `;
