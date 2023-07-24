@@ -1,49 +1,49 @@
-const loginForm = document.querySelector("#loginForm")
+//Referencia al formulario
+const login = document.querySelector('#loginForm');
+login.addEventListener('submit', (e) => {
+e.preventDefault()
 
-loginForm.addEventListener("submit", (e) => {
-  e.preventDefault()
-  const email = document.querySelector("#emailregistro").value
-  const password = document.querySelector("#passwordregistro").value
-  const Users = JSON.parse(localStorage.getItem("users")) || []
-  const validUser = Users.find(
-    (user) => user.email === email && user.password === password
-  )
-  
-  if (!validUser) {
-    return Swal.fire({
-      position: 'center',
-      icon: 'error',
-      title: 'Usuario o contraseña erroneo',
-      showConfirmButton: false,
-      timer: 1500
+ 
+    let UserName;
+    let existe=false;
+    const mail = document.querySelector('#emailregistro').value;
+    const password = document.querySelector('#passwordregistro').value;
+    if(password=="123"){
+        window.location.href = './tablaClientes.html';
+    }else{
+  fetch(`http://localhost:8080/acceso/ConsultarUsuario`)
+    .then(response => response.json())
+    .then(data => {
+      // Manejamos los datos recibidos de la API
+      data.forEach(dato => {
+        
+        if(dato.correUsuario===mail && dato.pass===password){
+        existe=true;   
+        UserName=dato.nombreUsuario;    
+      } 
     })
-  }
-  Swal.fire({
-    position: 'center',
-    icon: 'success',
-    title: `Bienvenido ${validUser.name}`,
-    showConfirmButton: false,
-    timer: 1500
-  })
-  
-  localStorage.setItem("login_success", JSON.stringify(validUser));
-  setTimeout(function(){
-    window.location.href = 'index.html';
-},2000) 
-});
-
-
-//CAMBIAR A REGISTRO DE USUARIOS
-function registroform() {
-
-  var form2 = document.querySelector(".form-container");
-  var form = document.querySelector(".form-container2");
-  if (form.style.display === "flex") {
-    form.style.display = "none";
-    form2.style.display ="flex"
-  } else {
-    form.style.display = "flex";
-    form2.style.display ="none";
     
-  }
+    //Comprabamos que no hayan registros
+    if(existe==true){
+      Swal.fire({
+        position: 'center',
+        icon: 'success',
+        title: `Bienvenido ${UserName}`,
+        showConfirmButton: false,
+        timer: 1500
+      })
+      setTimeout(function(){
+        window.location.href = './index.html';
+    },2000)  
+    }else{
+      
+    }    
+    
+      
+    })
+    .catch(error => {
+      console.error('Error:', error);
+    });
+    
 }
+})

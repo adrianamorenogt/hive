@@ -32,7 +32,8 @@ public class ProductoController {
     @RequestMapping(value = "ModificarProducto", method = RequestMethod.PUT)
     public ResponseEntity<?>ModificarProducto(@RequestBody Producto producto){
         Producto modificarProducto =this.productoConsulta.ModificarProducto(producto);
-        return ResponseEntity.status(HttpStatus.CREATED).body(modificarProducto);
+        //return ResponseEntity.status(HttpStatus.CREATED).body(modificarProducto);
+        return ResponseEntity.ok(producto);
     }
 
     @GetMapping
@@ -44,8 +45,9 @@ public class ProductoController {
     @DeleteMapping
     @RequestMapping(value = "EliminarProducto/{id_producto}", method = RequestMethod.DELETE)
     public ResponseEntity<?> EliminarProducto(@PathVariable int id_producto){
-        this.EliminarProducto(id_producto);
-        return ResponseEntity.ok().build();
+       Producto producto= this.productoConsulta.EliminarProducto(id_producto);
+        //return ResponseEntity.ok().build();
+        return ResponseEntity.ok(producto);
     }
 
 

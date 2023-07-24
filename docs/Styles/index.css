@@ -16,7 +16,7 @@ body {
 }
 
 header {
-  position: fixed;
+  
   display: flex;
   align-self: flex-end;
   justify-content: end;
@@ -515,19 +515,19 @@ footer {
 /* Estilos para la barra de cookies */
 
 .cookie-bar-container {
-  max-width: 100%;
+  width: 100%;
+  
 }
 
 .cookie-bar {
   position: fixed;
   bottom: 0;
-  left: 10%;
-  background-color: #1a1a1aab;
+  width: 100%;
+  background-color: #1a1a1a;
   color: #ffffff;
   padding: 10px;
   text-align: center;
-  width: 80%;
-  border-radius: 10px 10px 0 0;
+  z-index: 3;
 }
 
 .cookie-text h2 {
