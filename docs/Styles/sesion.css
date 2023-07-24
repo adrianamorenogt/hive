@@ -50,7 +50,7 @@ body {
   width: 80%;
   border-radius: 1rem;
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
-   background: rgba(255, 255, 255, 0.781);
+   background: rgba(255, 255, 255, 0.945);
   
   padding: 1.25rem;
   border-radius: 5px;
@@ -156,20 +156,23 @@ body {
 
 /*Registro estilos*/
 
-
+#sesion{
+  height: 110vh;
+}
 .register-form {
-  flex: 1;
-  min-height: 20rem;
-  padding: 2rem 3rem;
+  
+  width: 100%;
+  padding: 1rem;
+  margin-top: 10%;
   border-radius: 1rem;
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
-  gap: 1rem;
+  
   transition: transform 0.3s ease-in-out;
-  padding: 1.25rem;
+  
   border-radius: 5px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease-in-out;
-  background: rgba(255, 255, 255, 0.55);
+  background: rgba(255, 255, 255, 0.897);
   -webkit-backdrop-filter: blur(7px);
   backdrop-filter: blur(7px);
   border: 1px solid rgba(255, 255, 255, 0.275);
