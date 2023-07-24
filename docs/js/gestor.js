@@ -1,5 +1,6 @@
-ConsultarProducto();
+
 ConsultarCliente();
+ConsultarProducto();
 function ConsultarCliente() {
   listaNombres.innerHTML = "";
   fetch('http://localhost:8080/acceso/ConsultarCliente')
@@ -241,33 +242,6 @@ function crearCliente() {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /**-------------------CONSULTAS PARA LA SECCION DE PRODUCTOS--------------------------- */
 
 /** FUNCIONALIDADAES MOSTRAR FORM ENVIO*/
@@ -454,8 +428,9 @@ function crearProducto() {
     })
       .then(response => response.json())
       .then(responseData => {
-
         ConsultarProducto();
+        
+        
       })
       .catch(error => {
         console.error('No se pudo crear el Producto: ', error);
