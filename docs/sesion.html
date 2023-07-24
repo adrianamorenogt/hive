@@ -12,13 +12,10 @@
 		integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
 		crossorigin="anonymous">
 	<!-- CSS -->
-	<link rel="stylesheet" href="./Styles/sliderBannerIndex.css" />
-	<!--<link rel="stylesheet" href="css/styleSlider.css" />-->
 	<!-- INDEX -->
 	<link rel="stylesheet" href="./Styles/index.css">
 
 	<!--JavaScript-->
-	<link rel="script" href="./js/script.js">
 	<script src="https://kit.fontawesome.com/57e129950d.js" crossorigin="anonymous"></script>
 	<script src="https://cdn.lordicon.com/bhenfmcm.js"></script>
 	<!--CONFIGURACION PWA-->
@@ -94,11 +91,11 @@
 			<form class="login-form" id="loginForm">
 				<h2>Iniciar sesión</h2>
 				<hr>
-				<input type="email" placeholder="Correo electrónico*" id="emailregistro" required>
-				<input type="password" placeholder="Contraseña*" id="passwordregistro" required>
+				<input type="email" placeholder="Correo electrónico*" id="emailregistro" autocomplete="email" required>
+				<input type="password" placeholder="Contraseña*" id="passwordregistro" autocomplete="new-password" required>
 				<p for="Por favor registrese"></p>
 				<p>*Campos obligatorios</p>
-				<button type="submit"> Ingresar</button>
+				<button  type="submit"> Ingresar</button>
 				<hr>
 				<p>¿Aún no estás registrado?</p>
 				<p><a href="#form-container2" onclick="registroform();">Regístrate aquí</a></p>
@@ -111,9 +108,10 @@
 				<h2>Crea tú cuenta</h2>
 				<hr>
 				<input type="text" placeholder="Nombre*" id="name" required autofocus>
-				<input type="text" placeholder="Nombre Apellido*" id="lastname" required autofocus>//AÑADIDO RECIENTE MODIFICAR SCRIPT
-				<input type="tel" placeholder="Teléfono*" id="phone" required>//AÑADIDO RECIENTE MODIFICAR SCRIPT
+				<input type="text" placeholder="Apellido*" id="lastname" required autofocus>
+				<input type="tel" placeholder="Teléfono*" id="phone" required>
 				<input type="email" placeholder="Correo electrónico*" id="email" required>
+				<input type="text" placeholder="Dirección*" id="direccion" required>
 				<input type="password" placeholder="Contraseña*" id="password" required>
 				<input type="password" placeholder="Confirmar contraseña*" id="password2" required>
 				<p>*Campos obligatorios</p>
@@ -144,7 +142,7 @@
 	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 	<script src="./js/login.js"></script>
 	<script src="./js/registro.js"></script>
-	<script src="./js/script.js"></script>
+	
 
 	<!--Js script-->
 	<!--BOOSTRAP Integración-->
@@ -159,5 +157,5 @@
 		crossorigin="anonymous"></script>
 
 </body>
-<script src="./gestor.js"></script>
+
 </html>
