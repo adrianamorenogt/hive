@@ -17,7 +17,7 @@ productos.forEach((product) => {
             <img src="${product.img}">
             <lord-icon class="ver-detalles"
             src="https://cdn.lordicon.com/mrjuyheh.json"
-            trigger="loop" delay="2000" tittle="Ver Detalles"
+            trigger="hover" delay="2000" tittle="Ver Detalles"
             colors="outline:#121331,primary:#231e2d,secondary:#848484,tertiary:#ffffff"
             style="width:50px;height:50px"></lord-icon>
         </figure>
@@ -30,10 +30,14 @@ productos.forEach((product) => {
     //creamos el boton para comprar
     const buyButton = document.createElement("button");
     buyButton.className = "button-agg";
-    buyButton.innerHTML = `Agregar  <lord-icon
-    src="https://cdn.lordicon.com/xcevpeyr.json"
-    trigger="loop" colors="primary:#fff"
-    style="width:35px;height:35px"></lord-icon>`
+    buyButton.innerHTML = `Agregar  <script src="https://cdn.lordicon.com/bhenfmcm.js"></script>
+    <lord-icon 
+        class="agregar"
+        src="https://cdn.lordicon.com/ausvvtws.json"
+        trigger="hover"
+        colors="primary:#fff"
+        style="width:35px;height:35px">
+    </lord-icon>`
 
     //a content agregale el boton
     content.append(buyButton);
